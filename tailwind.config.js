@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        Roboto: ['Roboto', 'sans-serif'],
   helvetica: ['Helvetica', 'Arial', 'sans-serif'],
   poppins: ['Poppins', 'sans-serif'],
 }

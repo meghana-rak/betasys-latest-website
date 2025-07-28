@@ -1,37 +1,38 @@
 import React from 'react';
-import { useIntersectionObserver } from '../hooks/useParallax';
+import frame2 from '../assests/Frame2.png'; // Adjust the path as necessary
 
 const CTA = () => {
-  const { isVisible, setElement } = useIntersectionObserver();
+  
 
   return (
-    <section 
-      ref={setElement}
-      className={`py-16 my-12 bg-gradient-to-r from-green-500 to-green-600 transition-all duration-1000 ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-16'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex flex-col md:flex-row justify-between items-center transition-all duration-1000 delay-200 ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-8'
-        }`}>
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-3xl font-bold text-white mb-2">
+    <section className="relative bg-[#00A651] text-white overflow-hidden mb-6">
+      <div className="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+          {/* Left Text Section */}
+          <div className="text-left">
+            <h2 className="text-2xl font-bold md:text-3xl ">
               Book an AI Strategy Session
             </h2>
-            <p className="text-green-100">
-              Ready to explore how AI can transform your business? Let's discuss your goals.
+            <p className="mb-4 text-sm text-white/80 md:text-base">
+              Fill this form to book a 30-minute Strategy Session with our CTO
             </p>
           </div>
-          <button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-colors">
-            CONTACT US
-          </button>
+
+          {/* Right Button Section */}
+          <div className="shrink-0">
+            <button className="px-6 py-3 text-sm font-semibold text-white rounded-lg bg-[#002A3A] hover:bg-[#00394f] transition duration-300">
+              Contact Us
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Decorative Bottom Image */}
+      <img
+        src={frame2}
+        alt="Decorative Curve"
+        className="absolute bottom-0 left-0 w-full pointer-events-none"
+      />
     </section>
   );
 };
