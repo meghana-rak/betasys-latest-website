@@ -1,5 +1,5 @@
 import React from "react";
-import blogDetail from '../../assests/blogDetail.jpg';
+import blogDetail from '../../assests/blogDetails/blogDetail.jpg';
 
 const BlogMain: React.FC = () => {
   return (
