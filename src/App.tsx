@@ -7,7 +7,8 @@ import ContactUsPage from './pages/ContactUsPage';
 import CTA from './components/CTA';
 import BlogPage from './pages/BlogPage';
 import ServicePage from './pages/ServicePage';
-
+import BlogDetails from './pages/BlogDetails';
+import Ebook from './pages/Ebook';
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
         <Route path="/blog" element={<BlogPage/>} />
         <Route path="/services" element={<ServicePage />} />
         <Route path='/contactus' element={<ContactUsPage />} />
+        <Route path='/blogdetails' element={<BlogDetails />} />
+        <Route path='/ebook' element={<Ebook/>} />
       </Routes>
        <CTA />
       <Footer />

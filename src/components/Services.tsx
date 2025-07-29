@@ -1,6 +1,7 @@
 import React from 'react';
 import { Brain, Cpu, Cloud, Cog, BarChart3, Bot } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useParallax';
+import background from '../assests/Whatwedo/bg-img.png'
 
 const Services = () => {
   const { isVisible, setElement } = useIntersectionObserver();
@@ -39,40 +40,39 @@ const Services = () => {
   ];
 
   return (
-    <section 
+    <section
       ref={setElement}
-      className={`py-20 bg-slate-900 transition-all duration-1000 ${
-        isVisible 
-          ? 'opacity-100 translate-y-0' 
-          : 'opacity-0 translate-y-16'
-      }`}
+      className={`py-10 md:py-20 bg-cover bg-no-repeat bg-center  transition-all duration-1000 ${isVisible
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-16'
+        }`}
+      style={{
+        backgroundImage: "url('/src/assests/Whatwedo/bg-img.png')"
+      }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-16 transition-all duration-1000 delay-200 ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-8'
-        }`}>
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Why Growing Businesses Choose Betasys AI
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" mb-4 ">
+          <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">WHAT WE DO</p>
+          <h2 className="text-4xl font-helvetica font-regular  text-white my-1">
+            Why Growing Businesses <span className='font-bold'>Choose Betasys AI</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Transform your business with intelligent solutions designed for your specific growth goals.
-          </p>
+          <p className="max-w-4xl text-[#E8E8E8] font-poppins text-md leading-relaxed mb-8">
+            Built for agility, clarity, and real business impact—Betasys stands apart from legacy giants.         </p>
         </div>
-        
-        <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-400 ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-12'
-        }`}>
+
+        <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-400 ${isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-12'
+          }`}>
           {services.map((service, index) => (
-            <div key={index} className="bg-slate-800 p-8 rounded-xl hover:bg-slate-700 transition-colors group">
-              <div className="text-green-400 mb-4 group-hover:scale-110 transition-transform">
+            <div key={index} className="py-3 md:py-12 gap-3 flex ">
+              <div className="text-white ">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-300 leading-relaxed">{service.description}</p>
+              <div>
+                <h3 className="text-xl font-helvetica font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 font-poppins leading-relaxed font-light">{service.description}</p>
+              </div>
             </div>
           ))}
         </div>
