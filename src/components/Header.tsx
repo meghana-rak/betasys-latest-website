@@ -26,29 +26,29 @@ const Header = () => {
   ];
 
   return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
     <header className={`py-5 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
         ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
         : 'bg-transparent'
       }`}>
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 w-40">
             <Link to="/">
-              <img src={logo} alt="Logo" className="h-28 w-auto object-contain" />
+              <img src={logo} alt="Logo" className="object-contain w-auto h-28" />
             </Link>
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-6 font-poppins">
+          <nav className="hidden space-x-6 md:flex font-poppins">
             {navLinks.map(({ name, path }) =>
               path.startsWith('/') ? (
-                <Link key={name} to={path} className="text-white text-lg hover:text-green-400">
+                <Link key={name} to={path} className="text-lg text-white hover:text-green-400">
                   {name}
                 </Link>
               ) : (
-                <a key={name} href={path} className="text-white text-lg hover:text-green-400">
+                <a key={name} href={path} className="text-lg text-white hover:text-green-400">
                   {name}
                 </a>
               )
@@ -75,7 +75,7 @@ const Header = () => {
                 <Link
                   key={name}
                   to={path}
-                  className="block text-white text-base hover:text-green-400"
+                  className="block text-base text-white hover:text-green-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {name}
@@ -84,7 +84,7 @@ const Header = () => {
                 <a
                   key={name}
                   href={path}
-                  className="block text-white text-base hover:text-green-400"
+                  className="block text-base text-white hover:text-green-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {name}
@@ -95,6 +95,7 @@ const Header = () => {
         )}
       </div>
     </header>
+       </div>
   );
 };
 

@@ -37,15 +37,15 @@ const features = [
 const Process: React.FC = () => {
   return (
     <section className="bg-[#022334] py-16 px-4 lg:px-20 text-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         <p className="text-sm text-[#00A148] font-medium mb-1">Our Core Capabilities</p>
-        <h2 className="text-3xl font-semibold mb-3">Our Consulting Process</h2>
-        <p className="text-[#D4D4D4] text-[16px] mb-10 md:text-[14px">
+        <h2 className="mb-3 text-3xl font-semibold">Our Consulting Process</h2>
+        <p className="text-[#D4D4D4] text-sm mb-10 font-poppins">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum. Mauris venenatis, <br /> felis 
           scelerisque aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum id sapien.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((item, index) => (
             <div
               key={index}
@@ -54,11 +54,11 @@ const Process: React.FC = () => {
               <img
                 src={ReactangleP}
                 alt="Background"
-                className="w-full h-full object-cover"
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-                <h3 className="text-[#FFFFFF] text-[22px] font-bold font-helvetica mb-2">{item.title}</h3>
-                <p className="text-[#FFFFFF] text-[16px] font-poppins md:text-[14px]">{item.description}</p>
+              <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+                <h3 className="text-[#FFFFFF] text-lg font-bold font-helvetica mb-2 sm:text:sm ">{item.title}</h3>
+                <p className="text-[#FFFFFF] text-xs  md:text-xs lg:text-sm font-poppins ">{item.description}</p>
               </div>
             </div>
           ))}
