@@ -72,7 +72,7 @@ const ContactUsPage = () => {
                     ></iframe>
                 </div>
             </div>
-            <CTA />
+            
         </div>
     );
 };
