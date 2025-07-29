@@ -13,7 +13,7 @@ const BlogMain: React.FC = () => {
         />
 
         {/* Date Badge */}
-        <div className="absolute top-2 left-2">
+        <div className="absolute top-2 left-2 font-poppins">
           <span className="px-3 py-1 text-[10px] sm:text-[12px] font-semibold text-[#005F2B] bg-[#C4E1D1] rounded-full">
             20/06/2025
           </span>
@@ -21,7 +21,7 @@ const BlogMain: React.FC = () => {
       </div>
 
       {/* Category Tag */}
-      <span className="inline-block text-green-500 text-[15px] font-medium mb-2">
+      <span className="inline-block text-green-500 text-[15px] font-medium mb-2 font-poppins">
         Health
       </span>
 
