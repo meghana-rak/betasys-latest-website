@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import Homepage from './pages/Homepage';
 import ContactUsPage from './pages/ContactUsPage';
 import CTA from './components/CTA';
+import BlogDetails from './pages/BlogDetails';
+import Ebook from './pages/Ebook';
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path='/contactus' element={<ContactUsPage />} />
+        <Route path='/blogdetails' element={<BlogDetails />} />
+        <Route path='/ebook' element={<Ebook/>} />
       </Routes>
        <CTA />
       <Footer />
