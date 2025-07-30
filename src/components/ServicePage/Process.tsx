@@ -1,5 +1,5 @@
 import React from "react";
-import ReactangleP from "../../assests/RectangleP.png";
+import ReactangleP from "../../assests/Servicepage/RectangleP.png";
 
 const features = [
   {
@@ -41,26 +41,28 @@ const Process: React.FC = () => {
         <p className="text-sm text-[#00A148] font-medium mb-1">Our Core Capabilities</p>
         <h2 className="mb-3 text-3xl font-semibold">Our Consulting Process</h2>
         <p className="text-[#D4D4D4] text-sm mb-10 font-poppins">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum. Mauris venenatis, <br /> felis 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum. Mauris venenatis, <br className="hidden md:block"/> felis 
           scelerisque aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum id sapien.
         </p>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((item, index) => (
-            <div
-              key={index}
-              className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 min-h-[200px]"
-            >
-              <img
-                src={ReactangleP}
-                alt="Background"
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-                <h3 className="text-[#FFFFFF] text-lg font-bold font-helvetica mb-2 sm:text:sm ">{item.title}</h3>
-                <p className="text-[#FFFFFF] text-xs  md:text-xs lg:text-sm font-poppins ">{item.description}</p>
-              </div>
-            </div>
+           <div
+  key={index}
+  className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 min-h-[200px]"
+>
+  <img
+    src={ReactangleP}
+    alt="Background"
+    className="object-cover w-full h-full"
+  />
+  <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+    <h3 className="text-[#FFFFFF] text-md font-bold font-helvetica mb-2 ">{item.title}</h3>
+   <p className="text-[#FFFFFF] text-xs  font-poppins ">{item.description}</p>
+
+  </div>
+</div>
+
           ))}
         </div>
       </div>

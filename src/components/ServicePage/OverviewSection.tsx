@@ -2,7 +2,8 @@ import React from 'react';
 
 const OverviewSection: React.FC = () => {
   return (
-    <section className="bg-[#F8F8F8] px-4 py-10 sm:px-6 md:px-12 lg:px-20 xl:px-32 text-justify">
+    
+    <section className="bg-[#F8F8F8]  py-10  text-justify px-4 sm:px-6 lg:px-20">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#000000] mb-4 font-helvetica">Overview</h2>
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import BlogCard from './BlogCard';
-import Blogimg1 from "../../assests/Blogimg1.png"
-import Blogimg2 from "../../assests/Blogimg2.png"
-import Blogimg3 from "../../assests/Blogimg3.png"
+import Blogimg1 from "../../assests/blogpage/Blogimg1.png";
+import Blogimg2 from "../../assests/blogpage/Blogimg2.png"
+import Blogimg3 from "../../assests/blogpage/Blogimg3.png"
 
 // import Blogimg2 from '../assests/Blogimg2.png';
 // import Blogimg3 from '../assests/Blogimg3.png';

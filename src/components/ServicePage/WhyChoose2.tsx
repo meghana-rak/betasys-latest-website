@@ -1,16 +1,16 @@
 import React from 'react';
-import ReactangleS from "../../assests/RectangleS.png";
-import ReactangleS2 from "../../assests/RectangleS2.png";
+import ReactangleS from "../../assests/Servicepage/RectangleS.png";
+import ReactangleS2 from "../../assests/Servicepage/RectangleS2.png";
 
 const WhyChoose2: React.FC = () => {
   return (
-    <section className="py-12 px-4 sm:px-8 lg:px-16 bg-white mb-10">
+    <section className="px-4 py-12 mb-10 bg-white sm:px-8 lg:px-16">
       {/* Heading */}
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-[22px] sm:text-[26px] lg:text-[28px] text-[#000000] font-helvetica mb-2">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="text-[22px] sm:text-[26px] lg:text-[32px] text-[#000000] font-helvetica mb-2">
           Why Choose <span className="font-bold">Our AI Consulting?</span>
         </h2>
-        <p className="text-[#4B4B4B] text-justify font-poppins text-[15px] sm:text-[16px] mb-6 leading-relaxed">
+        <p className="text-[#4B4B4B] text-justify font-poppins text-[15px] sm:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,
           <br className="hidden sm:block" />
           assess readiness, and implement scalable AI.
@@ -18,9 +18,9 @@ const WhyChoose2: React.FC = () => {
       </div>
 
       {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <div className="grid items-start grid-cols-1 gap-10 mx-auto max-w-7xl md:grid-cols-2">
         {/* Left: Images */}
-        <div className="relative w-full flex justify-center md:justify-start">
+        <div className="relative flex justify-center w-full md:justify-start">
           <img
             src={ReactangleS}
             alt="AI Core"
@@ -29,13 +29,14 @@ const WhyChoose2: React.FC = () => {
           <img
             src={ReactangleS2}
             alt="Overlay Visual"
-            className="rounded-xl absolute bottom-[-30px] right-[130px] w-[200px] sm:w-[150px] md:w-[230px] h-auto shadow-xl"
+            className="absolute rounded-xl shadow-xl w-[140px] sm:w-[160px] md:w-[200px] lg:w-[230px] h-auto 
+                       bottom-[-20px] right-[40px] sm:right-[70px] md:right-[100px] lg:right-[130px]"
           />
         </div>
 
         {/* Right: Bullet Points */}
-        <div className="text-[#1E1E1E] font-poppins space-y-4 pt-4 md:pt-10 text-[15px] sm:text-[18px] text-justify">
-          <ul className="list-disc list-inside space-y-3 sm:space-y-6 ">
+        <div className="text-[#1E1E1E] font-poppins pt-2 sm:pt-4 md:pt-8 text-[15px] sm:text-[17px] lg:text-[18px] text-justify">
+          <ul className="space-y-3 list-disc list-inside sm:space-y-4 lg:space-y-6">
             <li>
               <span className="text-[#00A148]">Predictive analytics</span> for demand forecasting.
             </li>
