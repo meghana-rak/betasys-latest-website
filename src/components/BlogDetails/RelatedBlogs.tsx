@@ -1,7 +1,7 @@
 import React from "react";
-import blogdetail1 from "../../assests/blogDetail1.jpg";
-import blogdetail2 from "../../assests/blogDetail2.jpg";
-import blogdetail3 from "../../assests/blogDetail3.jpg";
+import blogdetail1 from "../../assests/blogDetails/blogDetail1.jpg";
+import blogdetail2 from "../../assests/blogDetails/blogDetail2.jpg";
+import blogdetail3 from "../../assests/blogDetails/blogDetail3.jpg";
 
 interface BlogPost {
   id: number;

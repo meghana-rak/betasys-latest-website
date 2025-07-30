@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { useIntersectionObserver } from '../hooks/useParallax';
+import { useIntersectionObserver } from '../../hooks/useParallax';
 
 const BusinessTransform = () => {
   const { isVisible, setElement } = useIntersectionObserver();
@@ -8,7 +8,7 @@ const BusinessTransform = () => {
   return (
     <section
       ref={setElement}
-      className={`py-10 md:py-20  transition-all duration-1000 ${isVisible
+      className={`py-10  transition-all duration-1000 ${isVisible
         ? 'opacity-100 translate-y-0'
         : 'opacity-0 translate-y-16'
         }`}
@@ -16,10 +16,10 @@ const BusinessTransform = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">What We Deliver</p>
-          <h2 className="text-4xl font-helvetica font-regular  text-gray-900  my-1">
+          <h2 className="text-2xl md:text-4xl font-helvetica font-regular  text-gray-900  my-1">
             How AI Solutions <span className='font-bold'>Transform Your Business</span>
           </h2>
-          <p className="max-w-4xl text-gray-600 font-poppins text-md leading-relaxed mb-8">
+          <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-lg leading-relaxed mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum. Mauris venenatis, felis scelerisque aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum id sapien.  </p>      </div>
 
         <div className={`grid lg:grid-cols-2 gap-6 transition-all duration-1000 delay-500 ${isVisible

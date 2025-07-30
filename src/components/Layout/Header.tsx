@@ -69,15 +69,18 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className="bg-[#202020] text-white w-full md:h-[180px] fixed top-0 z-20 shadow-lg">
-      {/* Top bar */}
-      <div className="py-3 text-xs bg-black">
-        <div className="flex flex-col items-center justify-between min-w-full gap-1 mx-auto text-[10px] md:text-sm text-center px-4 md:px-14 sm:flex-row sm:text-left">
-          <div className="flex items-start justify-center gap-1 text-center md:items-center sm:gap-2 sm:text-left">
-            <MapPin className="inline " size={14} />
-            <span className="-ml-1 text-xs sm:text-sm">
-              ALKY'S LIQUOR & WINE : 1927 GA-138 Suite 1300, Conyers, GA 30013
-            </span>
+      // <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <header className={`py-5 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
+        : 'bg-transparent'
+      }`}>
+      <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0 w-40">
+            <Link to="/">
+              <img src={logo} alt="Logo" className="object-contain w-auto h-28" />
+            </Link>
           </div>
           <span className="flex items-center justify-center font-inter">
             <Phone className="inline mr-1" size={14} /> (770)-526-3527
@@ -130,7 +133,7 @@ const Header: React.FC = () => {
                       }) => (
                         <p key={dept.DepartmentID}>
                           <Link
-                            to={/products/${dept.DepartmentID}}
+                            to={`/products/${dept.DepartmentID}`}
                             state={{ departmentID: dept.DepartmentID }}
                             onClick={() => {
                               setIsMobileMenuOpen(false);
@@ -258,7 +261,7 @@ const Header: React.FC = () => {
                     }) => (
                       <li key={dept.DepartmentID} className="font-inter ">
                         <Link
-                          to={/products/${dept.DepartmentID}}
+                          to={`/products/${dept.DepartmentID}`}
                           state={{ departmentID: dept.DepartmentID }}
                           onClick={() => setIsMobileMenuOpen(false)}
                           className="block px-4 py-2 text-sm text-gray-100 transition duration-150 hover:bg-gray-800 hover:text-white"
@@ -309,6 +312,7 @@ const Header: React.FC = () => {
           </div>
         )}
       </div>
+      
     </header>
   );
 };

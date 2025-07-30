@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Layout/Header';
+import Footer from './components/Layout/Footer';
 import Homepage from './pages/Homepage';
 import ContactUsPage from './pages/ContactUsPage';
-import CTA from './components/CTA';
+import CTA from './components/Layout/CTA';
 import BlogPage from './pages/BlogPage';
 import ServicePage from './pages/ServicePage';
 import BlogDetails from './pages/BlogDetails';
-import Ebook from './pages/Ebook';
+import EbookListing from './pages/EbookListing';
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         <Route path="/services" element={<ServicePage />} />
         <Route path='/contactus' element={<ContactUsPage />} />
         <Route path='/blogdetails' element={<BlogDetails />} />
-        <Route path='/ebook' element={<Ebook/>} />
+        <Route path='/ebooklisting' element={<EbookListing/>} />
       </Routes>
        <CTA />
       <Footer />
