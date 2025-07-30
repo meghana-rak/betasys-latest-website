@@ -27,7 +27,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ date, image, category, title }) => 
 
       {/* Content Section */}
       <div className="p-3 sm:p-4">
-        <p className="text-[10px] sm:text-xs font-medium uppercase text-[#00A148] mb-1">
+        <p className="text-[10px] sm:text-sm font-medium uppercase text-[#00A148] mb-1">
           {category}
         </p>
         <h3 className="text-sm sm:text-base font-semibold text-[#373737] leading-snug line-clamp-2">
