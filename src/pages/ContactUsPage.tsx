@@ -1,6 +1,5 @@
 import React from "react";
 import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps";
-import CTA from "../components/CTA";
 
 // const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 const geoUrl = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson";

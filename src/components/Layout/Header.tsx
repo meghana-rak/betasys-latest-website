@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '../assests/LOGO-01.png'; 
+import logo from '../../assests/LOGO-01.png'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      // <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <header className={`py-5 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
         ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
         : 'bg-transparent'
@@ -44,11 +44,11 @@ const Header = () => {
           <nav className="hidden md:flex space-x-6 font-poppins">
             {navLinks.map(({ name, path }) =>
               path.startsWith('/') ? (
-                <Link key={name} to={path} className="text-white text-lg hover:text-green-400">
+                <Link key={name} to={path} className="text-white text-sm lg:text-lg hover:text-green-400">
                   {name}
                 </Link>
               ) : (
-                <a key={name} href={path} className="text-white text-lg hover:text-green-400">
+                <a key={name} href={path} className="text-white text-sm lg:text-lg hover:text-green-400">
                   {name}
                 </a>
               )
@@ -75,7 +75,7 @@ const Header = () => {
                 <Link
                   key={name}
                   to={path}
-                  className="block text-white text-base hover:text-green-400"
+                  className="block text-white text-sm hover:text-green-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {name}
@@ -84,7 +84,7 @@ const Header = () => {
                 <a
                   key={name}
                   href={path}
-                  className="block text-white text-base hover:text-green-400"
+                  className="block text-white text-sm hover:text-green-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {name}
