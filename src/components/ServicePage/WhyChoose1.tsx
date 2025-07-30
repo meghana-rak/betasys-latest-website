@@ -22,12 +22,12 @@ const WhyChoose1: React.FC = () => {
   ];
 
   return (
-    <section className="px-4 py-12 sm:px-6 lg:px-20 bg-white">
-      <div className="max-w-7xl mx-auto text-start">
+    <section className="px-4 py-12 bg-white sm:px-6 lg:px-20">
+      <div className="mx-auto max-w-7xl text-start">
         <h2 className="text-xl sm:text-2xl  text-[#000000] mb-2 font-helvetica">
           Why Choose <span className="font-bold">Our AI Consulting?</span>
         </h2>
-        <p className="text-[#4B4B4B] md:text-[16px] font-poppins text-[16px] mb-10 text-justify">
+        <p className="text-[#4B4B4B]  font-poppins text-sm mb-10 text-justify">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,
           assess readiness, and implement scalable AI solutions aligned with business goals. Whether you’re just exploring
           AI or ready to transform operations, we guide you through every step of the journey.
@@ -35,7 +35,7 @@ const WhyChoose1: React.FC = () => {
       </div>
 
       {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
   {cards.map((card, index) => (
     <div
       key={index}
@@ -45,18 +45,18 @@ const WhyChoose1: React.FC = () => {
       <img
         src={servicereactangle}
         alt="glow"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 object-cover w-full h-full"
       />
 
       {/* Overlay for darkening if needed */}
       <div className="absolute inset-0 bg-black bg-opacity-30" />
 
       {/* Card Content */}
-      <div className="relative z-10 p-6 flex flex-col justify-between h-full">
-        <p className="text-[16px] sm:text-[17px] font-poppins text-[#E4E4E4] leading-relaxed mb-4">
+      <div className="relative z-10 flex flex-col justify-between h-full p-6">
+        <p className="text-sm font-poppins text-[#E4E4E4] leading-relaxed mb-4">
           {card.text}
         </p>
-        <h3 className="text-[18px] font-semibold font-helvetica">{card.title}</h3>
+        <h3 className="font-semibold text-md font-helvetica">{card.title}</h3>
       </div>
     </div>
   ))}

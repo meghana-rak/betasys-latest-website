@@ -6,14 +6,14 @@ const OverviewSection: React.FC = () => {
       <div className="max-w-5xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-[#000000] mb-4 font-helvetica">Overview</h2>
 
-        <p className="text-[#000000] text-[16px] leading-relaxed mb-4 font-poppins">
+        <p className="text-[#000000] text-sm leading-relaxed mb-4 font-poppins">
           At Betasys.ai, our AI Consulting services are designed to help organizations unlock the true potential of
           artificial intelligence — not just as a buzzword, but as a transformative business capability. We work closely
           with your team to identify high-impact opportunities where AI can deliver measurable value, whether it’s
           automating routine operations, enhancing customer experiences, or enabling smarter decision-making through data.
         </p>
 
-        <p className="text-[#000000] text-[16px] leading-relaxed mb-6 font-poppins">
+        <p className="text-[#000000] text-sm leading-relaxed mb-6 font-poppins">
           Our approach begins with a deep assessment of your current systems, data infrastructure, and organizational
           readiness. From there, we craft a practical roadmap that aligns AI strategy with your core business goals. Whether
           you’re in the early stages of AI exploration or ready to scale enterprise-wide AI solutions, we guide you through
