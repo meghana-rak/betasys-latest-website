@@ -33,7 +33,6 @@ const WhyChoose1: React.FC = () => {
           AI or ready to transform operations, we guide you through every step of the journey.
         </p>
       </div>
-
       {/* First Row */}
       <div className="flex flex-col gap-4 lg:flex-row">
         <div className="flex-1 min-w-0">
