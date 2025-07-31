@@ -37,8 +37,8 @@ const RelatedBlogs: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white ">
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">Related Blog</h3>
+    <div className="">
+      <h3 className="text-lg font-bold text-black mb-2 font-helvetica">Related Blog</h3>
       <div className="space-y-4">
         {relatedPosts.map((post) => (
           <div key={post.id} className="group cursor-pointer">
@@ -55,10 +55,10 @@ const RelatedBlogs: React.FC = () => {
                 </span>
               </div>
             </div>
-            <span className="inline-block text-green-500 py-1 rounded text-[13px] font-medium">
+            <span className="inline-block text-[#00A148] py-1 rounded text-[13px] font-poppins">
               {post.category}
             </span>
-            <h4 className="text-[14px] font-medium text-gray-500 group-hover:text-green-500 transition-colors line-clamp-2">
+            <h4 className="text-[14px] font-helvetica text-[#373737] group-hover:text-green-500 transition-colors line-clamp-2">
               {post.title}
             </h4>
           </div>
