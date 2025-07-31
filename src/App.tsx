@@ -9,6 +9,7 @@ import BlogPage from './pages/BlogPage';
 import ServicePage from './pages/ServicePage';
 import BlogDetails from './pages/BlogDetails';
 import EbookListing from './pages/EbookListing';
+import EbookDetails from './pages/EbookDetails';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/contactus' element={<ContactUsPage />} />
         <Route path='/blogdetails' element={<BlogDetails />} />
         <Route path='/ebooklisting' element={<EbookListing/>} />
+         <Route path='/ebookdetails' element={<EbookDetails/>} />
       </Routes>
        <CTA />
       <Footer />
