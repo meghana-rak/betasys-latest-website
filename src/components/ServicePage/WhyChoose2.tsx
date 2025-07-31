@@ -1,42 +1,61 @@
 import React from 'react';
 import ReactangleS from "../../assests/Servicepage/RectangleS.png";
 import ReactangleS2 from "../../assests/Servicepage/RectangleS2.png";
+import { useIntersectionObserver } from '../../hooks/useParallax';
+
 
 const WhyChoose2: React.FC = () => {
+  const { isVisible, setElement } = useIntersectionObserver();
+
   return (
-    <section className="px-4 py-12 mb-10 bg-white sm:px-8 lg:px-16">
-      {/* Heading */}
-      <div className="mx-auto max-w-7xl">
-        <h2 className="text-[22px] sm:text-[26px] lg:text-[32px] text-[#000000] font-helvetica mb-2">
+    <section
+      ref={setElement}
+      className={`py-10  transition-all duration-1000 ${isVisible
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-16'
+        }`}
+    >
+  
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className='mb-4'>
+        <h2 className=" text-[#000000]  mb-2 my-1 text-2xl md:text-3xl font-helvetica font-regular">
           Why Choose <span className="font-bold">Our AI Consulting?</span>
         </h2>
-        <p className="text-[#4B4B4B] text-justify font-poppins text-[15px] sm:text-[16px] lg:text-[18px] mb-6 leading-relaxed">
+        <p className="text-[#4B4B4B] max-w-4xl  font-regular font-poppins text-sm mb-10 text-justify font-regular mt-4 leading-loose ">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,
           <br className="hidden sm:block" />
           assess readiness, and implement scalable AI.
         </p>
+        </div>
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid items-start grid-cols-1 gap-10 mx-auto max-w-7xl md:grid-cols-2">
-        {/* Left: Images */}
-        <div className="relative flex justify-center w-full md:justify-start">
-          <img
-            src={ReactangleS}
-            alt="AI Core"
-            className="rounded-xl w-full max-w-[480px] h-auto md:h-[400px] object-cover"
-          />
-          <img
-            src={ReactangleS2}
-            alt="Overlay Visual"
-            className="absolute rounded-xl shadow-xl w-[140px] sm:w-[160px] md:w-[200px] lg:w-[230px] h-auto 
-                       bottom-[-20px] right-[40px] sm:right-[70px] md:right-[100px] lg:right-[130px]"
-          />
-        </div>
+      <div className="grid gap-4 px-4 mx-auto lg:grid-cols-2 sm:px-6 lg:px-8">
+
+          <div className="flex flex-col max-w-6xl gap-3 mx-auto md:mr-36 lg:flex-row">
+            <div className='flex gap-3'>
+            
+              <div className="relative flex justify-center w-full md:justify-start">
+                <img
+                  src={ReactangleS}
+                  alt="AI Core"
+                  className="z-10  rounded-xl  w-[550px] h-auto md:h-[470px] object-cover"
+                />
+              
+                <img
+                  src={ReactangleS2}
+                  alt="Overlay Visual"
+                  className=" rounded-xl z-20 absolute bottom-[-30px] -right-[20px] md:-right-[100px] md:w-[250px]  h-1/4 shadow-xl"
+                />
+              </div>
+            </div>
+          </div>
+        
+
 
         {/* Right: Bullet Points */}
-        <div className="text-[#1E1E1E] font-poppins pt-2 sm:pt-4 md:pt-8 text-[15px] sm:text-[17px] lg:text-[18px] text-justify">
-          <ul className="space-y-3 list-disc list-inside sm:space-y-4 lg:space-y-6">
+       <div className="text-[#1E1E1E] font-poppins pt-2 mt-6 text-xl text-justify font-medium">
+          <ul className="px-4 mx-auto space-y-5 list-disc sm:px-6 lg:px-8 ">
             <li>
               <span className="text-[#00A148]">Predictive analytics</span> for demand forecasting.
             </li>
@@ -57,6 +76,7 @@ const WhyChoose2: React.FC = () => {
             </li>
           </ul>
         </div>
+
       </div>
     </section>
   );
