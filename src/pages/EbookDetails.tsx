@@ -8,7 +8,7 @@ function EbookDetails() {
     <div>
       {/* Hero Section */}
       <section
-        className="relative bg-gray-50 flex items-center mt-28 min-h-[380px] sm:min-h-[400px]"
+        className="relative bg-gray-50 flex items-center mt-28 min-h-[400px] sm:min-h-[400px]"
         style={{
           backgroundImage: `url(${EbookImage})`,
           backgroundRepeat: "no-repeat",
@@ -16,11 +16,12 @@ function EbookDetails() {
           backgroundSize: "80% auto",
         }}
       >
-        <div className="max-w-7xl mx-auto w-full flex items-center px-4 sm:px-8 md:px-16 lg:px-20 py-10 sm:py-14 md:py-16 lg:py-18">
+        <div className="max-w-7xl mx-auto w-full flex items-center px-4 sm:px-6 lg:px-8  sm:py-16">
           {/* Left Text Content */}
           <div className="w-full">
             <h2 className="text-[20px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-bold text-gray-900 leading-tight font-helvetica">
-              Installing <span className="text-green-600">AI in Construction</span>
+              Installing{" "}
+              <span className="text-green-600">AI in Construction</span>
             </h2>
             <h3 className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-gray-900 mb-2 font-helvetica">
               A Practical Guide for Industry Leaders
@@ -37,7 +38,7 @@ function EbookDetails() {
       </section>
 
       {/* Discover Our Book Section */}
-      <section className="bg-[#F9FAFB] px-4 sm:px-8 md:px-10 py-12 sm:py-16">
+      <section className="bg-[#F9FAFB] px-4 sm:px-6 lg:px-8 md:px-10 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto text-start">
           {/* Heading */}
           <h2 className="text-2xl sm:text-3xl text-gray-900 mb-2 font-helvetica">
@@ -76,12 +77,12 @@ function EbookDetails() {
 
       {/* What It Covers Section */}
       <section
-        className="bg-[#022333] px-4 sm:px-8 md:px-10 py-12 sm:py-16 mb-20 relative"
+        className="bg-[#022333] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 mb-20 relative"
         style={{
           backgroundImage: `url(${BgFrame})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right bottom",
-          backgroundSize: "70% auto",
+          backgroundSize: "auto",
         }}
       >
         <div className="max-w-7xl mx-auto">
@@ -131,4 +132,3 @@ function EbookDetails() {
 }
 
 export default EbookDetails;
-
