@@ -30,7 +30,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ date, image, category, title }) => 
         <p className="text-[10px] sm:text-sm font-medium uppercase text-[#00A148] mb-1">
           {category}
         </p>
-        <h3 className="text-sm sm:text-base font-semibold text-[#373737] leading-snug line-clamp-2">
+        <h3 className="text-sm font-poppins sm:text-base font-semibold text-[#373737] leading-snug line-clamp-2">
           {title}
         </h3>
       </div>

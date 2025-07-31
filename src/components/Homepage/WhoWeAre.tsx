@@ -47,9 +47,9 @@ const WhoWeAre = () => {
       <div
         className="absolute bottom-0 -left-2/3 right-28 h-96 overflow-hidden"      >
         <img
-          src={waves[waveIndex]}
+          src={wave}
           alt="wave"
-          className="absolute opacity-40 w-full pointer-events-none transition-all duration-500 ease-in-out"
+          className="absolute w-full opacity-15 pointer-events-none transition-all duration-500 ease-in-out"
           style={{
             transform: 'scaleX(-1)', // horizontal flip
 

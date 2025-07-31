@@ -18,7 +18,8 @@ const Sidebar: React.FC = () => {
   return (
     <>
       {/* Hamburger Button  */}
-      <div className="block min-[1000px]:hidden left-4 z-50">
+      {/* <div className="block min-[1000px]:hidden left-4 z-50"> */}
+      <div className="block md:hidden left-4 z-50">
         <button
           onClick={() => setIsOpen(true)}
           className="text-[#00A148] hover:scale-110 transition-transform duration-200"
@@ -71,14 +72,15 @@ const Sidebar: React.FC = () => {
       </div>
 
       {/* Desktop Sidebar */}
-      <aside className="hidden min-[1000px]:block sticky w-full p-4 bg-white rounded-lg shadow-sm lg:w-60 h-[100vh] top-10 mr-10">
+      {/* <aside className="hidden min-[1000px]:block sticky w-full p-4 bg-white rounded-lg shadow-sm lg:w-60 h-[100vh] top-10 mr-10"> */}
+      <aside className="hidden md:block sticky w-full p-3 bg-[rgba(223,223,223,0.20)]  rounded-lg shadow-sm lg:w-60 h-[100vh] top-10 mr-10">
         <h2 className="mb-4 text-lg font-bold text-[#00A148]">Categories</h2>
         <ul className="space-y-2">
           {categories.map((category, index) => (
             <li key={index}>
               <a
                 href="#"
-                className="block font-semibold text-black transition-colors rounded-md text-md hover:text-emerald-600 hover:bg-emerald-50"
+                className="block font-poppins text-black transition-colors rounded-md text-md md:text-md hover:text-emerald-600 hover:bg-emerald-50"
               >
                 {category}
               </a>
