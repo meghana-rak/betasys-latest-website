@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '../../assests/LOGO-01.png'; 
+import logo from '../../assests/logo.png'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const Header = () => {
   const navLinks = [
     { name: 'Services', path: '/services' },
     { name: 'Product', path: '#' },
-    { name: 'About', path: '#' },
+    { name: 'About', path: '/aboutus' },
     { name: 'Career', path: '#' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contactus' },
@@ -34,9 +34,10 @@ const Header = () => {
       <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 w-40">
+          <div className="w-40">
             <Link to="/">
-              <img src={logo} alt="Logo" className="object-contain w-auto h-28" />
+              <img src={logo} alt="Logo" className="w-auto " />
+              {/* <img src={logo} alt="Logo" className="object-contain w-auto h-28" /> */}
             </Link>
           </div>
 

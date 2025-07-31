@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIntersectionObserver } from '../../hooks/useParallax';
 import { Link } from 'react-router-dom';
-import logo from '../../assests/LOGO-01.png';
+import logo from '../../assests/logo.png';
 
 const Footer = () => {
   const { isVisible, setElement } = useIntersectionObserver();
@@ -39,12 +39,12 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center font-poppins gap-3 sm:gap-y-0 sm:gap-x-6 mb-2">
+          <div className="flex flex-wrap justify-center  md:justify-start font-poppins gap-3 sm:gap-y-0 sm:gap-x-6 mb-2">
             {navLinks.map(({ name, path }) => (
               <Link
                 key={name}
                 to={path}
-                className="text-white text-xs md:text-sm hover:text-green-400"
+                className="text-white  text-xs md:text-sm hover:text-green-400"
               >
                 {name}
               </Link>
