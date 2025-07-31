@@ -28,7 +28,7 @@ const Footer = () => {
             }`}
         >
           {/* Logo */}
-          <div className="flex-shrink-0 w-40 mb-4 md:mb-0">
+          <div className="flex-shrink-0 w-40 mb-4 md:mb-0 p-3">
             <Link to="/">
               <img
                 src={logo}
