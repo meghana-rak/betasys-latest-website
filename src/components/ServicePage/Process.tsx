@@ -1,5 +1,6 @@
 import React from "react";
 import ReactangleP from "../../assests/Servicepage/RectangleP.png";
+import { useIntersectionObserver } from "../../hooks/useParallax";
 
 const features = [
   {
@@ -35,36 +36,64 @@ const features = [
 ];
 
 const Process: React.FC = () => {
+  const { isVisible, setElement } = useIntersectionObserver();
+
   return (
-    <section className="bg-[#022334] py-16 px-4 lg:px-20 text-white">
-      <div className="mx-auto max-w-7xl">
-        <p className="text-sm text-[#00A148] font-medium mb-1">Our Core Capabilities</p>
-        <h2 className="mb-3 text-3xl font-semibold">Our Consulting Process</h2>
-        <p className="text-[#D4D4D4] text-sm mb-10 font-poppins">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum. Mauris venenatis, <br className="hidden md:block"/> felis 
-          scelerisque aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum id sapien.
-        </p>
-
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((item, index) => (
-           <div
-  key={index}
-  className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 min-h-[200px]"
->
-  <img
-    src={ReactangleP}
-    alt="Background"
-    className="object-cover w-full h-full"
-  />
-  <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-    <h3 className="text-[#FFFFFF] text-md font-bold font-helvetica mb-2 ">{item.title}</h3>
-   <p className="text-[#FFFFFF] text-xs  font-poppins ">{item.description}</p>
-
-  </div>
-</div>
-
-          ))}
+    <section
+      ref={setElement}
+      className={`py-10  transition-all duration-1000 bg-[#022334] ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      }`}
+    >
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="py-10 mb-4 md:py-6">
+          <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">
+            Our Core Capabilities
+          </p>
+          <h2 className="my-1 text-2xl font-semibold text-white md:text-3xl font-helvetica font-regular">
+            Our Consulting Process
+          </h2>
+          <p className="text-[#D4D4D4] max-w-4xl  text-xs leading-relaxed font-poppins md:text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            mollis nunc a molestie dictum. Mauris venenatis, felis scelerisque
+            aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum
+            id sapien.
+          </p>
         </div>
+         <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-400 ${isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-12'
+          }`}>
+        
+       
+  {features.map((item, index) => (
+    <div
+      key={index}
+      className=" flex gap-3 py-3 md:py-12 relative min-h-[200px] rounded-[26px] border border-white/30 bg-[#F5F5F5]/20 backdrop-blur-[4px] overflow-hidden transition-all duration-300 shadow-md hover:shadow-lg"
+    >
+      {/* Optional background image */}
+      {/* <img
+        src={ReactangleP}
+        alt="Background"
+        className="object-cover w-full h-full"
+      /> */}
+      
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
+        <h3 className="mb-2 text-xl font-semibold text-white font-helvetica">
+          {item.title}
+        </h3>
+        <p className="text-xs font-light leading-relaxed text-gray-300 md:text-sm font-poppins">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  ))}
+
+
+        </div>
+
+        
+       
       </div>
     </section>
   );

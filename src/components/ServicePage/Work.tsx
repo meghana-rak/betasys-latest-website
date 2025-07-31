@@ -1,4 +1,5 @@
 import React from "react";
+import { useIntersectionObserver } from "../../hooks/useParallax";
 
 const clients = [
   "Enterprises seeking AI transformation",
@@ -26,48 +27,62 @@ const testimonials = [
 ];
 
 const Work: React.FC = () => {
+  const { isVisible, setElement } = useIntersectionObserver();
+
   return (
-    <section className="bg-white py-16 px-4 lg:px-20 text-[#000000]">
-      {/* Who We Work With */}
-      <div className="mx-auto mb-16 max-w-7xl">
-        <h2 className="mb-3 text-2xl font-helvetica">
+    <section
+      ref={setElement}
+      className={`py-10  transition-all duration-1000 bg-white text-[#000000]${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      }`}
+    >
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <h2 className="my-1 text-2xl text-gray-900 md:text-3xl font-helvetica font-regular">
           Who We <span className="font-bold">Work With</span>
         </h2>
-        <p className="text-[#595959] text-sm font-poppins mb-8">
+        <p className="text-[#4B4B4B] max-w-4xl  font-regular font-poppins text-sm mb-10 text-justify font-regular mt-4 leading-loose">
           Delivering Value Across Sectors and Scales identify high-impact
-          opportunities for artificial intelligence, assess readiness,
-          and implement scalable AI
+          opportunities for artificial intelligence, assess readiness, and
+          implement scalable AI
         </p>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ">
-          {clients.map((client, index) => (
-            <div
-              key={index}
-              className="bg-[#022334] text-white text-center font-poppins p-6 rounded-xl shadow-sm h-[120px] 
-             text-sm sm:text-base lg:text-sm flex items-center justify-center"
-            >
-              {client}
-            </div>
-          ))}
+        <div
+          className={` transition-all duration-1000 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
+        >
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 ">
+            {clients.map((client, index) => (
+              <div
+                key={index}
+                className="bg-[#022333] text-white rounded-2xl px-5 sm:px-6 pt-6 pb-6 sm:pt-7 sm:pb-7 flex flex-col justify-start relative"
+              >
+                <p className="text-center text-[17px] sm:text-[19px] font-poppins leading-snug mt-2">
+                  {" "}
+                  {client}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Success Stories */}
-      <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl  mb-3 font-helvetica text-[#000000">
+      <div className="px-4 mx-auto mt-10 md:mt-14 max-w-7xl sm:px-6 lg:px-8">
+        <h2 className="my-1 text-2xl text-gray-900 md:text-3xl font-helvetica font-regular">
           Success <span className="font-bold">Stories</span>
         </h2>
-        <p className="text-[#595959] text-sm font-poppins mb-8">
+        <p className="text-[#4B4B4B] max-w-4xl  font-regular font-poppins text-sm mb-10 text-justify font-regular mt-4 leading-loose">
           Delivering Value Across Sectors and Scales identify high-impact
-          opportunities for artificial intelligence, assess  readiness,
-          and implement scalable AI
+          opportunities for artificial intelligence, assess readiness, and
+          implement scalable AI
         </p>
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-[#022334] via-[#022334] to-[#06689A] text-white p-4 rounded-xl shadow-md"
+              className="bg-gradient-to-r from-[#022334] via-[#022334] to-[#06689A] text-white rounded-2xl shadow-md p-8"
             >
-              <p className="text-sm text-[#FFFFFF] font-poppins mb-8">
+              <p className="mb-8 text-sm font-normal leading-relaxed font-poppins font-regular">
                 {item.quote}
               </p>
               <p className="font-bold text-sm text-[#FFFFFF] font-poppins">
