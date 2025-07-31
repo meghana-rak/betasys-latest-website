@@ -104,10 +104,10 @@ function AboutPage() {
 
                         <div
                             className="transition-all duration-1000 ease-out"
-                            style={{
-                                marginLeft: showTransformedLayout ? '0px' : '32px',
-                                transform: showTransformedLayout ? 'none' : `translateX(${imageTranslateX}%) translateY(${imageTranslateY}%) scale(${imageScale})`
-                            }}
+                            // style={{
+                            //     marginLeft: showTransformedLayout ? '0px' : '32px',
+                            //     transform: showTransformedLayout ? 'none' : `translateX(${imageTranslateX}%) translateY(${imageTranslateY}%) scale(${imageScale})`
+                            // }}
                         >
                             <div className="rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-500 group">
                                 <div className="relative">
