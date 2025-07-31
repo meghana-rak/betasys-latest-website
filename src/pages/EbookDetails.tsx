@@ -8,7 +8,7 @@ function EbookDetails() {
     <div>
       {/* Hero Section */}
       <section
-        className="relative bg-gray-50 flex items-center mt-28 min-h-[400px] sm:min-h-[400px]"
+        className="relative bg-gray-50 flex items-center mt-28 min-h-[380px] sm:min-h-[400px]"
         style={{
           backgroundImage: `url(${EbookImage})`,
           backgroundRepeat: "no-repeat",
@@ -16,7 +16,7 @@ function EbookDetails() {
           backgroundSize: "80% auto",
         }}
       >
-        <div className="max-w-7xl mx-auto w-full flex items-center px-4 sm:px-6 lg:px-8  sm:py-16">
+        <div className="max-w-7xl mx-auto w-full flex items-center px-4 sm:px-6 lg:px-8 y-12 sm:py-16">
           {/* Left Text Content */}
           <div className="w-full">
             <h2 className="text-[20px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-bold text-gray-900 leading-tight font-helvetica">
