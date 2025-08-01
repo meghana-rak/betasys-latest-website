@@ -17,10 +17,10 @@ const Insights = () => {
         <div className={`flex lg:flex-row flex-col justify-between items-start mb-12 transition-all duration-1000 delay-200 `}>
           <div>
             <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">Insights & Resources</p>
-            <h2 className="text-2xl font-helvetica font-regular md:text-4xl text-gray-900 my-1">
+            <h2 className="text-2xl font-helvetica font-regular md:text-3xl text-gray-900 my-1">
               AI <span className='font-bold'> Business Insights</span>
             </h2>
-            <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-lg mb-2 ">
+            <p className="max-w-3xl leading-relaxed text-gray-600 font-poppins text-xs md:text-[20px] mb-2 ">
               Explore expert content, practical guides, and real-world use cases to unlock AI’s potential for your business.        </p>
           </div>
           <Link to=''>

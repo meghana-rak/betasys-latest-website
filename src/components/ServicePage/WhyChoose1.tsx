@@ -39,7 +39,7 @@ const WhyChoose1: React.FC = () => {
          <h2 className="my-1 text-2xl text-[#000000] md:text-3xl font-helvetica font-regular">
             Why Choose <span className='font-bold'>Our AI Consulting?</span>
           </h2>
-        <p className="mt-4 mb-10 text-xs leading-loose text-gray-700 md:text-justify font-regular font-poppins md:text-lg">
+        <p className="mt-2 mb-10 text-xs  md:text-justify font-regular text-gray-800 font-poppins leading-relaxed md:text-[20px]">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,
           assess readiness, and implement scalable AI solutions aligned with business goals. Whether you’re just exploring
           AI or ready to transform operations, we guide you through every step of the journey.

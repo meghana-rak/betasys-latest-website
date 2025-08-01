@@ -16,10 +16,10 @@ const BusinessTransform = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">What We Deliver</p>
-          <h2 className="text-2xl md:text-4xl font-helvetica font-regular  text-gray-900  my-1">
+          <h2 className="text-2xl md:text-3xl font-helvetica font-regular  text-gray-900  my-1">
             How AI Solutions <span className='font-bold'>Transform Your Business</span>
           </h2>
-          <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-lg leading-relaxed mb-8">
+          <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-[20px] leading-relaxed mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum. Mauris venenatis, felis scelerisque aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum id sapien.  </p>      </div>
 
         <div className={`grid lg:grid-cols-2 gap-6 transition-all duration-1000 delay-500 ${isVisible
@@ -39,7 +39,7 @@ const BusinessTransform = () => {
               <h3 className="font-helvetica text-xl md:text-4xl  font-semibold mt-3 md:mt-8 mb-2 md:mb-6  ">
                 Reduced support response time by 50% using AI chatbots.
               </h3>
-              <p className="text-gray-300 mb-3 md:mb-8 text-sm md:text-lg font-poppins">
+              <p className="text-gray-300 leading-relaxed mb-3 md:mb-8 text-sm md:text-[20px] font-poppins">
                 See how our AI solutions streamline workflows and eliminate manual bottlenecks.
               </p>
               <div className='flex md:justify-end'>

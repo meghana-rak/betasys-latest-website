@@ -16,10 +16,10 @@ const Journey = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">How It Works</p>
-          <h2 className="text-2xl font-helvetica font-regular md:text-4xl  text-white my-1">
+          <h2 className="text-2xl font-helvetica font-regular md:text-3xl  text-white my-1">
             Your Journey to  <span className='font-bold'>AI Implementation</span>
           </h2>
-          <p className="max-w-4xl text-[#E8E8E8] font-poppins text-xs md:text-lg leading-relaxed mb-8">
+          <p className="max-w-3xl text-[#E8E8E8] font-poppins text-xs md:text-[20px] leading-relaxed mb-8">
             A simple, low-risk path to adopting AI that fits your business—designed for clarity, confidence, and measurable results.         </p>
         </div>
 
