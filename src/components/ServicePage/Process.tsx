@@ -50,10 +50,10 @@ const Process: React.FC = () => {
           <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">
             Our Core Capabilities
           </p>
-          <h2 className="my-1 text-2xl font-semibold text-white md:text-3xl font-helvetica font-regular">
+          <h2 className="my-1 text-2xl font-semibold text-white md:text-4xl font-helvetica font-regular">
             Our Consulting Process
           </h2>
-          <p className="text-[#D4D4D4] max-w-4xl  text-xs leading-relaxed font-poppins md:text-sm">
+          <p className="text-[#D4D4D4] max-w-4xl  text-xs leading-loose font-poppins md:text-lg  ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             mollis nunc a molestie dictum. Mauris venenatis, felis scelerisque
             aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum
@@ -71,12 +71,6 @@ const Process: React.FC = () => {
       key={index}
       className=" flex gap-3 py-3 md:py-12 relative min-h-[200px] rounded-[26px] border border-white/30 bg-[#F5F5F5]/20 backdrop-blur-[4px] overflow-hidden transition-all duration-300 shadow-md hover:shadow-lg"
     >
-      {/* Optional background image */}
-      {/* <img
-        src={ReactangleP}
-        alt="Background"
-        className="object-cover w-full h-full"
-      /> */}
       
       <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
         <h3 className="mb-2 text-xl font-semibold text-white font-helvetica">

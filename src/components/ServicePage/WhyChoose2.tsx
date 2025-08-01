@@ -21,9 +21,9 @@ const WhyChoose2: React.FC = () => {
         <h2 className=" text-[#000000]  mb-2 my-1 text-2xl md:text-3xl font-helvetica font-regular">
           Why Choose <span className="font-bold">Our AI Consulting?</span>
         </h2>
-        <p className="text-[#4B4B4B] max-w-4xl  font-regular font-poppins text-sm mb-10 text-justify font-regular mt-4 leading-loose ">
+        <p className="max-w-4xl mt-4 mb-10 text-sm leading-loose text-gray-700 md:text-justify font-regular font-poppins md:text-lg">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,
-          <br className="hidden sm:block" />
+          
           assess readiness, and implement scalable AI.
         </p>
         </div>
@@ -54,8 +54,8 @@ const WhyChoose2: React.FC = () => {
 
 
         {/* Right: Bullet Points */}
-       <div className="text-[#1E1E1E] font-poppins pt-2 mt-6 text-xl text-justify font-medium">
-          <ul className="px-4 mx-auto space-y-5 list-disc sm:px-6 lg:px-8 ">
+       <div className="text-[#1E1E1E] font-poppins pt-2 mt-4 text-md md:text-lg  font-medium">
+          <ul className="px-4 mx-auto space-y-4 list-disc sm:px-6 lg:px-8 ">
             <li>
               <span className="text-[#00A148]">Predictive analytics</span> for demand forecasting.
             </li>

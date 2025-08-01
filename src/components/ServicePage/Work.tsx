@@ -40,7 +40,7 @@ const Work: React.FC = () => {
         <h2 className="my-1 text-2xl text-gray-900 md:text-3xl font-helvetica font-regular">
           Who We <span className="font-bold">Work With</span>
         </h2>
-        <p className="text-[#4B4B4B] max-w-4xl  font-regular font-poppins text-sm mb-10 text-justify font-regular mt-4 leading-loose">
+        <p className="max-w-4xl mt-4 mb-10 text-sm leading-loose text-gray-700 md:text-justify font-regular font-poppins md:text-lg">
           Delivering Value Across Sectors and Scales identify high-impact
           opportunities for artificial intelligence, assess readiness, and
           implement scalable AI
@@ -67,20 +67,25 @@ const Work: React.FC = () => {
       </div>
 
       {/* Success Stories */}
-      <div className="px-4 mx-auto mt-10 md:mt-14 max-w-7xl sm:px-6 lg:px-8">
+      <div  ref={setElement}
+      className={`py-10  transition-all duration-1000 bg-white text-[#000000]${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      }`}>
+      <div className="px-4 mx-auto mt-8 md:mt-14 max-w-7xl sm:px-6 lg:px-8">
         <h2 className="my-1 text-2xl text-gray-900 md:text-3xl font-helvetica font-regular">
           Success <span className="font-bold">Stories</span>
         </h2>
-        <p className="text-[#4B4B4B] max-w-4xl  font-regular font-poppins text-sm mb-10 text-justify font-regular mt-4 leading-loose">
+        <p className="max-w-4xl mt-4 mb-10 text-sm leading-loose text-gray-700 md:text-justify font-regular font-poppins md:text-lg">
           Delivering Value Across Sectors and Scales identify high-impact
           opportunities for artificial intelligence, assess readiness, and
           implement scalable AI
         </p>
+ 
         <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-r from-[#022334] via-[#022334] to-[#06689A] text-white rounded-2xl shadow-md p-8"
+              className="bg-gradient-to-r from-[#022334] via-[#022334] to-[#06689A] text-white rounded-2xl shadow-md md:p-6 p-4"
             >
               <p className="mb-8 text-sm font-normal leading-relaxed font-poppins font-regular">
                 {item.quote}
@@ -91,6 +96,9 @@ const Work: React.FC = () => {
             </div>
           ))}
         </div>
+          
+        
+      </div>
       </div>
     </section>
   );
