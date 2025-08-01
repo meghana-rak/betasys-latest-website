@@ -73,14 +73,14 @@ const Sidebar: React.FC = () => {
 
       {/* Desktop Sidebar */}
       {/* <aside className="hidden min-[1000px]:block sticky w-full p-4 bg-white rounded-lg shadow-sm lg:w-60 h-[100vh] top-10 mr-10"> */}
-      <aside className="hidden md:block sticky w-full p-3 bg-[rgba(223,223,223,0.20)]  rounded-lg shadow-sm lg:w-60 h-[100vh] top-10 mr-10">
+      <aside className="hidden md:block sticky w-48 py-6 px-6 bg-[#F0F0F0B2] border-[#DFDFDF8F] border-2 rounded-lg shadow-sm  h-[100vh] top-16 ml-8">
         <h2 className="mb-4 text-lg font-bold text-[#00A148]">Categories</h2>
         <ul className="space-y-2">
           {categories.map((category, index) => (
             <li key={index}>
               <a
                 href="#"
-                className="block font-poppins text-black transition-colors rounded-md text-md md:text-md hover:text-emerald-600 hover:bg-emerald-50"
+                className="block font-semibold text-black transition-colors rounded-md text-[15px] hover:text-emerald-600 hover:bg-emerald-50"
               >
                 {category}
               </a>

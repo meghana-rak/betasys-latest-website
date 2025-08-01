@@ -38,13 +38,13 @@ const CategoryList: React.FC = () => {
       {/* Mobile Sidebar */}
 
       <div
-        className={`fixed top-0 left-0 h-full w-46 bg-white shadow-2xl transform transition-transform duration-300 z-50  ${
+        className={`fixed top-0 left-0 h-full w-48 bg-white shadow-2xl transform transition-transform duration-300 z-50  ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Header */}
-        <div className="flex justify-between items-center py-6 px-6 border-b bg-gradient-to-r from-emerald-50 to-white rounded-tr-2xl">
-          <h2 className="text-lg font-bold text-[#00A148] tracking-wide">
+        <div className="flex justify-between items-center px-3 py-3 border-b bg-gradient-to-r from-emerald-50 to-white rounded-tr-2xl">
+          <h2 className="text-lg font-bold text-[#00A148] tracking-wide px-2">
             Categories
           </h2>
           <button
@@ -61,7 +61,7 @@ const CategoryList: React.FC = () => {
             <li key={index}>
               <a
                 href="#"
-                className="block font-[15px] font-semibold text-black rounded-lg px-3 py-1 transition-all hover:bg-emerald-50 hover:text-[#00A148] hover:shadow-sm"
+                className="block text-xs text-gray-700 font-medium px-3 py-2 transition-all hover:bg-emerald-50 hover:text-[#00A148] hover:shadow-sm"
               >
                 {category}
               </a>
