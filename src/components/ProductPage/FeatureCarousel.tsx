@@ -122,14 +122,14 @@ const slides = [
     title: "Live Sales Tracking",
     description:
       "Monitor every transaction in real time — fuel, product, and payment — across all pumps and counters, right from your dashboard.",
-    image: Laptop,
+    image: Ipad,
     imageClass: "h-auto",
   },
   {
     title: "Dynamic Pricebook Control",
     description:
       "Easily manage pricing for fuel and in-store items. Update prices instantly across locations with full version history and control.",
-    image: Ipad,
+    image: Laptop,
     imageClass: "h-auto",
   },
 ];
@@ -162,15 +162,15 @@ const FeatureCarousel = () => {
                 {/* Text Section with animation */}
                 <motion.div
                   key={current} // Force re-trigger animation on slide change
-                  className="lg:w-[65%] text-center lg:text-left"
+                  className="lg:max-w-3xl text-center lg:text-left"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.5, duration: 0.8 }}
+                  transition={{ delay: 1, duration: 0.8 }}
                 >
-                  <h2 className="text-[44px] text-[#000000] mb-0 lg:mb-6 leading-snug font-helvetica font-semibold">
+                  <h2 className="text-[44px] text-[#000000] mb-0 lg:mb-2 leading-snug font-helvetica font-semibold">
                     {slide.title}
                   </h2>
-                  <p className="text-[#000000] font-poppins text-[20px] leading-relaxed">
+                  <p className="text-[#000000] font-poppins font-medium text-[20px] leading-relaxed">
                     {slide.description}
                   </p>
                 </motion.div>
@@ -180,27 +180,26 @@ const FeatureCarousel = () => {
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    className={`${slide.imageClass} object-contain`}
+                    className={`${slide.imageClass} object-contain w-[150px] sm:w-[200px] md:w-[240px] lg:w-auto mb-4`}
                   />
                 </div>
               </div>
             ))}
           </div>
         </div>
-
         {/* Navigation Arrows */}
-        <div className="mr-[380px] -mt-28 flex justify-start space-x-4 w-full lg:w-3/5 relative z-10">
+        <div className="sm:mr-0 md:mr-[40px] lg:mr-[388px]  -mt-24 lg:-mt-28 flex justify-start space-x-4 w-full lg:w-3/5 relative z-10">
           <button
             onClick={prevSlide}
-            className="flex items-center justify-center hover:bg-gray-100 transition"
+            className="flex items-center justify-center transition"
           >
-            <img src={Icon} className="w-[31px] h-auto" alt="Previous" />
+            <img src={Icon} className="w-[42px] h-auto" alt="Previous" />
           </button>
           <button
             onClick={nextSlide}
-            className="flex items-center justify-center hover:bg-gray-100 transition"
+            className="flex items-center justify-center transition"
           >
-            <img src={Icon2} className="w-[25px] h-auto" alt="Next" />
+            <img src={Icon2} className="w-[34px] h-auto" alt="Next" />
           </button>
         </div>
       </div>
