@@ -7,9 +7,9 @@ function OurValues() {
         <div>
             {/* Our Values Section */}
             <div className={`transition-all duration-1000 `}>
-                <div className="max-w-7xl mx-auto px-16 pt-40">
+                <div className="max-w-7xl mx-auto px-3 md:px-16">
                     {/* Values Header */}
-                    <div className={`mb-16 transition-all duration-800 delay-300 `}>
+                    <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
                         {/* Green accent line */}
                         {/* <div className="w-1 h-16 bg-emerald-500 mb-8"></div> */}
 

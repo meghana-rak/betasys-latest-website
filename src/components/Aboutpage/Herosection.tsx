@@ -13,16 +13,16 @@ function Herosection() {
 
 
             {/* Main Content */}
-            <main className="relative z-10 px-6 pt-32">
+            <main className="relative z-10 px-3 md:px-6 pt-32">
                 <div>
                     {/* Hero Section */}
-                    <div className="text-center mb-16">
-                        <div className="text-slate-700 font-semibold text-lg font-poppins mb-6">
+                    <div className="text-center md:mb-16">
+                        <div className="text-slate-700 font-semibold text-lg font-poppins mb-3 md:mb-6">
                             About Us
                         </div>
 
-                        <div className="relative">
-                            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-4 font-poppins">
+                        <div className="relative ">
+                            <h1 className="max-w-5xl font-helvetica text-3xl md:text-4xl lg:text-7xl font-bold ">
                                 <div>
                                     <span className="text-slate-800">Your </span>
                                     <span className="text-emerald-600 relative">
@@ -37,8 +37,8 @@ function Herosection() {
                     </div>
 
                     {/* Container */}
-                    <div className="max-w-7xl mx-auto px-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div className="max-w-7xl mx-auto md:px-4">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             {/* Hero Image Section */}
                             <div className="relative w-full">
                                 <div className="absolute left-0 top-0 w-1 bg-gradient-to-b from-transparent via-emerald-500 to-transparent h-full" />
@@ -48,7 +48,7 @@ function Herosection() {
                                             <img
                                                 src={heroimg}
                                                 alt="Team collaboration with sticky notes"
-                                                className="w-full h-[500px] md:h-[600px] object-cover"
+                                                className="w-full h-[300px] md:h-[600px] object-cover"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                                             <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-yellow-400 rounded-sm opacity-80"></div>
@@ -61,7 +61,7 @@ function Herosection() {
 
                             {/* Text Content */}
                             <div>
-                                <div className="px-5">
+                                <div className="md:px-5">
                                     <div>
                                         <h3 className="text-xl md:text-3xl font-semibold font-poppins leading-relaxed">
                                             More than a tech service —
@@ -77,8 +77,8 @@ function Herosection() {
                     </div>
 
                     {/* Paragraph content */}
-                    <div className="mt-16">
-                        <div className="max-w-7xl mx-auto space-y-8 px-4">
+                    <div className="mt-5 md:mt-16">
+                        <div className="max-w-7xl mx-auto space-y-8 md:px-4">
                             <div>
                                 <p className="text-gray-700 font-poppins text-xs md:text-[20px] leading-relaxed text-center ">
                                     Fifteen years ago, businesses were overwhelmed by fragmented systems, manual processes, and outdated digital tools. Betasys.ai was founded to change that — with a vision to simplify complexity through purposeful technology. What began as a small team offering software solutions has grown into a company that builds intelligent systems to help businesses operate smarter, faster, and with greater clarity.

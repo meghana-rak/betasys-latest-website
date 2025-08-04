@@ -33,10 +33,10 @@ function OurMission() {
     return (
         <div>
             {/* Our Mission Section */}
-            <div >
-                <div className="max-w-7xl mx-auto px-16 pt-40">
+            <div className='min-h-[100vh]'>
+                <div className="max-w-7xl mx-auto px-3 md:px-16 pt-10 ">
                     {/* Mission Header */}
-                    <div className={`mb-16 transition-all duration-800 delay-300 `}>
+                    <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
                         {/* Green accent line */}
                         {/* <div className="w-1 h-16 bg-emerald-500 mb-8"></div> */}
 
@@ -57,7 +57,7 @@ function OurMission() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
                         {/* Values Card */}
                         <div className={`transition-all duration-800 delay-500 `}>
-                            <div className="bg-slate-800 rounded-2xl p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+                            <div className="bg-slate-800 rounded-2xl p-4 md:p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
                                 {/* Green accent line */}
                                 {/* <div className="absolute left-0 top-0 w-1 h-full bg-emerald-500"></div> */}
 
@@ -81,7 +81,7 @@ function OurMission() {
 
                         {/* Pillars Card */}
                         <div className={`transition-all duration-800 delay-700 `}>
-                            <div className="bg-slate-800 rounded-2xl p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+                            <div className="bg-slate-800 rounded-2xl p-4 md:p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
                                 <div className="relative z-10 flex flex-col justify-between gap-8">
                                     <p className="text-gray-300 text-xs line-clamp-6 md:text-lg font-poppins leading-relaxed font-light">
                                         Our work stands on a foundation of strong beliefs. Integrity, innovation, and empathy lead the way. These principles shape our team and culture. They keep us aligned, accountable, and inspired.
@@ -106,7 +106,7 @@ function OurMission() {
 
                         {/* Ethos Card */}
                         <div className={`transition-all duration-800 delay-900 `}>
-                            <div className="bg-slate-800 rounded-2xl p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
+                            <div className="bg-slate-800 rounded-2xl p-4 md:p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
                                 <div className="relative z-10 flex flex-col justify-between gap-8">
                                     <p className="text-gray-300 text-xs line-clamp-6 md:text-lg font-poppins leading-relaxed font-light">
                                         What we believe shapes what we create. Our ethos is built on trust, purpose, and bold thinking. It lives in our mindset and in every detail. And it's reflected in the impact we aim to deliver.
