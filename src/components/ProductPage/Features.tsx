@@ -1,7 +1,7 @@
 import React from "react";
-import features from "../assests/Feature.png";
+import features from "../../assests/ProductPage/Feature.png"
 
-const FeaturesPage = () => {
+const Features = () => {
   return (
     <div className="flex items-center justify-center min-h-screen px-4 py-14 md:px-0 lg:py-16 bg-gradient-to-r from-white to-green-50 sm:py-20">
       <div className="relative grid items-start w-full grid-cols-1 max-w-7xl md:grid-cols-3 sm:grid-cols-2 gap-y-8">
@@ -58,4 +58,4 @@ const FeaturesPage = () => {
   );
 };
 
-export default FeaturesPage;
+export default Features;

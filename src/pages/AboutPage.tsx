@@ -52,10 +52,10 @@
 //     return (
 //         <div className="relative min-h-[200vh] bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 overflow-hidden">
 //             {/* Fixed Vertical Stroke */}
-//             <div className="fixed top-1/2 left-5 transform -translate-y-1/2 z-50">
-//                 <div className="w-1 h-56 bg-green-200 relative rounded-full">
+//             <div className="fixed z-50 transform -translate-y-1/2 top-1/2 left-5">
+//                 <div className="relative w-1 h-56 bg-green-200 rounded-full">
 //                     <div
-//                         className="absolute w-1 h-16 bg-green-700 rounded-full left-1/2 -translate-x-1/2 transition-all duration-300"
+//                         className="absolute w-1 h-16 transition-all duration-300 -translate-x-1/2 bg-green-700 rounded-full left-1/2"
 //                         style={{ top: `${activeIndex * 80}px` }} // adjust 80px spacing between dots
 //                     ></div>
 //                 </div>
@@ -65,7 +65,7 @@
 //             <div ref={(el) => (sectionRefs.current[0] = el)} >
 //                 <motion.div
 //                     ref={(el) => (sectionRefs.current[0] = el)}
-//                     // className="min-h-screen flex items-center"
+//                     // className="flex items-center min-h-screen"
 //                     initial={{ opacity: 1, y: 50 }}
 //                     whileInView={{ opacity: 1, y: 0 }}
 //                     viewport={{ once: false, amount: 0.4 }}
@@ -77,7 +77,7 @@
 //             <div ref={(el) => (sectionRefs.current[1] = el)} >
 //                 <motion.div
 //                     ref={(el) => (sectionRefs.current[1] = el)}
-//                     // className="min-h-screen flex items-center"
+//                     // className="flex items-center min-h-screen"
 //                     initial={{ opacity: 0, y: 50 }}
 //                     whileInView={{ opacity: 1, y: 0 }}
 //                     viewport={{ once: false, amount: 0.4 }}
@@ -89,7 +89,7 @@
 //             <div ref={(el) => (sectionRefs.current[2] = el)} >
 //                 <motion.div
 //                     ref={(el) => (sectionRefs.current[2] = el)}
-//                     // className="min-h-screen flex items-center"
+//                     // className="flex items-center min-h-screen"
 //                     initial={{ opacity: 0, y: 50 }}
 //                     whileInView={{ opacity: 1, y: 0 }}
 //                     viewport={{ once: false, amount: 0.4 }}
@@ -101,7 +101,7 @@
 //             <div ref={(el) => (sectionRefs.current[3] = el)} >
 //                  <motion.div
 //                     ref={(el) => (sectionRefs.current[3] = el)}
-//                     // className="min-h-screen flex items-center"
+//                     // className="flex items-center min-h-screen"
 //                     initial={{ opacity: 0, y: 50 }}
 //                     whileInView={{ opacity: 1, y: 0 }}
 //                     viewport={{ once: false, amount: 0.4 }}
@@ -158,13 +158,13 @@ const AboutPage = () => {
     return (
         <div
             ref={containerRef}
-            className="h-screen bottom-10 w-screen overflow-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative"
+            className="relative w-screen h-screen overflow-hidden bottom-10 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
         >
             {/* Fixed Stroke */}
-            <div className="fixed top-1/2 left-5 transform -translate-y-1/2 z-50">
-                <div className="w-1 h-56 bg-green-200 relative rounded-full">
+            <div className="fixed z-50 transform -translate-y-1/2 top-1/2 left-5">
+                <div className="relative w-1 h-56 bg-green-200 rounded-full">
                     <div
-                        className="absolute w-1 h-14 bg-green-700 rounded-full left-1/2 -translate-x-1/2 transition-all duration-300"
+                        className="absolute w-1 transition-all duration-300 -translate-x-1/2 bg-green-700 rounded-full h-14 left-1/2"
                         style={{ top: `${activeIndex * 80}px` }}
                     ></div>
                 </div>
