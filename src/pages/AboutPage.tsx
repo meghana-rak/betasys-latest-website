@@ -126,8 +126,8 @@ import OurMission from '../components/Aboutpage/OurMission';
 import GuidedBy from '../components/Aboutpage/GuidedBy';
 import Banner from "../components/Aboutpage/Banner";
 
-// const components = [<Banner/>, <Herosection />, <OurMission />, <OurValues />, <GuidedBy />];
-const components = [<Banner/>];
+const components = [<Banner/>,  <OurMission />, <OurValues />, <GuidedBy />];
+// const components = [<Banner/>];
 
 const AboutPage = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -160,7 +160,7 @@ const AboutPage = () => {
     return (
         <div
             ref={containerRef}
-            className="relative w-screen h-screen  bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
+            className="relative w-screen min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
         >
             {/* Fixed Stroke */}
             <div className="fixed z-50 transform -translate-y-1/2 top-1/2 left-5">
