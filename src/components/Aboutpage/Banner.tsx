@@ -98,7 +98,7 @@ function Banner() {
 
         {/* Paragraph floats from bottom */}
         <div
-          className={`absolute mt-5 md:mt-16 transition-all duration-700 ease-in-out ${
+          className={` mt-5 md:mt-16 transition-all duration-700 ease-in-out ${
             showParagraph
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"

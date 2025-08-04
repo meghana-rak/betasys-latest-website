@@ -4,6 +4,42 @@ function OurMission() {
     const [showTransformedLayout, setShowTransformedLayout] = useState(false);
     const [showMissionSection, setShowMissionSection] = useState(false);
     const [scrollY, setScrollY] = useState(0);
+      const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+ 
+
+  useEffect(() => {
+    setIsLoaded(true);
+    const timer = setTimeout(() => setIsVisible(true), 200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+      
+      // Trigger transformation when scrolled past 400px
+      if (currentScrollY > 400) {
+        setShowTransformedLayout(true);
+      } else {
+        setShowTransformedLayout(false);
+      }
+      
+      // Show mission section when scrolled past 800px
+      if (currentScrollY > 800) {
+        setShowMissionSection(true);
+      } else {
+        setShowMissionSection(false);
+      }
+      
+     
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,10 +66,16 @@ function OurMission() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
     return (
         <div>
             {/* Our Mission Section */}
-            <div className='min-h-[100vh]'>
+           <div className={`transition-all duration-1000 ${
+          showMissionSection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'
+        } ${showMissionSection ? 'fixed top-0 left-0 right-0 bottom-0 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 z-30 overflow-y-auto' : 'hidden'}`}>
+          <div className="max-w-7xl mx-auto px-16 pt-40">
+            {/* Mission Header */}
+            <div className={`mb-16 transition-all duration-800 delay-300 ${showMissionSection ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}>
                 <div className="max-w-7xl mx-auto px-3 md:px-16 pt-10 ">
                     {/* Mission Header */}
                     <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
@@ -129,6 +171,8 @@ function OurMission() {
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
     )
 }
