@@ -28,7 +28,9 @@ const Header = () => {
   ];
 
 
-  const isSpecialPath = location.pathname === '/aboutus'
+  const specialPaths = ['/aboutus', '/EbookDetails', '/product'];
+  const isSpecialPath = specialPaths.some(path => location.pathname.startsWith(path));
+
   return (
       // <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <header
@@ -41,7 +43,7 @@ const Header = () => {
       }`}
     >
       <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="flex gap-3 items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 gap-3">
           {/* Logo */}
           <div className="w-40">
             <Link to="/">
