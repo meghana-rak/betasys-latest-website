@@ -124,8 +124,10 @@ import Herosection from '../components/Aboutpage/Herosection';
 import OurValues from '../components/Aboutpage/OurValues';
 import OurMission from '../components/Aboutpage/OurMission';
 import GuidedBy from '../components/Aboutpage/GuidedBy';
+import Banner from "../components/Aboutpage/Banner";
 
-const components = [<Herosection />, <OurMission />, <OurValues />, <GuidedBy />];
+// const components = [<Banner/>, <Herosection />, <OurMission />, <OurValues />, <GuidedBy />];
+const components = [<Banner/>];
 
 const AboutPage = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -158,14 +160,14 @@ const AboutPage = () => {
     return (
         <div
             ref={containerRef}
-            className="relative w-screen h-screen overflow-hidden bottom-10 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
+            className="relative w-screen h-screen  bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50"
         >
             {/* Fixed Stroke */}
             <div className="fixed z-50 transform -translate-y-1/2 top-1/2 left-5">
                 <div className="relative w-1 h-56 bg-green-200 rounded-full">
                     <div
                         className="absolute w-1 transition-all duration-300 -translate-x-1/2 bg-green-700 rounded-full h-14 left-1/2"
-                        style={{ top: `${activeIndex * 80}px` }}
+                        style={{ top: `${activeIndex * 50}px` }}
                     ></div>
                 </div>
             </div>
@@ -178,7 +180,7 @@ const AboutPage = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.6 }}
-                    className="absolute top-28 left-0 w-full h-[100vh] flex items-center justify-center"
+                    className="absolute  left-0 w-full  flex items-center justify-center"
                 >
                     {components[activeIndex]}
                 </motion.div>
