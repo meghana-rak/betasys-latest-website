@@ -19,10 +19,10 @@ const Partners = () => {
           {/* Left Text Section - 60% (3 columns) */}
           <div className="md:col-span-3">
             <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">Our Partners</p>
-            <h2 className="text-2xl md:text-4xl font-helvetica font-regular text-gray-900 my-1">
+            <h2 className="text-2xl md:text-3xl font-helvetica font-regular text-gray-900 my-1">
               Powered by <span className="font-bold">Leading AI Technologies</span>
             </h2>
-            <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-lg leading-relaxed mb-8">
+            <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-[20px] leading-relaxed mb-8">
               Explore expert content, practical guides, and real-world use cases to unlock AI’s potential for your business.
             </p>
           </div>

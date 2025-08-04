@@ -68,7 +68,7 @@ const BlogGrid = () => {
   return (
     <div className="flex-1">
       <div className="mb-6">
-          <h2 className="md:text-4xl text-2xl font-helvetica font-bold text-gray-900 my-1">Blog</h2>
+          <h2 className="text-lg font-helvetica font-bold text-black my-1">Blog</h2>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
         {blogPosts.map((post, index) => (

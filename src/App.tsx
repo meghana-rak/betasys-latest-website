@@ -13,6 +13,8 @@ import EbookDetails from './pages/EbookDetails';
 import AboutPage from './pages/AboutPage';
 import FeaturesPage from './pages/FeaturesPage';
 import Faq from './pages/Faq';
+import ProductPage from './pages/ProductPage';
+
 
 
 function App() {
@@ -37,12 +39,10 @@ function App() {
         <Route path='/blogdetails' element={<BlogDetails />} />
         <Route path='/ebooklisting' element={<EbookListing />} />
         <Route path='/ebookdetails' element={<EbookDetails />} />
-        <Route path='/aboutus' element={<AboutPage />} />
-        
+        <Route path='/aboutus' element={<AboutPage />} />        
         <Route path='/features' element={<FeaturesPage />} />
         <Route path="/faq" element={<Faq/>} />
-        
-        
+        <Route path='/product' element={<ProductPage />} />
       </Routes>
       <CTA />
       <Footer />

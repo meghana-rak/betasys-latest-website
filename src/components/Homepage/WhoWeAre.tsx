@@ -60,10 +60,10 @@ const WhoWeAre = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">WHO WE ARE</p>
-          <h2 className="md:text-4xl text-2xl font-helvetica font-regular text-gray-900 my-1">
+          <h2 className="md:text-3xl text-2xl font-helvetica font-regular text-gray-900 my-1">
             Driving Business <span className='font-bold'> Growth Through AI</span>
           </h2>
-          <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-lg  mb-8">
+          <p className="max-w-4xl text-gray-600 leading-relaxed font-poppins text-xs md:text-[20px]  mb-8">
             At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.          </p>
         </div>
 
@@ -96,7 +96,7 @@ const WhoWeAre = () => {
             </div>
           </div>
           <div>
-            <p className='font-poppins text-gray-700 text-xs md:text-lg'>At Betasys, we specialize in turning complex AI technologies into practical, results-driven solutions for businesses of all sizes. Our team blends deep technical expertise with a strong understanding of business needs to deliver custom-built AI tools that improve efficiency, enhance customer experiences, and drive data-informed decisions. Whether you're just starting your AI journey or scaling your existing systems, we're here to guide you every step of the way.</p>
+            <p className='font-poppins text-gray-700 leading-relaxed text-xs md:text-[20px]'>At Betasys, we specialize in turning complex AI technologies into practical, results-driven solutions for businesses of all sizes. Our team blends deep technical expertise with a strong understanding of business needs to deliver custom-built AI tools that improve efficiency, enhance customer experiences, and drive data-informed decisions. Whether you're just starting your AI journey or scaling your existing systems, we're here to guide you every step of the way.</p>
             <button className="bg-[#00A148] hover:bg-[rgb(58,176,99)] my-3  text-white px-3 py-2 md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold transition-colors text-xs md:text-lg ">
               Explore Our AI Expertise
             </button>

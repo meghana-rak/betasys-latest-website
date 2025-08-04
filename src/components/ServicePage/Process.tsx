@@ -53,7 +53,7 @@ const Process: React.FC = () => {
           <h2 className="my-1 text-2xl font-semibold text-white md:text-4xl font-helvetica font-regular">
             Our Consulting Process
           </h2>
-          <p className="text-[#D4D4D4] max-w-4xl  text-xs leading-loose font-poppins md:text-lg  ">
+          <p className="text-[#D4D4D4] max-w-3xl  text-xs leading-relaxed font-poppins md:text-[20px] ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             mollis nunc a molestie dictum. Mauris venenatis, felis scelerisque
             aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum

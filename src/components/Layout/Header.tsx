@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../../assests/logo.png'; 
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,21 +20,28 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Services', path: '/services' },
-    { name: 'Product', path: '#' },
+    { name: 'Product', path: '/product' },
     { name: 'About', path: '/aboutus' },
-    { name: 'Career', path: '#' },
+    // { name: 'Career', path: '#' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contactus' },
   ];
 
+
+  const isSpecialPath = location.pathname === '/aboutus'
   return (
       // <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <header className={`py-5 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
-        : 'bg-transparent'
-      }`}>
+        <header
+      className={`py-5 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isSpecialPath
+          ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800' // custom styles for specific paths
+          : isScrolled
+          ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
+          : 'bg-transparent'
+      }`}
+    >
       <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex gap-3 items-center justify-between h-16">
           {/* Logo */}
           <div className="w-40">
             <Link to="/">

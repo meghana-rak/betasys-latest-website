@@ -40,7 +40,7 @@ const Work: React.FC = () => {
         <h2 className="my-1 text-2xl text-gray-900 md:text-3xl font-helvetica font-regular">
           Who We <span className="font-bold">Work With</span>
         </h2>
-        <p className="max-w-4xl mt-4 mb-10 text-sm leading-loose text-gray-700 md:text-justify font-regular font-poppins md:text-lg">
+        <p className="max-w-4xl mt-2 mb-10 text-sm leading-relaxed text-gray-800 md:text-justify font-regular font-poppins md:text-[20px]">
           Delivering Value Across Sectors and Scales identify high-impact
           opportunities for artificial intelligence, assess readiness, and
           implement scalable AI
@@ -75,7 +75,7 @@ const Work: React.FC = () => {
         <h2 className="my-1 text-2xl text-gray-900 md:text-3xl font-helvetica font-regular">
           Success <span className="font-bold">Stories</span>
         </h2>
-        <p className="max-w-4xl mt-4 mb-10 text-sm leading-loose text-gray-700 md:text-justify font-regular font-poppins md:text-lg">
+        <p className="max-w-4xl mt-2 mb-10 text-sm leading-relaxed text-gray-800 md:text-justify font-regular font-poppins md:text-[20px]">
           Delivering Value Across Sectors and Scales identify high-impact
           opportunities for artificial intelligence, assess readiness, and
           implement scalable AI
@@ -87,10 +87,10 @@ const Work: React.FC = () => {
               key={index}
               className="bg-gradient-to-r from-[#022334] via-[#022334] to-[#06689A] text-white rounded-2xl shadow-md md:p-6 p-4"
             >
-              <p className="mb-8 text-sm font-normal leading-relaxed font-poppins font-regular">
+              <p className="mb-8 text-xs font-light leading-relaxed font-poppins ">
                 {item.quote}
               </p>
-              <p className="font-bold text-sm text-[#FFFFFF] font-poppins">
+              <p className="font-semibold text-sm text-[#FFFFFF] font-poppins">
                 {item.author}
               </p>
             </div>

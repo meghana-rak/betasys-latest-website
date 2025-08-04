@@ -53,10 +53,10 @@ const Services = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">WHAT WE DO</p>
-          <h2 className="md:text-4xl text-2xl font-helvetica font-regular  text-white my-1">
+          <h2 className="md:text-3xl text-2xl font-helvetica font-regular  text-white my-1">
             Why Growing Businesses <span className='font-bold'>Choose Betasys AI</span>
           </h2>
-          <p className="max-w-4xl text-[#E8E8E8] font-poppins text-xs md:text-lg leading-relaxed mb-8">
+          <p className="max-w-4xl text-[#E8E8E8] font-poppins text-xs md:text-[20px] leading-relaxed mb-8">
             Built for agility, clarity, and real business impact—Betasys stands apart from legacy giants.         </p>
         </div>
 
@@ -71,7 +71,7 @@ const Services = () => {
               </div>
               <div>
                 <h3 className="text-xl font-helvetica font-semibold text-white mb-2">{service.title}</h3>
-                <p className="text-gray-300 text-xs md:text-lg font-poppins leading-relaxed font-light">{service.description}</p>
+                <p className="text-gray-300 text-xs md:text-[20px] font-poppins leading-relaxed font-light">{service.description}</p>
               </div>
             </div>
           ))}
