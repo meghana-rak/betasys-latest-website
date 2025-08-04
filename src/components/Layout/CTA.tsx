@@ -5,7 +5,7 @@ const CTA = () => {
   
 
   return (
-    <section className="relative bg-[#00A651] text-white overflow-hidden mb-6">
+    <section className=" bg-[#00A651] text-white  mb-6">
       <div className="px-4 py-4 lg:py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
           {/* Left Text Section */}
