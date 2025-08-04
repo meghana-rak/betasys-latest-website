@@ -11,6 +11,7 @@ import BlogDetails from './pages/BlogDetails';
 import EbookListing from './pages/EbookListing';
 import EbookDetails from './pages/EbookDetails';
 import AboutPage from './pages/AboutPage';
+import ProductPage from './pages/ProductPage';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path='/ebooklisting' element={<EbookListing />} />
         <Route path='/ebookdetails' element={<EbookDetails />} />
         <Route path='/aboutus' element={<AboutPage />} />
+        <Route path='/product' element={<ProductPage />} />
       </Routes>
       <CTA />
       <Footer />
