@@ -8,7 +8,7 @@ const HeroSectionPart2 = () => {
   return (
     // md:pt-[250px] 
     <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-28 pb-16 sm:pb-24 text-center mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-32 pb-16 sm:pb-24 text-center mb-4">
 
         {/* Hero Images */}
         <div

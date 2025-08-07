@@ -18,10 +18,10 @@ const WhyChoose2: React.FC = () => {
   
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className='mb-4'>
-        <h2 className=" text-[#000000]  mb-2 my-1 text-2xl md:text-3xl font-helvetica font-regular">
+          <h2 className="md:text-[38px] text-[28px] leading-tight   font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
           Why Choose <span className="font-bold">Our AI Consulting?</span>
         </h2>
-        <p className="max-w-3xl mt-4 mb-10 text-sm  md:text-justify font-regular  text-gray-800 font-poppins leading-relaxed md:text-[20px]">
+          <p className=" text-gray-700 font-poppins  text-[18px] md:text-[22px] max-w-3xl my-4 ">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,
           
           assess readiness, and implement scalable AI.
@@ -30,7 +30,7 @@ const WhyChoose2: React.FC = () => {
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid gap-4 px-4 mx-auto lg:grid-cols-2 sm:px-6 lg:px-8">
+      <div className="grid gap-4 px-4 mx-auto lg:grid-cols-2 sm:px-6 lg:px-8 py-4">
 
           <div className="flex flex-col max-w-6xl gap-3 mx-auto md:mr-36 lg:flex-row">
             <div className='flex gap-3'>
@@ -54,7 +54,7 @@ const WhyChoose2: React.FC = () => {
 
 
         {/* Right: Bullet Points */}
-       <div className="text-[#1E1E1E] font-poppins pt-2 mt-4 text-md md:text-lg  font-medium">
+       <div className="text-gray-700 flex items-center justify-center font-poppins pt-4 md:[pt-0] text-[18px] md:text-[22px]  ">
           <ul className="px-4 mx-auto space-y-4 list-disc sm:px-6 lg:px-8 ">
             <li>
               <span className="text-[#00A148]">Predictive analytics</span> for demand forecasting.

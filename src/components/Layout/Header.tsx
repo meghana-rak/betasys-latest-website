@@ -56,11 +56,11 @@ const Header = () => {
           <nav className="hidden space-x-6 md:flex font-poppins">
             {navLinks.map(({ name, path }) =>
               path.startsWith('/') ? (
-                <Link key={name} to={path} className="text-sm text-white lg:text-lg hover:text-green-400">
+                <Link key={name} to={path} className="text-[16px] text-white lg:text-[20px] hover:text-green-400">
                   {name}
                 </Link>
               ) : (
-                <a key={name} href={path} className="text-sm text-white lg:text-lg hover:text-green-400">
+                <a key={name} href={path} className="text-[16px] text-white lg:text-[20px] hover:text-green-400">
                   {name}
                 </a>
               )

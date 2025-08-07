@@ -13,7 +13,7 @@ const ContactUsPage = () => {
     const { isVisible, setElement } = useIntersectionObserver();
     const label = "Contact Us"
     return (
-        <div className="bg-white text-gray-900">
+        <div className="bg-white ">
             {/* Header Section */}
             {/* <div className="bg-[#002A44] text-white px-6 py-16 relative">
                 <h2 className="text-green-400 text-sm font-semibold mb-2">Label</h2>
@@ -35,22 +35,22 @@ const ContactUsPage = () => {
                 <div className="relative max-w-7xl justify-between grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto px-4 sm:px-6 lg:px-8">
                     <div className=" pr-12 flex justify-between flex-col">
                         <div>
-                            <h3 className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">GET IN TOUCH</h3>
+                            <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">GET IN TOUCH</p>
                             <h2 className="text-xl font-helvetica font-regular md:text-3xl  text-black my-1">
                                 We are ready to help you and
                                 <span className='font-bold'> Answer your question</span>
                             </h2>
-                            <p className="max-w-4xl text-gray-600 font-poppins leading-tight text-xs md:text-[20px] ">Explore expert content, practical guides, and real-world use cases to for your business.</p>
+                             <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">Explore expert content, practical guides, and real-world use cases to for your business.</p>
                         </div>
                         <div>
-                            <p className="font-semibold text-black font-poppins lg:my-0 my-2">Call Center</p>
-                            <p className="text-gray-700 font-poppins text-xs md:text-[20px]">(778) 686-2396</p>
-                            <p className="text-gray-700 font-poppins text-xs md:text-[20px]">(572) 481-6883</p>
+                            <p className="font-semibold text-black font-poppins lg:my-0  text-[22px] md:text-[24px]">Call Center</p>
+                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">(778) 686-2396</p>
+                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">(572) 481-6883</p>
                         </div>
 
-                        <div className=" " >
-                            <p className="font-semibold text-black font-poppins lg:my-0 my-2">Address</p>
-                            <p className="text-gray-700 font-poppins text-xs md:text-[20px]">4th Floor, Chidanand Heights<br />
+                        <div className=" my-4 " >
+                            <p className="font-semibold text-black font-poppins lg:my-0  text-[22px] md:text-[24px]">Address</p>
+                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">4th Floor, Chidanand Heights<br />
                                 Manish Nagar, Nagpur - 440025<br />
                                 Maharashtra, India</p>
                         </div>

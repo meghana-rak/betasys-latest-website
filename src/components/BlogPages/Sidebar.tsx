@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
     <>
       {/* Hamburger Button  */}
       {/* <div className="block min-[1000px]:hidden left-4 z-50"> */}
-      <div className="block md:hidden left-4 z-50">
+      <div className="block lg:hidden left-4 z-50 mb-2">
         <button
           onClick={() => setIsOpen(true)}
           className="text-[#00A148] hover:scale-110 transition-transform duration-200"
@@ -73,21 +73,21 @@ const Sidebar: React.FC = () => {
 
       {/* Desktop Sidebar */}
       {/* <aside className="hidden min-[1000px]:block sticky w-full p-4 bg-white rounded-lg shadow-sm lg:w-60 h-[100vh] top-10 mr-10"> */}
-      <aside className="hidden md:block sticky w-48 py-6 px-6 bg-[#F0F0F0B2] border-[#DFDFDF8F] border-2 rounded-lg shadow-sm  h-[100vh] top-16 ml-8">
-        <h2 className="mb-4 text-lg font-bold text-[#00A148]">Categories</h2>
+      <aside className="hidden lg:block sticky lg:w-64 py-6 px-6 bg-[#F0F0F0]/30 border-[#DFDFDF8F]/30 border-2 rounded-lg shadow-sm  h-screen ">
+    <h2 className="text-[#00A148] font-semibold text-[24px] md:text-[28px]  font-poppins mb-4">Categories</h2>
         <ul className="space-y-2">
           {categories.map((category, index) => (
             <li key={index}>
               <a
                 href="#"
-                className="block font-semibold text-black transition-colors rounded-md text-[15px] hover:text-emerald-600 hover:bg-emerald-50"
+                className=" font-poppins font-medium text-gray-700 transition-colors  rounded-md text-[18px] lg:text-[20px] hover:text-emerald-600 hover:bg-emerald-50"
               >
                 {category}
               </a>
             </li>
           ))}
         </ul>
-      </aside>
+      </aside> 
     </>
   );
 };

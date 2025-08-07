@@ -8,7 +8,7 @@ const Insights = () => {
   return (
     <section
       ref={setElement}
-      className={`py-10 md:py-20 bg-gray-50 transition-all duration-1000 ${isVisible
+      className={`py-10 md:py-20  transition-all duration-1000 ${isVisible
         ? 'opacity-100 translate-y-0'
         : 'opacity-0 translate-y-16'
         }`}
@@ -16,16 +16,16 @@ const Insights = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex lg:flex-row flex-col justify-between items-start mb-12 transition-all duration-1000 delay-200 `}>
           <div>
-            <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">Insights & Resources</p>
-            <h2 className="text-2xl font-helvetica font-regular md:text-3xl text-gray-900 my-1">
+           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">Insights & Resources</p>
+             <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               AI <span className='font-bold'> Business Insights</span>
             </h2>
-            <p className="max-w-3xl leading-relaxed text-gray-600 font-poppins text-xs md:text-[20px] mb-2 ">
+             <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
               Explore expert content, practical guides, and real-world use cases to unlock AI’s potential for your business.        </p>
           </div>
           <Link to=''>
             <button className="bg-[#00A148]  hover:bg-green-500 text-white px-2 py-1 lg:px-4 lg:py-2 rounded-lg font-regular transition-all duration-500 transform hover:scale-105 hover:shadow-xl hover:shadow-[#00A148]/25 relative overflow-hidden">
-              <span className="relative z-10 font-poppins text-xs ">See All Blog</span>
+              <span className="relative z-10 font-poppins text-[16px] md:text-[20px] ">See All Blog</span>
             </button>
           </Link>
         </div>
@@ -43,15 +43,15 @@ const Insights = () => {
                   className=" w-full lg:h-full  object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                  <div className="absolute top-4 left-4">
-                  <span className="bg-[#00A148] text-white px-3 py-1 rounded-full text-xs font-semibold">Healthcare</span>
+                  <span className="bg-[#00A148] text-white px-3 py-1 rounded-full text-[16px] md:text-[18px]  font-semibold">Healthcare</span>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="text-gray-500 text-sm font-poppins font-medium">19/06/2025</div>
-              <h3 className="text-xl font-bold text-gray-700 my-2 group-hover:text-[#00A148] transition-colors duration-300">
+              <div className="text-gray-500 pt-2 text-[16px] font-poppins font-medium">19/06/2025</div>
+              <h3 className="text-[22px] md:text-[24px] xl:text-[28px] leading-tight font-bold text-gray-700 my-2 group-hover:text-[#00A148] transition-colors duration-300">
                 The Future of AI in Healthcare Transforming Patient Care
               </h3>
-              <p className="text-gray-600 font-poppins text-sm md:text-md leading-relaxed">
+              <p className="text-gray-700 font-poppins text-[16px] md:text-[18px] leading-tight">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum.
               </p>
             </div>
@@ -74,11 +74,11 @@ const Insights = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="text-gray-500 text-sm font-poppins font-medium ">19/06/2025</div>
-              <h3 className="text-xl font-semibold font-poppins  text-gray-700 my-2 group-hover:text-[#00A148] transition-colors duration-300">
+              <div className="text-gray-500 pt-2  text-[16px] font-poppins font-medium ">19/06/2025</div>
+              <h3 className="text-[22px] md:text-[24px] xl:text-[28px] font-semibold font-poppins leading-tight text-gray-700 my-2 group-hover:text-[#00A148] transition-colors duration-300">
                 The Future of AI in Healthcare Transforming Patient Care
               </h3>
-              <p className="text-gray-600 font-poppins text-sm md:text-md leading-relaxed">
+             <p className="text-gray-700 font-poppins text-[16px] md:text-[18px] leading-tight">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum.
               </p>
             </div>
@@ -114,10 +114,10 @@ const Insights = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <div className="text-gray-500 text-sm font-poppins font-medium">19/06/2025</div>
-                      <span className="bg-[#00A148] text-white px-2 py-1 rounded-full text-xs font-semibold">Healthcare</span>
+                      <div className="text-gray-500 text-[16px] font-poppins font-medium">19/06/2025</div>
+                      <span className="bg-[#00A148] text-white px-2 py-1 rounded-full text-[16px] font-semibold">Healthcare</span>
                     </div>
-                    <h4 className="font-semibold text-sm  md:text-lg text-gray-800 group-hover:text-[#00A148] transition-colors duration-300 leading-tight">
+                    <h4 className="font-semibold text-[22px] md:text-[24px] xl:text-[28px]  text-gray-800 group-hover:text-[#00A148] transition-colors duration-300 leading-tight">
                       {article.title}
                     </h4>
                   </div>

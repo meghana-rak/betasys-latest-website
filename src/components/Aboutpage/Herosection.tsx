@@ -86,11 +86,11 @@ function Herosection() {
 
 
             {/* Main Content */}
-            <main className="relative z-10 px-3 md:px-6 pt-32">
+            <main className="relative z-10 px-3 md:px-6 md:pt-32 ">
                 <div>
                     {/* Hero Section */}
                     <div className="text-center md:mb-16">
-                        <div className="text-slate-700 font-semibold text-lg font-poppins mb-3 md:mb-6">
+                        <div className="text-[#5A5A5A] font-semibold text-lg font-poppins mb-3 md:mb-6">
                             About Us
                         </div>
 
@@ -137,7 +137,7 @@ function Herosection() {
                                             <img
                                                 src={heroimg}
                                                 alt="Team collaboration with sticky notes"
-                                                className={`w-full object-cover transition-all duration-1000 group-hover:scale-105 ${showTransformedLayout ? 'h-full' : 'h-[500px] md:h-[600px]'
+                                                className={`w-full object-cover transition-all duration-1000 group-hover:scale-105 ${showTransformedLayout ? 'w-full h-full' : 'h-[500px] md:h-[600px]'
                                                     }`}
                                             />
 
@@ -156,7 +156,7 @@ function Herosection() {
                             {/* Text Content - Appears alongside transformed image */}
                             <div className={`transition-all duration-1000 ${showTransformedLayout ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-16 pointer-events-none'
                                 } ${showTransformedLayout ? 'fixed top-40 left-80 right-16 z-10' : 'hidden'}`}>
-                                <div className="space-y-8 pt-4">
+                                <div className="md:space-y-8 pt-4">
                                     {/* Main heading */}
                                     <div className={`transition-all duration-800 delay-300 ${showTransformedLayout ? 'translate-x-0 opacity-100' : 'translate-x-16 opacity-0'}`}>
                                         <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">

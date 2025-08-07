@@ -47,7 +47,7 @@ function EbookDetails() {
               Our <span className="font-bold">Book</span>
             </span>
           </h2>
-          <p className="text-[15px] sm:text-[16px] text-gray-600 mb-10 sm:mb-14 max-w-3xl leading-relaxed font-poppins">
+          <p className="text-[15px] sm:text-[16px] text-gray-700 mb-10 sm:mb-14 max-w-3xl leading-relaxed font-poppins">
             Delivering Value Across Sectors and Scales identify high-impact
             opportunities for artificial intelligence, assess readiness, and
             implement scalable AI

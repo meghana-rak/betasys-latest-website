@@ -53,7 +53,7 @@ function GuidedBy() {
                     <h2 className="md:text-4xl text-2xl font-helvetica font-regular text-gray-900 my-1">
                         Guided by Vision, <span className='font-bold'> Driven by Purpose </span>
                     </h2>
-                    <p className=" text-center  text-gray-600 font-poppins text-xs md:text-lg  mb-8">
+                    <p className=" text-center  text-gray-700 font-poppins text-xs md:text-lg  mb-8">
                         At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.
                     </p>
                 </div>

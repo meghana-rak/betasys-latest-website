@@ -10,17 +10,17 @@ const CTA = () => {
         <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
           {/* Left Text Section */}
           <div className="text-left">
-            <h2 className="text-2xl font-bold md:text-3xl ">
+            <h2 className="text-[28px]  md:text-[42px] font-helvetica font-bold leading-tight">
               Book an AI Strategy Session
             </h2>
-            <p className="mb-4 text-xs md:text-sm text-white/80">
+            <p className="mb-4 text-[18px] md:text-[22px] text-white/80">
               Fill this form to book a 30-minute Strategy Session with our CTO
             </p>
           </div>
 
           {/* Right Button Section */}
           <div className="shrink-0">
-            <button className="px-6 py-2 md:py-3 text-sm font-semibold text-white rounded-lg bg-[#002A3A] hover:bg-[#00394f] transition duration-300">
+            <button className="px-6 py-2 md:py-2 text-[16px] md:text-[18px] font-semibold text-white rounded-lg bg-[#002A3A] hover:bg-[#00394f] transition duration-300">
               Contact Us
             </button>
           </div>

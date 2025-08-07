@@ -8,11 +8,11 @@ const HeroSection = () => {
   return (
     // md:pt-[250px] 
     <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-28 pb-16 sm:pb-24 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6  sm:pt-12 pb-16 sm:pb-24 text-center">
         
         {/* Small heading */}
         <motion.p
-          className="text-[#5A5A5A] text-[16px] sm:text-[18px] font-semibold mb-3 tracking-wide font-poppins"
+          className=" font-semibold text-lg  mb-3 md:mb-6 text-[#5A5A5A] text-[16px] sm:text-[18px] tracking-wide font-poppins "
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

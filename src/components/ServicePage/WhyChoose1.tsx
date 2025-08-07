@@ -22,56 +22,56 @@ const WhyChoose1: React.FC = () => {
     },
   ];
 
-   const { isVisible, setElement } = useIntersectionObserver();
-  
-    return (
-      <section
-        ref={setElement}
-        className={`py-10  transition-all duration-1000 ${isVisible
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-16'
-          }`}
-      >
+  const { isVisible, setElement } = useIntersectionObserver();
 
-{/* <section className="px-4 py-12 bg-white sm:px-6 lg:px-20"> */}
+  return (
+    <section
+      ref={setElement}
+      className={`py-10  transition-all duration-1000 ${isVisible
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-16'
+        }`}
+    >
+
+      {/* <section className="px-4 py-12 bg-white sm:px-6 lg:px-20"> */}
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-       
-         <h2 className="my-1 text-2xl text-[#000000] md:text-3xl font-helvetica font-regular">
-            Why Choose <span className='font-bold'>Our AI Consulting?</span>
-          </h2>
-        <p className="mt-2 mb-10 text-xs  md:text-justify font-regular text-gray-800 font-poppins leading-relaxed md:text-[20px]">
+
+        <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+          Why Choose <span className='font-bold'>Our AI Consulting?</span>
+        </h2>
+        <p className=" text-gray-700 font-poppins my-4 text-[18px] md:text-[22px] ">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,
           assess readiness, and implement scalable AI solutions aligned with business goals. Whether you’re just exploring
           AI or ready to transform operations, we guide you through every step of the journey.
         </p>
 
-   
 
-       <div className={` transition-all duration-1000 delay-500 ${isVisible
+
+        <div className={` transition-all duration-1000 delay-500 ${isVisible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-12'
           }`}>
-      {/* First Row */}
-      <div className="flex flex-col gap-3 mx-auto max-w-7xl lg:flex-row">
-        <div className="flex-1 ">
-          <Card title={cards[0].title} text={cards[0].text} />
-        </div>
-        <div className="flex-[0.6] ">
-          <Card title={cards[1].title} text={cards[1].text} />
-        </div>
-      </div>
+          {/* First Row */}
+          <div className="flex flex-col gap-3 mx-auto max-w-7xl lg:flex-row">
+            <div className="flex-1 ">
+              <Card title={cards[0].title} text={cards[0].text} />
+            </div>
+            <div className="flex-[0.8] ">
+              <Card title={cards[1].title} text={cards[1].text} />
+            </div>
+          </div>
 
-      {/* Second Row */}
-      <div className="flex flex-col gap-3 mx-auto mt-4 lg:flex-row max-w-7xl">
-        <div className="flex-[0.6] ">
-          <Card title={cards[2].title} text={cards[2].text} />
-        </div>
-        <div className="flex-1 ">
-          <Card title={cards[3].title} text={cards[3].text} />
+          {/* Second Row */}
+          <div className="flex flex-col gap-3 mx-auto mt-4 lg:flex-row max-w-7xl">
+            <div className="flex-[0.8] ">
+              <Card title={cards[2].title} text={cards[2].text} />
+            </div>
+            <div className="flex-1 ">
+              <Card title={cards[3].title} text={cards[3].text} />
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-         </div>
     </section>
   );
 };
@@ -83,20 +83,27 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, text }) => {
   return (
-    <div className="relative rounded-lg overflow-hidden min-h-[220px] sm:min-h-[240px] lg:min-h-[240px] bg-[#001e2d] text-white  ">
+    <div className="relative rounded-xl overflow-hidden h-full mt-4 bg-[#001e2d] text-white">
       <img
         src={servicereactangle}
         alt="glow"
         className="absolute inset-0 object-cover w-full h-full"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-30" />
-      <div className="relative z-10 flex flex-col justify-between h-full p-4">
-        <p className="text-sm font-poppins text-[#E4E4E4] leading-relaxed mb-10 font-regular mt-4">
-          {text}
-        </p>
-        <h3 className="mt-2 font-semibold text-md font-helvetica">{title}</h3>
+      <div className="absolute inset-0 bg-black bg-opacity-10" />
+
+      {/* Main content */}
+      <div className="relative z-10 flex flex-col justify-between px-8 py-6 h-full">
+        <div className="flex-1">
+          <p className="font-poppins lg:text-justify text-[18px] md:text-[22px] text-[#E4E4E4] leading-relaxed font-regular">
+            {text}
+          </p>
+        </div>
+        <h3 className="font-semibold text-[24px] md:text-[28px] font-poppins mt-4">
+          {title}
+        </h3>
       </div>
     </div>
+
   );
 };
 

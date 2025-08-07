@@ -103,7 +103,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeftCircle, ArrowRightCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import Mobile from "../../assests/ProductPage/mobile.png";
 import Laptop from "../../assests/ProductPage/laptop.png";
 import Ipad from "../../assests/ProductPage/ipad.png";
@@ -116,7 +116,7 @@ const slides = [
     description:
       "Automatically track fuel, lubricants, and store stock levels. Get low-stock alerts and manage reorder points with ease.",
     image: Mobile,
-    imageClass: "h-auto", 
+    imageClass: "h-auto",
   },
   {
     title: "Live Sales Tracking",
@@ -147,9 +147,9 @@ const FeatureCarousel = () => {
 
   return (
     <section className="relative py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         {/* Carousel Container */}
-        <div className="relative w-full overflow-hidden">
+        <div className="">
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${current * 100}%)` }}
@@ -157,51 +157,55 @@ const FeatureCarousel = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-full flex flex-col lg:flex-row items-center justify-between px-4 lg:px-12"
+                className="flex-shrink-0 w-full  grid  md:grid-cols-2 grid-cols-1 items-center justify-between px-4 lg:px-12"
               >
                 {/* Text Section with animation */}
                 <motion.div
                   key={current} // Force re-trigger animation on slide change
-                  className="lg:max-w-3xl text-center lg:text-left"
+                  className="lg:max-w-3xl text-center lg:text-left order-2 md:order-1 "
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1, duration: 0.8 }}
                 >
-                  <h2 className="text-[44px] text-[#000000] mb-0 lg:mb-2 leading-snug font-helvetica font-semibold">
+                  <h2 className="text-xl md:text-3xl text-[#000000] mb-0 lg:mb-2 leading-snug font-helvetica font-semibold">
                     {slide.title}
                   </h2>
                   <p className="text-[#000000] font-poppins font-medium text-[20px] leading-relaxed">
                     {slide.description}
                   </p>
+                  {/* Navigation Arrows */}
+                  <div className=" mt-3   flex  justify-center lg:justify-start space-x-4 w-full lg:w-3/5 relative z-10">
+                    <button
+                      onClick={prevSlide}
+                      className="flex items-center justify-start transition"
+                    >
+                      <ArrowLeftCircle className="md:w-8 md:h-8" />
+                    </button>
+                    <button
+                      onClick={nextSlide}
+                      className="flex items-center justify-center transition"
+                    >
+                      <ArrowRightCircle className="md:w-8 md:h-8" />
+
+                    </button>
+                  </div>
                 </motion.div>
 
                 {/* Image Section */}
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center order-1 md:order-2">
                   <img
                     src={slide.image}
                     alt={slide.title}
                     className={`${slide.imageClass} object-contain w-[150px] sm:w-[200px] md:w-[240px] lg:w-auto mb-4`}
                   />
                 </div>
+
               </div>
             ))}
           </div>
+
         </div>
-        {/* Navigation Arrows */}
-        <div className="sm:mr-0 md:mr-[40px] lg:mr-[388px]  -mt-24 lg:-mt-28 flex justify-start space-x-4 w-full lg:w-3/5 relative z-10">
-          <button
-            onClick={prevSlide}
-            className="flex items-center justify-center transition"
-          >
-            <img src={Icon} className="w-[42px] h-auto" alt="Previous" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="flex items-center justify-center transition"
-          >
-            <img src={Icon2} className="w-[34px] h-auto" alt="Next" />
-          </button>
-        </div>
+
       </div>
     </section>
   );

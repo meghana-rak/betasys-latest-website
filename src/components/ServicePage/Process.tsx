@@ -41,53 +41,52 @@ const Process: React.FC = () => {
   return (
     <section
       ref={setElement}
-      className={`py-10  transition-all duration-1000 bg-[#022334] ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
-      }`}
+      className={`md:py-10 py-3 transition-all duration-1000 bg-[#022334] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+        }`}
     >
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="py-10 mb-4 md:py-6">
-          <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">
+          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             Our Core Capabilities
           </p>
-          <h2 className="my-1 text-2xl font-semibold text-white md:text-4xl font-helvetica font-regular">
-            Our Consulting Process
+          <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-white mt-[4px] mb-[1px]">
+            Our Consulting <span className="font-bold"> Process</span>
           </h2>
-          <p className="text-[#D4D4D4] max-w-3xl  text-xs leading-relaxed font-poppins md:text-[20px] ">
+          <p className="text-[#D4D4D4] max-w-3xl my-4  font-poppins  text-[18px] md:text-[22px] ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             mollis nunc a molestie dictum. Mauris venenatis, felis scelerisque
             aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum
             id sapien.
           </p>
         </div>
-         <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-400 ${isVisible
+        <div className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-400 ${isVisible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-12'
           }`}>
-        
-       
-  {features.map((item, index) => (
-    <div
-      key={index}
-      className=" flex gap-3 py-3 md:py-12 relative min-h-[200px] rounded-[26px] border border-white/30 bg-[#F5F5F5]/20 backdrop-blur-[4px] overflow-hidden transition-all duration-300 shadow-md hover:shadow-lg"
-    >
-      
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
-        <h3 className="mb-2 text-xl font-semibold text-white font-helvetica">
-          {item.title}
-        </h3>
-        <p className="text-xs font-light leading-relaxed text-gray-300 md:text-sm font-poppins">
-          {item.description}
-        </p>
-      </div>
-    </div>
-  ))}
+
+
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className="  gap-3 relative min-h-[200px] rounded-[26px] border border-white/30 bg-[#F5F5F5]/10 overflow-hidden transition-all duration-300 shadow-md "
+            >
+
+              <div className=" inset-0 flex flex-col items-center justify-center p-3  md:p-8 text-center">
+                <h3 className="mb-2 text-[24px] md:text-[28px] font-semibold text-white font-helvetica">
+                  {item.title}
+                </h3>
+                <p className="text-[16px] font-light leading-relaxed text-[#D4D4D4] md:text-[20px] font-poppins">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
 
 
         </div>
 
-        
-       
+
+
       </div>
     </section>
   );

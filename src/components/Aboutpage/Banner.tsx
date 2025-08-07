@@ -29,14 +29,14 @@ function Banner() {
   return (
     <div>
       {/* Floating background patterns */}
-      <div className="absolute inset-0 opacity-20 z-0">
+      {/* <div className="absolute inset-0 opacity-20 z-0 ">
         <div className="absolute top-20 left-10 w-2 h-2 bg-emerald-200 rounded-full animate-pulse"></div>
         <div className="absolute top-40 right-20 w-1 h-1 bg-emerald-300 rounded-full animate-ping"></div>
         <div className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-emerald-200 rounded-full animate-bounce"></div>
-      </div>
+      </div> */}
 
       {/* Main Content */}
-      <main className="relative z-10 px-3 md:px-6 pt-32 ">
+      <main className="relative z-10  md:px-6 pt-32 ">
         <div className="text-center md:mb-16">
           <div className="text-slate-700 font-semibold text-lg font-poppins mb-3 md:mb-6">
             About Us
@@ -53,11 +53,11 @@ function Banner() {
         </div>
 
         {/* Image and Animated Text Section */}
-        <div className={`max-w-7xl mx-auto md:px-4 flex  gap-8 items-center transition-all duration-700 ease-in-out ${ scrolled ? "flex-row justify-between items-center" : "flex-col  "}`}>
+        <div className={`max-w-7xl mx-auto md:px-4 grid gap-2 lg:gap-8 items-center transition-all duration-700 ease-in-out ${ scrolled ? "grid-cols-1 md:grid-cols-2 justify-between items-center" : "flex-col  "}`}>
           {/* Hero Image */}
           <div
-            className={`transition-all duration-700 ease-in-out ${
-              scrolled ? " w-5/6" : "w-full "
+            className={`transition-all duration-700 ease-in ${
+              scrolled ? "w-full" : "w-full "
             }`}
           >
             <div className="rounded-2xl overflow-hidden shadow-2xl group h-full">
@@ -66,7 +66,7 @@ function Banner() {
                   src={heroimg}
                   alt="Team collaboration"
                   className={`transition-all duration-700 ease-in-out object-cover ${
-                    scrolled ? "h-[400px]" : "h-[600px]"
+                    scrolled ? "h-[300px] lg:h-[400px]" : "lg:h-[600px] h-[450px]"
                   } w-full`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
@@ -79,13 +79,13 @@ function Banner() {
 
           {/* Main Text floats from right */}
           <div
-            className={`transition-all px-8 duration-700 ease-in-out ${
+            className={`transition-all md:px-8 duration-700 ease-in-out ${
               showMainText
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-10"
             }`}
           >
-            <h3 className="text-xl md:text-3xl font-semibold font-poppins leading-relaxed">
+            <h3 className="text-xl lg:text-3xl font-semibold font-poppins leading-relaxed">
               More than a tech service —{" "}
               <span className="text-emerald-600">Betasys.ai</span>{" "}
               <span className="text-slate-800">

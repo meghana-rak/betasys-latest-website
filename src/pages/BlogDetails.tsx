@@ -42,25 +42,26 @@ import BlogHero from '../components/BlogDetails/BlogHero';
 import CategoryList from '../components/BlogDetails/CategoryList';
 import BlogMain from '../components/BlogDetails/BlogMain';
 import RelatedBlogs from '../components/BlogDetails/RelatedBlogs';
+import Sidebar from '../components/BlogPages/Sidebar';
 
 const BlogDetails: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <BlogHero />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 md:py-6 lg:py-16 relative">
+      <main className="px-4 mx-auto md:text-justify md:py-14 max-w-7xl sm:px-6 lg:px-8 ">
         {/* ✅ Fixed Hamburger Button for 1280px and below */}
         <div className="block xl:hidden">
-          <CategoryList />
+          <Sidebar />
         </div>
 
         {/* ✅ Responsive Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-6 xl:gap-8">
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-6 xl:gap-6">
+
           {/* Desktop Left Sidebar - Only visible on ≥1280px */}
           <aside className="hidden xl:block xl:col-span-3 order-2 xl:order-1">
             <div className="sticky top-4 md:top-6 lg:top-8">
-              <CategoryList />
+              <Sidebar />
             </div>
           </aside>
 

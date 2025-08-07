@@ -7,7 +7,7 @@ function OurValues() {
         <div>
             {/* Our Values Section */}
             <div className={`transition-all duration-1000 `}>
-                <div className="max-w-7xl mx-auto px-3 md:px-16">
+                <div className="max-w-7xl mx-auto md:px-16">
                     {/* Values Header */}
                     <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
                         {/* Green accent line */}
@@ -21,7 +21,7 @@ function OurValues() {
                             Empowering Progress <span className="font-bold">Through Innovation</span>
                         </h2>
 
-                        <p className="max-w-4xl text-gray-600 font-poppins text-xs md:text-lg  mb-8">
+                        <p className="max-w-4xl text-gray-700 font-poppins text-xs md:text-lg  mb-8">
                             At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.
                         </p>
                     </div>
