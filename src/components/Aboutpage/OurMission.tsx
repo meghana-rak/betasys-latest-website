@@ -1,9 +1,54 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { useIntersectionObserver } from '../../hooks/useParallax';
+
+const cardData = [
+    {
+        title: "Values",
+        content:
+            "These are more than words — they are our compass. They guide every decision, action, and idea. We stay true to them in every project. Because how we work matters as much as what we build.",
+        icon: (
+            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+                <div className="w-4 h-4 bg-white rounded-sm"></div>
+            </div>
+        ),
+        delay: 500,
+    },
+    {
+        title: "Pillars",
+        content:
+            "Our work stands on a foundation of strong beliefs. Integrity, innovation, and empathy lead the way. These principles shape our team and culture. They keep us aligned, accountable, and inspired.",
+        icon: (
+            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+                <div className="flex space-x-1">
+                    <div className="w-1 h-4 bg-white rounded-full"></div>
+                    <div className="w-1 h-3 bg-white rounded-full"></div>
+                    <div className="w-1 h-5 bg-white rounded-full"></div>
+                </div>
+            </div>
+        ),
+        delay: 700,
+    },
+    {
+        title: "Ethos",
+        content:
+            "What we believe shapes what we create. Our ethos is built on trust, purpose, and bold thinking. It lives in our mindset and in every detail. And it's reflected in the impact we aim to deliver.",
+        icon: (
+            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+                <div className="w-4 h-4 border-2 border-white rounded-full flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                </div>
+            </div>
+        ),
+        delay: 900,
+    },
+];
+
 
 function OurMission() {
     const [showTransformedLayout, setShowTransformedLayout] = useState(false);
     const [showMissionSection, setShowMissionSection] = useState(false);
     const [scrollY, setScrollY] = useState(0);
+    const { isVisible, setElement } = useIntersectionObserver();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,107 +75,75 @@ function OurMission() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    
+
     return (
+        <section
+            id="who-section"
+            ref={setElement}
+            className={`py-10 transition-all duration-1000 ${isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-16'
+                }`}
+        >
         <div>
             {/* Our Mission Section */}
-            <div className=''>
-                <div className="max-w-7xl mx-auto md:px-16 pt-10 ">
+            <div className='lg:mt-32 mt-10  transition-all duration-1000'>
+                <div className="max-w-7xl mx-auto md:px-16 transition-all duration-1000">
                     {/* Mission Header */}
                     <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
                         {/* Green accent line */}
                         {/* <div className="w-1 h-16 bg-emerald-500 mb-8"></div> */}
 
-                        <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">
+                        <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
                             Our Mission
                         </p>
 
-                        <h2 className="md:text-4xl text-2xl font-helvetica font-regular text-gray-900 my-1">
+                        <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
                             The Values <span className='font-bold'>Behind Every Decision We Make</span>
                         </h2>
 
-                        <p className="max-w-4xl text-gray-700 font-poppins text-xs md:text-lg  mb-8">
+                        <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
                             At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.
                         </p>
                     </div>
 
                     {/* Cards Grid */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-                        {/* Values Card */}
-                        <div className={`transition-all duration-800 delay-500 `}>
-                            <div className="bg-slate-800 rounded-2xl p-4 md:p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
-                                {/* Green accent line */}
-                                {/* <div className="absolute left-0 top-0 w-1 h-full bg-emerald-500"></div> */}
+                    <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 mb-20">
+                        {cardData.map((card, index) => (
+                            <div
+                                key={index}
+                                className="transition-all duration-800 delay-500"
+                            >
+                                <div className="bg-slate-800 rounded-2xl p-4 md:p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300 flex flex-col justify-between">
+                                    {/* Card Content */}
+                                    <div className="flex-1 flex flex-col justify-between gap-8">
+                                        <p className="text-[16px] md:text-[22px] font-light text-[#D4D4D4] leading-relaxed font-poppins line-clamp-4 lg:line-clamp-6">
+                                            {card.content}
+                                        </p>
 
-                                <div className="relative z-10 flex flex-col justify-between gap-8">
-                                    <p className="text-gray-300 line-clamp-6 text-xs md:text-lg font-poppins leading-relaxed font-light">
-                                        These are more than words — they are our compass. They guide every decision, action, and idea. We stay true to them in every project. Because how we work matters as much as what we build.
-                                    </p>
-
-                                    <div className="flex items-center justify-between">
-                                        <h3 className="text-white text-xl md:text-2xl lg:text-3xl font-bold">Values</h3>
-                                        <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                                            <div className="w-4 h-4 bg-white rounded-sm"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Hover effect overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                        </div>
-
-                        {/* Pillars Card */}
-                        <div className={`transition-all duration-800 delay-700 `}>
-                            <div className="bg-slate-800 rounded-2xl p-4 md:p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
-                                <div className="relative z-10 flex flex-col justify-between gap-8">
-                                    <p className="text-gray-300 text-xs line-clamp-6 md:text-lg font-poppins leading-relaxed font-light">
-                                        Our work stands on a foundation of strong beliefs. Integrity, innovation, and empathy lead the way. These principles shape our team and culture. They keep us aligned, accountable, and inspired.
-                                    </p>
-
-                                    <div className="flex items-center justify-between">
-                                        <h3 className="text-white text-xl md:text-2xl lg:text-3xl font-bold">Pillars</h3>
-                                        <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                                            <div className="flex space-x-1">
-                                                <div className="w-1 h-4 bg-white rounded-full"></div>
-                                                <div className="w-1 h-3 bg-white rounded-full"></div>
-                                                <div className="w-1 h-5 bg-white rounded-full"></div>
+                                        {/* Title Section at Bottom */}
+                                        <div className="flex items-center justify-between mt-8">
+                                            <h3 className="font-semibold text-white text-[24px] md:text-[28px] font-poppins ">
+                                                {card.title}
+                                            </h3>
+                                            <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
+                                                {card.icon}
                                             </div>
                                         </div>
                                     </div>
+
+                                    {/* Hover Overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </div>
-
-                                {/* Hover effect overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
-                        </div>
-
-                        {/* Ethos Card */}
-                        <div className={`transition-all duration-800 delay-900 `}>
-                            <div className="bg-slate-800 rounded-2xl p-4 md:p-8 h-full relative overflow-hidden group hover:scale-105 transition-transform duration-300">
-                                <div className="relative z-10 flex flex-col justify-between gap-8">
-                                    <p className="text-gray-300 text-xs line-clamp-6 md:text-lg font-poppins leading-relaxed font-light">
-                                        What we believe shapes what we create. Our ethos is built on trust, purpose, and bold thinking. It lives in our mindset and in every detail. And it's reflected in the impact we aim to deliver.
-                                    </p>
-
-                                    <div className="flex items-center justify-between">
-                                        <h3 className="text-white text-xl md:text-2xl lg:text-3xl font-bold">Ethos</h3>
-                                        <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                                            <div className="w-4 h-4 border-2 border-white rounded-full flex items-center justify-center">
-                                                <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Hover effect overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
+
+
                 </div>
             </div>
         </div>
+        </section>
     )
 }
 

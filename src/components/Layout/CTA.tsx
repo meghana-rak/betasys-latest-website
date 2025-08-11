@@ -5,7 +5,7 @@ const CTA = () => {
   
 
   return (
-    <section className=" bg-[#00A651] text-white  mb-6">
+    <section className="relative  bg-[#00A651] text-white  mb-6">
       <div className="px-4 py-4 lg:py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
           {/* Left Text Section */}
@@ -21,7 +21,7 @@ const CTA = () => {
           {/* Right Button Section */}
           <div className="shrink-0">
             <button className="px-6 py-2 md:py-2 text-[16px] md:text-[18px] font-semibold text-white rounded-lg bg-[#002A3A] hover:bg-[#00394f] transition duration-300">
-              Contact Us
+             Explore Now
             </button>
           </div>
         </div>

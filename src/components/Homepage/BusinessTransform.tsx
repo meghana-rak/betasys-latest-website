@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { useIntersectionObserver } from '../../hooks/useParallax';
+import bgImage from '../../assests/Whatwedeliver/bg-img1.png';
 
 const BusinessTransform = () => {
   const { isVisible, setElement } = useIntersectionObserver();
@@ -29,14 +30,14 @@ const BusinessTransform = () => {
           {/* Left side - Large card */}
           <div className="p-4 md:p-8 rounded-2xl text-white relative overflow-hidden  bg-cover bg-no-repeat bg-center "
             style={{
-              backgroundImage: "url('/src/assests/Whatwedeliver/bg-img1.png')"
+              backgroundImage: `url(${bgImage})`
             }}>
 
             <div className="relative z-10">
               <p className="text-green-400 font-helvetica  text-[18px] md:text-[20px] uppercase tracking-wide ">
                 INCREASE OPERATIONAL EFFICIENCY
               </p>
-              <h3 className=" font-helvetica text-[30px] md:text-[42px] leading-tight font-semibold mt-3 md:mt-8 mb-2 md:mb-2  mr-10 ">
+              <h3 className=" font-helvetica text-[30px] md:text-[42px] leading-tight font-semibold mt-3 md:mt-8 mb-2 md:mb-2  md:mr-10 ">
                 Reduced support response  time by 50% using AI chatbots.
               </h3>
               <p className="text-gray-300 leading-relaxed mb-3 md:mb-8 text-sm md:text-[20px] font-poppins">
@@ -56,7 +57,7 @@ const BusinessTransform = () => {
             {/* Top card */}
             <div className="p-4 md:p-8 rounded-2xl text-white relative overflow-hidden  bg-cover bg-no-repeat bg-center "
               style={{
-                backgroundImage: "url('/src/assests/Whatwedeliver/bg-img1.png')"
+                backgroundImage: `url(${bgImage})`
               }}>
               <div className="relative z-10">
                 <div className="flex justify-between items-start md:mb-4">
@@ -74,7 +75,7 @@ const BusinessTransform = () => {
             {/* Bottom card */}
             <div className="p-4 md:p-8 rounded-2xl text-white relative overflow-hidden  bg-cover bg-no-repeat bg-center "
               style={{
-                backgroundImage: "url('/src/assests/Whatwedeliver/bg-img1.png')"
+                backgroundImage: `url(${bgImage})`
               }}>
               <div className="relative z-10">
                 <div className="flex justify-between items-start md:mb-4">

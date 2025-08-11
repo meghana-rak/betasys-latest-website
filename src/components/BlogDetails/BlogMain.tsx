@@ -26,7 +26,7 @@ const BlogMain: React.FC = () => {
       </span>
 
       {/* Title */}
-      <h1 className="font-medium tracking-tighter  text-[24px]  md:text-[28px]  space-x-0 text-gray-700 mb-1 leading-tighter font-poppins">
+      <h1 className="font-medium md:tracking-tighter  text-[24px]  md:text-[28px]  space-x-0 text-gray-700 mb-1 leading-tighter font-poppins">
         The Future of AI in Healthcare Transforming Patient Care
       </h1>
 

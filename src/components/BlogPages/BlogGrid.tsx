@@ -15,61 +15,61 @@ const BlogGrid = () => {
       date: '20/07/2024',
       image: Blogimg1,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       id: '2',
       date: '18/07/2024',
       image: Blogimg2,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       id: '3',
       date: '15/07/2024',
       image: Blogimg3,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       id: '4',
       date: '12/07/2024',
       image: Blogimg1,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       date: '10/07/2024',
       image: Blogimg2,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       id: '5',
       date: '08/07/2024',
       image: Blogimg3,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       date: '05/07/2024',
       image: Blogimg1,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       id: '6',
       date: '03/07/2024',
       image: Blogimg2,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     },
     {
       id: '7',
       date: '01/07/2024',
       image: Blogimg3,
       category: 'Healthcare',
-      title: 'The Future of AI in Healthcare: Transforming Patient Care'
+      title: 'How Artificial Intelligence is Shaping the Future of Patient Care'
     }
   ];
 
@@ -91,7 +91,8 @@ const BlogGrid = () => {
       <div className="mb-6">
         <h2 className="md:text-[38px] text-[28px] leading-tight font-bold  font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">Blog</h2>
       </div>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1">
+      {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1"> */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 max-w-[1024px]   ">
         {currentPosts?.map((post) => (
           <BlogCard
             key={post.id}

@@ -7,13 +7,13 @@ import HeroDesktop from "../../assests/ProductPage/Frame.png";
 const HeroSection = () => {
   return (
     // md:pt-[250px] 
-    <section className="relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6  sm:pt-12 pb-16 sm:pb-24 text-center">
-        
+    <section className="relative pt-[140px] md:pt-[130px] container  ">
+      <div className="max-w-5xl md:max-w-7xl mx-auto px-4 sm:px-6  md:pt-6 text-center">
+
         {/* Small heading */}
         <motion.p
-          className=" font-semibold text-lg  mb-3 md:mb-6 text-[#5A5A5A] text-[16px] sm:text-[18px] tracking-wide font-poppins "
-          initial={{ opacity: 0, y: -20 }}
+          className="text-gray-700 font-semibold text-[18px] md:text-[22px] font-poppins mb-3 md:mb-6"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -23,12 +23,13 @@ const HeroSection = () => {
 
         {/* Main heading */}
         <motion.h1
-          className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[52px] text-[#022334] font-bold leading-tight font-helvetica"
+          className="max-w-7xl font-helvetica text-[28px] md:text-[48px] xl:text-[68px] font-bold leading-tight"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           viewport={{ once: true }}
         >
+          
           Complete <span className="text-[#00A148]">POS Backoffice</span> Control
           <br className="hidden sm:block" />
           Anytime, Anywhere

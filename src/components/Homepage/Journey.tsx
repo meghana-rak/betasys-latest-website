@@ -43,7 +43,7 @@ const Journey = () => {
               <h3 className="md:text-[28px] text-24px font-bold text-white mb-2 md:mb-3 ">
                 1. Discovery & Solution Design
               </h3>
-              <p className="text-gray-300 leading-relaxed text-[16px] md:text-[18px]">
+               <p className="text-gray-300 leading-relaxed text-[18px] md:text-[20px] lg:text-[22px]">
                 We begin by understanding your unique business challenges and identifying where AI can add real value.
               </p>
             </div>
@@ -52,7 +52,7 @@ const Journey = () => {
               <h3 className="md:text-[28px] text-24px font-bold text-white mb-2 md:mb-3 ">
                 2. Proof of Concept
               </h3>
-              <p className="text-gray-300 leading-relaxed text-[16px] md:text-[18px]">
+              <p className="text-gray-300 leading-relaxed text-[18px] md:text-[20px] lg:text-[22px]">
                 We develop a working prototype so you can validate the solution with minimal investment and low risk.
               </p>
             </div>
@@ -61,7 +61,7 @@ const Journey = () => {
               <h3 className="md:text-[28px] text-24px font-bold text-white mb-2 md:mb-3 ">
                 3. Discovery & Solution Design
               </h3>
-              <p className="text-gray-300 leading-relaxed text-[16px] md:text-[18px]">
+              <p className="text-gray-300 leading-relaxed text-[18px] md:text-[20px] lg:text-[22px]">
                 Once validated, we scale the AI solution across your business operations for lasting impact and ROI.
               </p>
             </div>

@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import stackimg from '../../assests/Aboutpage/inovation.png'
+import { useIntersectionObserver } from '../../hooks/useParallax';
 
 function OurValues() {
+      const { isVisible, setElement } = useIntersectionObserver();
 
     return (
-        <div>
+        <section
+            id="who-section"
+            ref={setElement}
+            className={`py-10 md:py-20 transition-all duration-1000 ${isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-16'
+                }`}
+        >
+            <div>
             {/* Our Values Section */}
             <div className={`transition-all duration-1000 `}>
                 <div className="max-w-7xl mx-auto md:px-16">
@@ -13,15 +23,15 @@ function OurValues() {
                         {/* Green accent line */}
                         {/* <div className="w-1 h-16 bg-emerald-500 mb-8"></div> */}
 
-                        <p className="text-[#00A148] font-medium text-sm uppercase tracking-wide font-poppins">
+                        <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
                             Our Values
                         </p>
 
-                        <h2 className="md:text-4xl text-2xl font-helvetica font-regular text-gray-900 my-1">
+                        <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
                             Empowering Progress <span className="font-bold">Through Innovation</span>
                         </h2>
 
-                        <p className="max-w-4xl text-gray-700 font-poppins text-xs md:text-lg  mb-8">
+                        <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
                             At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.
                         </p>
                     </div>
@@ -33,7 +43,7 @@ function OurValues() {
                         <div className="lg:col-span-2">
                             <div className="bg-slate-800 rounded-2xl p-5 md:p-12 h-full relative overflow-hidden group">
                                 <div className="relative z-10 flex flex-col justify-between gap-8">
-                                    <p className="text-gray-300 text-xs line-clamp-6 md:text-lg font-poppins leading-relaxed font-light">
+                                    <p className="text-[16px] md:text-[22px] font-light text-[#D4D4D4] leading-relaxed font-poppins line-clamp-4 lg:line-clamp-6">
                                         Our mission is to harness the power of technology and innovation to solve real-world problems and create lasting value. We are committed to building intelligent, user-centric solutions that empower businesses, enhance lives, and drive meaningful progress. Guided by purpose and driven by impact, we strive to make a difference through every product, partnership, and experience we create.
                                     </p>
 
@@ -83,7 +93,8 @@ function OurValues() {
 
                 </div>
             </div>
-        </div>
+            </div>
+        </section>
     )
 }
 

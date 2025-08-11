@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import EbookCard from './EbookCard';
 import Ebook1 from '../../assests/EbookList/ebook1.jpg';
 import Ebook2 from '../../assests/EbookList/ebook2.jpg';
 import Ebook3 from '../../assests/EbookList/ebook3.jpg';
+import { section } from 'framer-motion/client';
+import { useIntersectionObserver } from '../../hooks/useParallax';
 
 const ebooks = [
   { id: 1, title: 'AI in Construction', image: Ebook1 },
@@ -20,14 +23,23 @@ const ebooks = [
 ];
 
 const EbookGrid = () => {
+  const { isVisible, setElement } = useIntersectionObserver();
   return (
-    <div className="mx-4 px-4 sm:px-8 mb-6 bg-white font-helvetica">
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-        {ebooks.map((book) => (
-          <EbookCard key={book.id} title={book.title} image={book.image} />
-        ))}
+    <section
+      ref={setElement}
+      className={`py-10 md:py-20 bg-cover bg-no-repeat bg-center  transition-all duration-1000 ${isVisible
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-16'
+        }`}
+    >
+      <div className={`container mx-auto px-4  sm:px-8 mb-6 bg-white font-helvetica`} >
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-6">
+          {ebooks.map((book) => (
+            <Link to={`/ebookdetails/${book.id}`}> <EbookCard key={book.id} title={book.title} image={book.image} /></Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,13 +2,22 @@ import React from "react";
 import EbookImage from "../assests/EbookDetail/EbookDetail.jpg";
 import Icon from "../assests/EbookDetail/Icon.png";
 import BgFrame from "../assests/EbookDetail/Frame.png";
+import { useIntersectionObserver } from '../hooks/useParallax';
 
 function EbookDetails() {
+    const { isVisible, setElement } = useIntersectionObserver();
+
   return (
-    <div>
+     <section
+         ref={setElement}
+         className={` bg-[#F9FAFB]  bg-cover bg-no-repeat bg-center  transition-all duration-1000 ${isVisible
+           ? 'opacity-100 translate-y-0'
+           : 'opacity-0 translate-y-16'
+           }`}
+       >
       {/* Hero Section */}
       <section
-        className="relative bg-gray-50 flex items-center mt-28 min-h-[380px] sm:min-h-[400px]"
+        className="relative  flex items-center pt-28 py-4 lg:mt-20 "
         style={{
           backgroundImage: `url(${EbookImage})`,
           backgroundRepeat: "no-repeat",
@@ -16,21 +25,21 @@ function EbookDetails() {
           backgroundSize: "80% auto",
         }}
       >
-        <div className="max-w-7xl mx-auto w-full flex items-center px-4 sm:px-6 lg:px-8 y-12 sm:py-16">
+        <div className="max-w-7xl mx-auto w-full flex items-center px-4 sm:px-6 lg:px-8 sm:py-8">
           {/* Left Text Content */}
           <div className="w-full">
-            <h2 className="text-[20px] sm:text-[26px] md:text-[28px] lg:text-[32px] font-bold text-gray-900 leading-tight font-helvetica">
+            <h2 className="md:text-[38px] text-[28px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               Installing{" "}
-              <span className="text-green-600">AI in Construction</span>
+              <span className="text-green-600 ">AI in Construction</span>
             </h2>
-            <h3 className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-bold text-gray-900 mb-2 font-helvetica">
+            <h3 className="md:text-[38px] text-[28px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               A Practical Guide for Industry Leaders
             </h3>
-            <p className="text-[14px] sm:text-[15px] md:text-[16px] text-black mb-6 leading-relaxed font-poppins max-w-xl">
+            <p className="text-gray-700 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light mt-2">
               Transform Projects, Improve Efficiency, and Build a Smarter Future
               with AI
             </p>
-            <button className="bg-slate-900 text-white text-[14px] sm:text-[15px] md:text-[16px] px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl hover:bg-slate-800 transition-colors shadow-md font-poppins">
+            <button className="bg-[#042337] text-white text-[16px] mt-6  md:text-[20px] px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-slate-800 transition-colors shadow-md font-poppins">
               Download Now
             </button>
           </div>
@@ -38,35 +47,35 @@ function EbookDetails() {
       </section>
 
       {/* Discover Our Book Section */}
-      <section className="bg-[#F9FAFB] px-4 sm:px-6 lg:px-8 md:px-10 py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto text-start">
+      <section className="max-w-7xl mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-4 md:py-8">
+        <div className=" mx-auto text-start ">
           {/* Heading */}
-          <h2 className="text-2xl sm:text-3xl text-gray-900 mb-2 font-helvetica">
+         <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
             Discover{" "}
             <span className="font-semibold">
               Our <span className="font-bold">Book</span>
             </span>
           </h2>
-          <p className="text-[15px] sm:text-[16px] text-gray-700 mb-10 sm:mb-14 max-w-3xl leading-relaxed font-poppins">
+          <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-14">
             Delivering Value Across Sectors and Scales identify high-impact
             opportunities for artificial intelligence, assess readiness, and
             implement scalable AI
           </p>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map((item) => (
               <div
                 key={item}
                 className="bg-[#022333] text-white rounded-2xl px-5 sm:px-6 pt-6 pb-6 sm:pt-7 sm:pb-7 flex flex-col justify-start relative"
               >
                 {/* Icon aligned to top-left */}
-                <div className="absolute -top-5 left-5 sm:left-6 flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 bg-[#022333] border-4 border-white rounded-full shadow-md">
-                  <img src={Icon} alt="icon" />
+                <div className="absolute -top-5 left-5 sm:left-6 flex items-center justify-center w-9 h-9 md:w-12 md:h-12 bg-[#022333] border-4 border-white rounded-full shadow-md">
+                  <img src={Icon} alt="icon"  />
                 </div>
 
                 {/* Card Text */}
-                <p className="text-center text-[17px] sm:text-[19px] font-poppins leading-snug mt-2">
+                <p className="text-center text-[18px] md:text-[22px] font-poppins leading-snug mt-2">
                   Enterprises seeking AI transformation
                 </p>
               </div>
@@ -85,37 +94,34 @@ function EbookDetails() {
           backgroundSize: "auto",
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto container px-4 sm:px-6 lg:px-8 md:px-10 py-4 sm:py-8 ">
           {/* Top Label */}
-          <p className="text-green-500 text-[14px] sm:text-[16px] font-medium mb-4 uppercase tracking-wide font-poppins">
+          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             WHAT IT COVER
           </p>
 
           {/* Heading */}
-          <h2 className="text-[24px] sm:text-[32px] md:text-[36px] font-helvetica font-medium text-white mb-1 leading-snug">
+          <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
             Why Growing Businesses{" "}
             <span className="font-bold">Choose Betasys AI</span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-[15px] sm:text-[16px] text-gray-300 font-poppins mb-8 leading-relaxed tracking-wide">
+         <p className="max-w-3xl text-[#E8E8E8] font-poppins  text-[18px] md:text-[22px]  mb-8">
             Built for agility, clarity, and real business impact — Betasys
             stands apart from legacy giants.
           </p>
 
           {/* Body Text */}
-          <div className="max-w-5xl text-justify">
-            <p className="text-[15px] sm:text-[16px] text-gray-300 leading-loose font-poppins mb-0">
+          <div className="max-w-7xl text-justify">
+            <p className="text-gray-300 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light">
               The construction industry is evolving and AI is at the forefront.
               This guide is for executives and project leaders ready to turn AI
               into real-world results. Discover practical use cases, proven
               frameworks, and strategies to overcome delays, cost overruns, and
               safety risks. Whether you’re starting small or scaling big, this
               book helps you make AI work right where it matters. AI in
-              construction isn’t the future. It’s now. Let’s build smarter.
-            </p>
-
-            <p className="text-[15px] sm:text-[16px] text-gray-300 leading-relaxed font-poppins mt-0">
+              construction isn’t the future. It’s now. Let’s build smarter.           
               The construction industry is evolving and AI is at the forefront.
               This guide is for executives and project leaders ready to turn AI
               into real-world results. Discover practical use cases, proven
@@ -127,7 +133,7 @@ function EbookDetails() {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 }
 

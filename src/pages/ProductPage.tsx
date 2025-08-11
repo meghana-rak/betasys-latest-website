@@ -165,46 +165,143 @@
 // export default ProductPage;
 
 
+// import { useEffect, useRef, useState } from "react";
+// import { AnimatePresence, motion } from "framer-motion";
+// import HeroSection from "../components/ProductPage/HeroSection";
+// import HeroSectionPart2 from "../components/ProductPage/HeroSectionPart2";
+// import FeatureCarousel from "../components/ProductPage/FeatureCarousel";
+// import Features from "../components/ProductPage/Features";
+// import Faq from "../components/ProductPage/Faq";
+
+// // Mock components array
+// const components = [
+//   <div className="text-4xl font-bold"><HeroSection/></div>,
+//   <div className="text-4xl font-bold"><Features/></div>,
+//   <div className="text-4xl font-bold"><FeatureCarousel/></div>,
+//   <div className="text-4xl font-bold"><Faq/></div>
+// ];
+
+// const SECTION_COUNT = components.length;
+// const PAGE_HEIGHT_VH = 400;
+
+// export default function ProductPage() {
+//   const containerRef = useRef(null);
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const [showFooter, setShowFooter] = useState(false);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const scrollY = window.scrollY;
+//       const viewportHeight = window.innerHeight;
+//       const totalScrollableHeight = (PAGE_HEIGHT_VH / 100) * viewportHeight;
+
+//       // Detect active section
+//       const sectionHeight = totalScrollableHeight / SECTION_COUNT;
+//       const index = Math.min(
+//         SECTION_COUNT - 1,
+//         Math.floor(scrollY / sectionHeight)
+//       );
+//       setActiveIndex(index);
+
+//       // Show footer if user scrolls past the last section
+//       setShowFooter(scrollY >= totalScrollableHeight);
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <div className="relative w-screen overflow-x-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+//       {/* Scrollable Container Height */}
+//       <div
+//         ref={containerRef}
+//         style={{ height: `${PAGE_HEIGHT_VH}vh` }}
+//         className="relative overflow-hidden"
+//       >
+//         {/* Fixed Stroke Indicator */}
+//         <div className="hidden md:block fixed z-50 transform -translate-y-1/2 top-1/2 left-5 ">
+//           <div className="relative w-1 h-56 bg-green-200 rounded-full">
+//             <div
+//               className="absolute w-1 h-14 bg-green-700 rounded-full transition-all duration-300 left-1/2 -translate-x-1/2"
+//               style={{ top: `${activeIndex * 80}px` }}
+//             ></div>
+//           </div>
+//         </div>
+
+//         {/* Animated Sections - Fixed in middle */}
+//         <div className="flex items-center justify-center fixed inset-0 pointer-events-none">
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={activeIndex}
+//               initial={{ opacity: 0, y: 40 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               exit={{ opacity: 0, y: -40 }}
+//               transition={{ duration: 0.6 }}
+//               className="pointer-events-auto"
+//             >
+//               {components[activeIndex]}
+//             </motion.div>
+//           </AnimatePresence>
+//         </div>
+//       </div>
+
+      
+//     </div>
+//   );
+// }
+
+
+
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import HeroSection from "../components/ProductPage/HeroSection";
-import HeroSectionPart2 from "../components/ProductPage/HeroSectionPart2";
 import FeatureCarousel from "../components/ProductPage/FeatureCarousel";
 import Features from "../components/ProductPage/Features";
 import Faq from "../components/ProductPage/Faq";
 
-// Mock components array
 const components = [
-  <div className="text-4xl font-bold"><HeroSection/></div>,
-  <div className="text-4xl font-bold"><Features/></div>,
-  <div className="text-4xl font-bold"><FeatureCarousel/></div>,
-  <div className="text-4xl font-bold"><Faq/></div>
+  <HeroSection key="hero" />,
+  <Features key="features" />,
+  <FeatureCarousel key="carousel" />,
+  <Faq key="faq" />,
 ];
 
 const SECTION_COUNT = components.length;
-const PAGE_HEIGHT_VH = 400;
+const PAGE_HEIGHT_VH = SECTION_COUNT * 100;
 
 export default function ProductPage() {
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [showFooter, setShowFooter] = useState(false);
+  const [isFixed, setIsFixed] = useState(true);
+  const [showStroke, setShowStroke] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
+      if (!containerRef.current) return;
+
       const scrollY = window.scrollY;
       const viewportHeight = window.innerHeight;
-      const totalScrollableHeight = (PAGE_HEIGHT_VH / 100) * viewportHeight;
+      const totalHeight = (PAGE_HEIGHT_VH / 100) * viewportHeight;
+      const sectionHeight = totalHeight / SECTION_COUNT;
 
       // Detect active section
-      const sectionHeight = totalScrollableHeight / SECTION_COUNT;
       const index = Math.min(
         SECTION_COUNT - 1,
         Math.floor(scrollY / sectionHeight)
       );
       setActiveIndex(index);
 
-      // Show footer if user scrolls past the last section
-      setShowFooter(scrollY >= totalScrollableHeight);
+      // Hide stroke bar and release fixed position after scrolling past the last section
+      const releasePoint = SECTION_COUNT * sectionHeight;
+      console.log("Release Point:", releasePoint, "Current Scroll:", scrollY);
+      if (scrollY >= releasePoint) {
+        setIsFixed(false);
+        setShowStroke(false);
+      } else {
+        setIsFixed(true);
+        setShowStroke(true);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -213,31 +310,37 @@ export default function ProductPage() {
 
   return (
     <div className="relative w-screen overflow-x-hidden bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
-      {/* Scrollable Container Height */}
+      {/* Scrollable Container */}
       <div
         ref={containerRef}
         style={{ height: `${PAGE_HEIGHT_VH}vh` }}
         className="relative overflow-hidden"
       >
-        {/* Fixed Stroke Indicator */}
-        <div className="hidden md:block fixed z-50 transform -translate-y-1/2 top-1/2 left-5">
-          <div className="relative w-1 h-56 bg-green-200 rounded-full">
-            <div
-              className="absolute w-1 h-14 bg-green-700 rounded-full transition-all duration-300 left-1/2 -translate-x-1/2"
-              style={{ top: `${activeIndex * 80}px` }}
-            ></div>
+        {/* Stroke Indicator - Hidden after all components are shown */}
+        {showStroke && (
+          <div className="hidden md:block fixed z-50 transform -translate-y-1/2 top-1/2 left-5">
+            <div className="relative w-1 h-56 bg-green-200 rounded-full">
+              <div
+                className="absolute w-1 h-14 bg-green-700 rounded-full transition-all duration-300 left-1/2 -translate-x-1/2"
+                style={{ top: `${activeIndex * 80}px` }}
+              ></div>
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Animated Sections - Fixed in middle */}
-        <div className="flex items-center justify-center fixed inset-0 pointer-events-none">
+        {/* Animated Sections */}
+        <div
+          className={`flex items-center justify-center pointer-events-none ${
+            isFixed ? "fixed inset-0" : "relative"
+          }`}
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -40 }}
-              transition={{ duration: 0.6 }}
+              exit={{ opacity: 0, y: -80 }}
+              transition={{ duration: 0.4 }}
               className="pointer-events-auto"
             >
               {components[activeIndex]}
@@ -245,8 +348,8 @@ export default function ProductPage() {
           </AnimatePresence>
         </div>
       </div>
-
-      
     </div>
   );
 }
+
+

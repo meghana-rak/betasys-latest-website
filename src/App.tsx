@@ -11,9 +11,7 @@ import BlogDetails from './pages/BlogDetails';
 import EbookListing from './pages/EbookListing';
 import EbookDetails from './pages/EbookDetails';
 import AboutPage from './pages/AboutPage';
-import FeaturesPage from './components/ProductPage/Features';
-import Faq from './components/ProductPage/Faq';
-import ProductPage from './pages/ProductPage';
+import ProductPage from './pages/ProductPageNew';
 
 
 
@@ -38,8 +36,8 @@ function App() {
         <Route path='/contactus' element={<ContactUsPage />} />
         <Route path='/blogdetails/:id' element={<BlogDetails />} />
         <Route path='/ebooklisting' element={<EbookListing />} />
-        <Route path='/ebookdetails' element={<EbookDetails />} />
-        <Route path='/aboutus' element={<AboutPage />} />        
+        <Route path='/ebookdetails/:id' element={<EbookDetails />} />
+        <Route path='/aboutus' element={<AboutPage />} />
         <Route path='/product' element={<ProductPage />} />
       </Routes>
       <CTA />

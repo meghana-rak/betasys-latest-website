@@ -43,7 +43,7 @@ const RelatedBlogs: React.FC = () => {
       <div className="space-y-4">
         {relatedPosts.map((post) => (
           <Link to={`/blogdetails/${post.id}`} key={post.id} className="group">
-            <div key={post.id} className="group cursor-pointer mb-2">
+            <div key={post.id} className="group cursor-pointer pb-3">
               <div className="relative">
                 <img
                   src={post.image}

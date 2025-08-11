@@ -58,8 +58,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
               />
               {/* Overlay */}
               <div className="absolute font-poppins inset-0 bg-gradient-to-b from-black/0 via-black/20 to-black flex flex-col justify-end p-3 text-white">
-                <p className="text-[10px] md:text-sm font-semibold">{image?.name}</p>
-                <p className="text-[10px]"> {image?.position}</p>
+                <p className="text-[10px] md:text-[16px] font-semibold">{image?.name}</p>
+                <p className="text-[10px] md:text-[16px]"> {image?.position}</p>
               </div>
             </div>
           </div>

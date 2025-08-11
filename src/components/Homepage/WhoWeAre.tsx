@@ -69,7 +69,7 @@ const WhoWeAre = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
 
-          <div className="mx-auto md:pr-28">
+          <div className="mx-auto sm:pr-28 md:pr-0">
             <div className='flex gap-3'>
               <img
                 src={img}
@@ -80,7 +80,7 @@ const WhoWeAre = () => {
                 <img
                   src={img1}
                   alt="AI Core"
-                  className="z-10 rounded-xl w-5/6 object-cover"
+                  className="z-10 rounded-xl md:w-5/6  object-cover"
                 />
                 <img
                   src={img2}

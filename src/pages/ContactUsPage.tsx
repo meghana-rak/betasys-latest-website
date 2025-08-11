@@ -36,7 +36,7 @@ const ContactUsPage = () => {
                     <div className=" pr-12 flex justify-between flex-col">
                         <div>
                             <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">GET IN TOUCH</p>
-                            <h2 className="text-xl font-helvetica font-regular md:text-3xl  text-black my-1">
+                            <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
                                 We are ready to help you and
                                 <span className='font-bold'> Answer your question</span>
                             </h2>
@@ -44,26 +44,35 @@ const ContactUsPage = () => {
                         </div>
                         <div>
                             <p className="font-semibold text-black font-poppins lg:my-0  text-[22px] md:text-[24px]">Call Center</p>
-                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">(778) 686-2396</p>
-                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">(572) 481-6883</p>
+                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">+91-8080404566</p>
+                            {/* <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">(572) 481-6883</p> */}
                         </div>
 
                         <div className=" my-4 " >
                             <p className="font-semibold text-black font-poppins lg:my-0  text-[22px] md:text-[24px]">Address</p>
-                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">4th Floor, Chidanand Heights<br />
-                                Manish Nagar, Nagpur - 440025<br />
-                                Maharashtra, India</p>
+                            <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">4th floor, Chidanand Heights,  Nagpur,<br />
+                                above Titan eye Care, Manish Nagar, Somalwada,<br />
+                                Maharashtra 440025</p>
                         </div>
                     </div>
 
                     <div className="w-full md:h-96 rounded-lg overflow-hidden">
+                      {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.5351975912226!2d79.0726599778843!3d21.091218635564637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bfd7ae5cb621%3A0x88ff86a105e9ecf1!2sBetasys%20AI%20Learning%20Hub!5e0!3m2!1sen!2sus!4v1754917486511!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
                         <iframe
                             title="Nagpur Location"
-                            src="https://www.google.com/maps?q=Manish%20Nagar,%20Nagpur,%20India&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.5351975912226!2d79.0726599778843!3d21.091218635564637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bfd7ae5cb621%3A0x88ff86a105e9ecf1!2sBetasys%20AI%20Learning%20Hub!5e0!3m2!1sen!2sus!4v1754917486511!5m2!1sen!2sus"
                             className="w-full h-full border-none"
-                            allowFullScreen=""
+                            allowFullScreen
                             loading="lazy"
+                            style={{
+                                minHeight: "350px",
+                                width: "100%",
+                                height: "100%",
+                                border: "none",
+                                borderRadius: "8px",
+                            }}
                         ></iframe>
+                        
                     </div>
                 </div>
             </section>

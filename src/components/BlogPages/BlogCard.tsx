@@ -30,14 +30,16 @@ const BlogCard: React.FC<BlogCardProps> = ({ key, date, image, category, title }
 
         {/* Content Section */}
         <div className="py-1 sm:py-2">
-          <p className="text-[#00A148] tracking-tighter  mb-1 text-[18px] md:text-[22px] font-poppins">
+          <p className="text-[#00A148] -tracking-[0.5px] mb-1 text-[18px] md:text-[22px] font-poppins">
             {category}
           </p>
-          <h3 className=" font-medium  text-[16px]  md:text-[18px]  space-x-0 text-gray-700  transition-colors   line-clamp-2"
+          <h3
+            className="font-medium text-[16px] md:text-[18px] text-gray-700 transition-colors line-clamp-2 font-poppins -tracking-[0.3px]"
           >
             {title}
           </h3>
         </div>
+
       </article>
     </Link>
   );

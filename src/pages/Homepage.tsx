@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Helmet } from "react-helmet";
 import Hero from '../components/Homepage/Hero';
 import WhoWeAre from '../components/Homepage/WhoWeAre';
 import Services from '../components/Homepage/Services';

@@ -105,10 +105,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeftCircle, ArrowRightCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import Mobile from "../../assests/ProductPage/mobile.png";
-import Laptop from "../../assests/ProductPage/laptop.png";
-import Ipad from "../../assests/ProductPage/ipad.png";
-import Icon from "../../assests/ProductPage/arrow-left-contained-02.png";
-import Icon2 from "../../assests/ProductPage/Icon (1).png";
+import Laptop from "../../assests/ProductPage/Galaxy Tab S8 Ultra 1.png";
+import Ipad from "../../assests/ProductPage/MacBook Air (15 inch).png";
+import { useIntersectionObserver } from "../../hooks/useParallax";
 
 const slides = [
   {
@@ -136,6 +135,7 @@ const slides = [
 
 const FeatureCarousel = () => {
   const [current, setCurrent] = useState(0);
+  const { isVisible, setElement } = useIntersectionObserver();
 
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -146,8 +146,16 @@ const FeatureCarousel = () => {
   };
 
   return (
-    <section className="relative py-16 overflow-hidden">
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+    <section
+      id="who-section"
+      ref={setElement}
+      className={`relative container overflow-hidden py-10  transition-all duration-1000 ${isVisible
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-16'
+        }`}
+    >
+      {/* <section className="relative container overflow-hidden"> */}
+      <div className="relative w-full mx-auto  flex flex-col items-center">
         {/* Carousel Container */}
         <div className="">
           <div
@@ -157,50 +165,53 @@ const FeatureCarousel = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-full  grid  md:grid-cols-2 grid-cols-1 items-center justify-between px-4 lg:px-12"
+                className="flex-shrink-0 w-full grid md:grid-cols-12 items-center justify-between px-4 lg:px-12"
               >
-                {/* Text Section with animation */}
+                {/* Text Section */}
                 <motion.div
-                  key={current} // Force re-trigger animation on slide change
-                  className="lg:max-w-3xl text-center lg:text-left order-2 md:order-1 "
+                  key={current}
+                  className="lg:max-w-3xl col-span-7 text-center lg:text-left order-2 md:order-1"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1, duration: 0.8 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
                 >
-                  <h2 className="text-xl md:text-3xl text-[#000000] mb-0 lg:mb-2 leading-snug font-helvetica font-semibold">
+                  <h2 className="text-[22px] font-bold text-black font-poppins md:text-[28px]">
                     {slide.title}
                   </h2>
-                  <p className="text-[#000000] font-poppins font-medium text-[20px] leading-relaxed">
+                  <p className="text-[18px] text-gray-700 font-light font-poppins leading-relaxed md:text-[22px]">
                     {slide.description}
                   </p>
                   {/* Navigation Arrows */}
-                  <div className=" mt-3   flex  justify-center lg:justify-start space-x-4 w-full lg:w-3/5 relative z-10">
+                  <div className="mt-3 flex justify-center lg:justify-start space-x-4 w-full lg:w-3/5 relative z-10">
                     <button
                       onClick={prevSlide}
-                      className="flex items-center justify-start transition"
+                      disabled={current === 0}
+                      className={`flex items-center justify-start transition ${current === 0 ? "opacity-40 cursor-not-allowed" : ""
+                        }`}
                     >
-                      <ArrowLeftCircle className="md:w-8 md:h-8" />
+                      <ArrowLeftCircle className="md:w-8 md:h-8 text-gray-600" />
                     </button>
                     <button
                       onClick={nextSlide}
-                      className="flex items-center justify-center transition"
+                      disabled={current === slides.length - 1}
+                      className={`flex items-center justify-center transition ${current === slides.length - 1 ? "opacity-40 cursor-not-allowed" : ""
+                        }`}
                     >
-                      <ArrowRightCircle className="md:w-8 md:h-8" />
-
+                      <ArrowRightCircle className="md:w-8 md:h-8 text-gray-600" />
                     </button>
                   </div>
                 </motion.div>
 
                 {/* Image Section */}
-                <div className="flex justify-center items-center order-1 md:order-2">
+                <div className="col-span-5 flex justify-center items-center order-1 md:order-2">
                   <img
                     src={slide.image}
                     alt={slide.title}
-                    className={`${slide.imageClass} object-contain w-[150px] sm:w-[200px] md:w-[240px] lg:w-auto mb-4`}
+                    className={`${slide.imageClass} object-contain w-auto md:w-96 h-[200px] md:h-96 mb-4`}
                   />
                 </div>
-
               </div>
+
             ))}
           </div>
 

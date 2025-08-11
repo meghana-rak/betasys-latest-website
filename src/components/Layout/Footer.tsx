@@ -44,7 +44,7 @@ const Footer = () => {
               <Link
                 key={name}
                 to={path}
-                className="text-white text-[16px] lg:text-[20px]  hover:text-green-400"
+                className="text-white text-[18px] lg:text-[22px]  hover:text-green-400"
               >
                 {name}
               </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
 
         {/* Bottom copyright */}
         <div
-          className={` text-xs md:text-sm py-2 font-poppins text-gray-400 text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          className={` text-[18px] md:text-[22px] py-2 font-poppins text-gray-400 text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
         >
           <p>&copy; 2024 BetasysAI. All rights reserved.</p>

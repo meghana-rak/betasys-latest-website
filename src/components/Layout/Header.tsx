@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '../../assests/logo.png'; 
+import logo from '../../assests/logo.png';
 import { useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation()
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,28 +20,37 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Services', path: '/services' },
+    {
+      name: 'Services',
+      path: '/services',
+      dropdown: [
+        { name: 'AI Consulting', path: '/services/ai-consulting' },
+        { name: 'Agentic AI', path: '/services/agrntic-ai' },
+        { name: 'Cloud Data Engineering', path: '/services/cloud-data-engineering' },
+        { name: 'Product Engineering', path: '/services/product-engineering' },
+        { name: 'Magnetic AI', path: '/services/magnetic-ai' },
+      ],
+    },
     { name: 'Product', path: '/product' },
     { name: 'About', path: '/aboutus' },
-    // { name: 'Career', path: '#' },
+    { name: 'EBook', path: '/ebooklisting' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contactus' },
   ];
 
 
-  const specialPaths = ['/aboutus', '/EbookDetails', '/product'];
+  const specialPaths = ['/aboutus', '/ebookdetails/', '/product'];
   const isSpecialPath = specialPaths.some(path => location.pathname.startsWith(path));
 
   return (
-      // <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <header
-      className={`py-5 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isSpecialPath
+    // <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <header
+      className={`py-5 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isSpecialPath
           ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800' // custom styles for specific paths
           : isScrolled
-          ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
-          : 'bg-transparent'
-      }`}
+            ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
+            : 'bg-transparent'
+        }`}
     >
       <div className="w-full px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-3">
@@ -53,7 +63,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden space-x-6 md:flex font-poppins">
+          {/* <nav className="hidden space-x-6 md:flex font-poppins">
             {navLinks.map(({ name, path }) =>
               path.startsWith('/') ? (
                 <Link key={name} to={path} className="text-[16px] text-white lg:text-[20px] hover:text-green-400">
@@ -61,6 +71,56 @@ const Header = () => {
                 </Link>
               ) : (
                 <a key={name} href={path} className="text-[16px] text-white lg:text-[20px] hover:text-green-400">
+                  {name}
+                </a>
+              )
+            )}
+          </nav> */}
+          <nav className="hidden space-x-6 md:flex font-poppins relative">
+            {navLinks.map(({ name, path, dropdown }) =>
+              dropdown ? (
+                <div
+                  key={name}
+                  className="relative group"
+                  onMouseEnter={() => setOpenDropdown(name)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <Link
+                    to={path}
+                    className="text-[16px] lg:text-[20px] text-white hover:text-green-400"
+                  >
+                    {name}
+                  </Link>
+
+                  {/* Dropdown */}
+                  {openDropdown === name && (
+                    <div className="absolute left-0  border-t-2 border-gray-800 w-56 bg-white rounded-md shadow-lg py-2 z-50">
+                      {dropdown.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.path}
+                          className="block px-4 py-2 text-gray-800 hover:bg-green-100 hover:text-green-600"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : path.startsWith("/") ? (
+                <Link
+                  key={name}
+                  to={path}
+                  className="text-[16px] lg:text-[20px] text-white hover:text-green-400"
+                >
+                  {name}
+                </Link>
+              ) : (
+                <a
+                  key={name}
+                  href={path}
+                  className="text-[16px] lg:text-[20px] text-white hover:text-green-400"
+                >
                   {name}
                 </a>
               )
@@ -78,9 +138,8 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div
-            className={`md:hidden font-poppins px-4 pt-3 pb-4 space-y-2 border-t border-slate-800 ${
-              isScrolled ? 'bg-slate-900' : 'bg-slate-900/95 backdrop-blur-sm'
-            }`}
+            className={`md:hidden font-poppins px-4 pt-3 pb-4 space-y-2 border-t border-slate-800 ${isScrolled ? 'bg-slate-900' : 'bg-slate-900/95 backdrop-blur-sm'
+              }`}
           >
             {navLinks.map(({ name, path }) =>
               path.startsWith('/') ? (

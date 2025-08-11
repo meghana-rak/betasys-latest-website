@@ -6,7 +6,7 @@ interface EbookCardProps {
 }
 
 const EbookCard: React.FC<EbookCardProps> = ({ title, image }) => (
-  <div className="relative bg-gradient-to-br from-[#01243C] to-[#00345E] p-4 rounded-xl flex items-center text-white gap-4 min-h-[130px] shadow-md mb-8">
+  <div className="relative bg-gradient-to-br from-[#01243C] to-[#00345E] p-3 md:p-6 rounded-xl items-center text-white gap-6 min-h-[130px] shadow-md mb-8">
     {/* Floating Image */}
     <img
       src={image}
@@ -15,11 +15,11 @@ const EbookCard: React.FC<EbookCardProps> = ({ title, image }) => (
     />
 
     {/* Text Section */}
-    <div className="flex flex-col justify-between h-full text-left pl-20 sm:pl-28">
-      <h3 className="font-semibold text-[14px] sm:text-[20px] md:text-[20px] mb-3 leading-tight">
+    <div className="flex flex-col justify-between h-full text-left pl-20 md:pl-24 ">
+      <h3 className="font-semibold text-white text-[18px] sm:text-[18px] md:text-[22px] mb-3 leading-tight line-clamp-1">
         {title}
       </h3>
-      <button className="bg-[#00A148] hover:bg-green-600 text-white text-[9px] sm:text-[12px] px-3 py-2 rounded-md w-fit font-poppins">
+      <button className="bg-[#00A148] hover:bg-green-600 text-white text-[16px] md:text-[16px] lg:text-[18px] px-2 py-2 rounded-md w-fit font-poppins">
         Download Now
       </button>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Brain, Cpu, Cloud, Cog, BarChart3, Bot } from 'lucide-react';
 import { useIntersectionObserver } from '../../hooks/useParallax';
-import background from '../assests/Whatwedo/bg-img.png'
+import bgImage from '../../assests/Whatwedo/bg-img.png'
 
 const Services = () => {
   const { isVisible, setElement } = useIntersectionObserver();
@@ -47,7 +47,7 @@ const Services = () => {
         : 'opacity-0 translate-y-16'
         }`}
       style={{
-        backgroundImage: "url('/src/assests/Whatwedo/bg-img.png')"
+        backgroundImage:`url(${bgImage})`
       }}
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
