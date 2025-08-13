@@ -17,7 +17,7 @@ function EbookDetails() {
        >
       {/* Hero Section */}
       <section
-        className="relative  flex items-center pt-28 py-4 lg:mt-20 "
+        className="relative  flex items-center pt-28 py-4 "
         style={{
           backgroundImage: `url(${EbookImage})`,
           backgroundRepeat: "no-repeat",
@@ -25,7 +25,7 @@ function EbookDetails() {
           backgroundSize: "80% auto",
         }}
       >
-        <div className="max-w-7xl mx-auto w-full flex items-center px-4 sm:px-6 lg:px-8 sm:py-8">
+       <div className=" container mx-auto px-4 sm:px-6 lg:px-8 h-[300px] sm:h-[260px] md:h-[300px] lg:h-[380px] xl:h-[380px]  flex items-center ">
           {/* Left Text Content */}
           <div className="w-full">
             <h2 className="md:text-[38px] text-[28px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
@@ -47,8 +47,8 @@ function EbookDetails() {
       </section>
 
       {/* Discover Our Book Section */}
-      <section className="max-w-7xl mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-4 md:py-8">
-        <div className=" mx-auto text-start ">
+      <section className="mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-4 md:py-8">
+        <div className="  text-start ">
           {/* Heading */}
          <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
             Discover{" "}
@@ -94,7 +94,7 @@ function EbookDetails() {
           backgroundSize: "auto",
         }}
       >
-        <div className="max-w-7xl mx-auto container px-4 sm:px-6 lg:px-8 md:px-10 py-4 sm:py-8 ">
+        <div className=" mx-auto container px-4 sm:px-6 lg:px-8 md:px-10 py-4 sm:py-8 ">
           {/* Top Label */}
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             WHAT IT COVER

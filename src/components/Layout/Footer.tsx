@@ -9,7 +9,7 @@ const Footer = () => {
     { name: 'Services', path: '/services' },
     { name: 'Product', path: '#' },
     { name: 'About', path: '/aboutus' },
-    // { name: 'Career', path: '#' },
+    { name: 'Ebook', path: '/ebook' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contactus' },
   ];
@@ -20,7 +20,7 @@ const Footer = () => {
       className={`bg-slate-900 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top section: Logo + Links */}
         <div
@@ -28,7 +28,7 @@ const Footer = () => {
             }`}
         >
           {/* Logo */}
-          <div className="flex-shrink-0 w-40 mb-4 md:mb-0 p-3">
+          <div className="flex-shrink-0 w-40 mb-4 md:mb-0 py-3">
             <Link to="/">
               <img
                 src={logo}
@@ -44,7 +44,7 @@ const Footer = () => {
               <Link
                 key={name}
                 to={path}
-                className="text-white text-[18px] lg:text-[22px]  hover:text-green-400"
+                className="text-white font-semibold text-[18px] lg:text-[22px]  hover:text-green-400"
               >
                 {name}
               </Link>
@@ -54,10 +54,10 @@ const Footer = () => {
 
         {/* Bottom copyright */}
         <div
-          className={` text-[18px] md:text-[22px] py-2 font-poppins text-gray-400 text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          className={` text-[16px] md:text-[20px] py-2 font-poppins text-gray-400 text-center transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
         >
-          <p>&copy; 2024 BetasysAI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BetasysAI. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -27,14 +27,14 @@ const WhyChoose1: React.FC = () => {
   return (
     <section
       ref={setElement}
-      className={`py-10  transition-all duration-1000 ${isVisible
+      className={`md:py-20 py-10  transition-all duration-1000 ${isVisible
         ? 'opacity-100 translate-y-0'
         : 'opacity-0 translate-y-16'
         }`}
     >
 
       {/* <section className="px-4 py-12 bg-white sm:px-6 lg:px-20"> */}
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto container sm:px-6 lg:px-8">
 
         <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
           Why Choose <span className='font-bold'>Our AI Consulting?</span>

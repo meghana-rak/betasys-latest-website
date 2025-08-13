@@ -44,7 +44,7 @@ const Process: React.FC = () => {
       className={`md:py-10 py-3 transition-all duration-1000 bg-[#022334] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
         }`}
     >
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto container sm:px-6 lg:px-8">
         <div className="py-10 mb-4 md:py-6">
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             Our Core Capabilities

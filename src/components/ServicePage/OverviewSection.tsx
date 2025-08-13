@@ -14,7 +14,7 @@ const OverviewSection: React.FC = () => {
         : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className="px-4 mx-auto md:text-justify md:py-2 max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto md:text-justify md:py-2 container sm:px-6 lg:px-8">
         <div className="md:mb-4">
           <h2 className="md:text-[38px] text-[28px] leading-tight font-bold  font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">Overview</h2>
 

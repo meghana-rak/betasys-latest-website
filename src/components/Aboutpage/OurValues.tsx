@@ -9,7 +9,7 @@ function OurValues() {
         <section
             id="who-section"
             ref={setElement}
-            className={`py-10 md:py-20 transition-all duration-1000 ${isVisible
+            className={`py-10 bg-gray-50 transition-all duration-1000 ${isVisible
                 ? 'opacity-100 translate-y-0'
                 : 'opacity-0 translate-y-16'
                 }`}
@@ -17,7 +17,7 @@ function OurValues() {
             <div>
             {/* Our Values Section */}
             <div className={`transition-all duration-1000 `}>
-                <div className="max-w-7xl mx-auto md:px-16">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Values Header */}
                     <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
                         {/* Green accent line */}

@@ -14,7 +14,7 @@ const BusinessTransform = () => {
         : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mt-6 mb-12 ">
          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">What We Deliver</p>
           <h2 className="md:text-[38px] text-[28px]leading-tight  font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">

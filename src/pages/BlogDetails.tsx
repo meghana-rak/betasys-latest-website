@@ -46,39 +46,38 @@ import Sidebar from '../components/BlogPages/Sidebar';
 
 const BlogDetails: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <BlogHero />
+  <div className="min-h-screen bg-gray-50">
+  <BlogHero />
 
-      <main className="px-4 mx-auto md:text-justify md:py-14 max-w-7xl sm:px-6 lg:px-8 ">
-        {/* ✅ Fixed Hamburger Button for 1280px and below */}
-        <div className="block xl:hidden">
-          <Sidebar />
-        </div>
-
-        {/* ✅ Responsive Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-6 xl:gap-6">
-
-          {/* Desktop Left Sidebar - Only visible on ≥1280px */}
-          <aside className="hidden xl:block xl:col-span-3 order-2 xl:order-1">
-            <div className="sticky top-4 md:top-6 lg:top-8">
-              <Sidebar />
-            </div>
-          </aside>
-
-          {/* Blog Main Content */}
-          <div className="col-span-1 md:col-span-1 xl:col-span-6 order-1 xl:order-2">
-            <BlogMain />
-          </div>
-
-          {/* Related Blogs */}
-          <aside className="col-span-1 md:col-span-1 xl:col-span-3 order-2 md:order-2 mt-6 md:mt-0">
-            <div className="sticky top-4 md:top-6 lg:top-8">
-              <RelatedBlogs />
-            </div>
-          </aside>
-        </div>
-      </main>
+  <main className="px-4 mx-auto md:text-justify md:py-14 container sm:px-6 lg:px-8">
+    {/* ✅ Mobile Sidebar (Hamburger) */}
+    <div className="block lg:hidden">
+      <Sidebar />
     </div>
+
+    {/* ✅ Responsive Layout */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-8">
+      
+      {/* Left Sidebar - visible only on large screens */}
+      <aside className="hidden lg:block lg:col-span-3 ">
+        <Sidebar />
+      </aside>
+
+      {/* Blog Main Content */}
+      <div className="col-span-1 lg:col-span-6 ">
+        <BlogMain />
+      </div>
+
+      {/* Related Blogs */}
+      <aside className="col-span-1 lg:col-span-3 ">
+        <div className="sticky top-4 md:top-6 lg:top-8">
+          <RelatedBlogs />
+        </div>
+      </aside>
+    </div>
+  </main>
+</div>
+
   );
 };
 

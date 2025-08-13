@@ -9,7 +9,7 @@ const BlogMain: React.FC = () => {
         <img
           src={blogDetail}
           alt="Doctor with stethoscope"
-          className="w-[1000px] h-62 object-cover rounded-lg"
+          className=" h-62 object-cover rounded-lg"
         />
 
         {/* Date Badge */}
@@ -21,12 +21,12 @@ const BlogMain: React.FC = () => {
       </div>
 
       {/* Category Tag */}
-      <span className="inline-block text-[#00A148] mb-1 text-[18px] md:text-[22px] font-poppins">
+      <span className="tracking-tighter inline-block text-[#00A148] mb-1 text-[18px] md:text-[22px] font-poppins">
         Health
       </span>
 
       {/* Title */}
-      <h1 className="font-medium md:tracking-tighter  text-[24px]  md:text-[28px]  space-x-0 text-gray-700 mb-1 leading-tighter font-poppins">
+      <h1 className="font-medium tracking-tighter  text-[24px]  md:text-[28px]  space-x-0 text-gray-700 mb-1 leading-tighter font-poppins">
         The Future of AI in Healthcare Transforming Patient Care
       </h1>
 
@@ -36,7 +36,7 @@ const BlogMain: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="prose prose-lg max-w-none text-[16px] lg:text-justify font-poppins">
+      <div className=" tracking-tighter prose prose-lg max-w-none text-[16px] lg:text-justify font-poppins">
         <p className="text-gray-700 leading-tighter font-poppins text-[18px] md:text-[20px] mb-2">
           Artificial intelligence is rapidly transforming healthcare, offering
           unprecedented opportunities to improve patient outcomes, streamline

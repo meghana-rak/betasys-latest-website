@@ -13,7 +13,7 @@ const Insights = () => {
         : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex lg:flex-row flex-col justify-between items-start mb-12 transition-all duration-1000 delay-200 `}>
           <div>
            <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">Insights & Resources</p>

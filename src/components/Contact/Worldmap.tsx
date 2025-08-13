@@ -15,7 +15,7 @@ function Worldmap() {
                         : 'opacity-0 translate-y-16'
                     }`}>
                 <div className="flex justify-center">
-                    <div className="max-w-6xl w-full">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         {/* <ComposableMap projectionConfig={{ scale: 140 }} className="w-full h-auto">
                             <Geographies geography={geoUrl}>
                                 {({ geographies }) =>

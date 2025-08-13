@@ -155,7 +155,7 @@ const Faq: React.FC = () => {
         : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="my-1 mb-8 text-[24px] font-bold text-black md:text-[38px] font-helvetica">
           FAQ
         </h2>

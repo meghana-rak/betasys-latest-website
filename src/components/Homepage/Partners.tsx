@@ -14,7 +14,7 @@ const Partners = () => {
         : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-5 md:gap-8 items-center">
           {/* Left Text Section - 60% (3 columns) */}
           <div className="md:col-span-3">

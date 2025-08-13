@@ -87,8 +87,8 @@ function OurMission() {
         >
         <div>
             {/* Our Mission Section */}
-            <div className='lg:mt-32 mt-10  transition-all duration-1000'>
-                <div className="max-w-7xl mx-auto md:px-16 transition-all duration-1000">
+            <div className=' container  mx-auto px-4 sm:px-6 lg:px-8  transition-all duration-1000'>
+                <div className="  transition-all duration-1000">
                     {/* Mission Header */}
                     <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
                         {/* Green accent line */}
@@ -108,7 +108,7 @@ function OurMission() {
                     </div>
 
                     {/* Cards Grid */}
-                    <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 mb-20">
+                    <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 ">
                         {cardData.map((card, index) => (
                             <div
                                 key={index}

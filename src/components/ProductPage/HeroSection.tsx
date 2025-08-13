@@ -7,8 +7,8 @@ import HeroDesktop from "../../assests/ProductPage/Frame.png";
 const HeroSection = () => {
   return (
     // md:pt-[250px] 
-    <section className="relative pt-[140px] md:pt-[130px] container  ">
-      <div className="max-w-5xl md:max-w-7xl mx-auto px-4 sm:px-6  md:pt-6 text-center">
+    <section className="relative pt-[140px] md:pt-[130px] container  mx-auto ">
+      <div className=" px-4 sm:px-6  md:pt-6 text-center">
 
         {/* Small heading */}
         <motion.p

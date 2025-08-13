@@ -10,13 +10,13 @@ const WhyChoose2: React.FC = () => {
   return (
     <section
       ref={setElement}
-      className={`py-10  transition-all duration-1000 ${isVisible
+      className={`md:py-20 pb-10 transition-all duration-1000 ${isVisible
         ? 'opacity-100 translate-y-0'
         : 'opacity-0 translate-y-16'
         }`}
     >
   
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto container sm:px-6 lg:px-8">
         <div className='mb-4'>
           <h2 className="md:text-[38px] text-[28px] leading-tight   font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
           Why Choose <span className="font-bold">Our AI Consulting?</span>
@@ -27,7 +27,7 @@ const WhyChoose2: React.FC = () => {
           assess readiness, and implement scalable AI.
         </p>
         </div>
-      </div>
+    
 
       {/* Main Content Grid */}
       <div className="grid gap-4 px-4 mx-auto lg:grid-cols-2 sm:px-6 lg:px-8 py-4">
@@ -78,6 +78,7 @@ const WhyChoose2: React.FC = () => {
         </div>
 
       </div>
+        </div>
     </section>
   );
 };

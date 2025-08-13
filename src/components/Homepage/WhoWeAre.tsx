@@ -57,7 +57,7 @@ const WhoWeAre = () => {
         />
 
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">WHO WE ARE</p>
           <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">

@@ -40,7 +40,7 @@ const Hero = () => {
         backgroundImage: `url(${bgImage})`
       }}
     >
-      <div >
+      <div>
 
         {/* Flowing wave design */}
         <div
@@ -54,37 +54,28 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className=" pb-2 pt-32 md:pb-32 z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-        
+        className="container mx-auto px-4 sm:px-6 lg:px-8 flex min-h-screen  items-center"
       >
-        <div className="pb-3  md:pt-10 md:pb-0">
-            <h1
-            className="max-w-3xl font-helvetica text-[36px] md:text-4xl lg:text-[68px] font-bold text-white mb-6 leading-tight lg:leading-[74px]"
-            >
+        <div className="pb-3 md:pt-10 md:pb-0 ">
+          <h1
+            className="max-w-3xl font-helvetica text-[36px] md:text-4xl lg:text-[68px] font-bold text-white mb-6 leading-tight lg:leading-[74px] mx-auto"
+          >
             AI Business Solutions Tailored for Your Growth
-            </h1>
-          <p className="font-poppins text-[18px] md:text-[22px] text-gray-300 mb-8 max-w-2xl leading-relaxed">
+          </h1>
+          <p className="font-poppins text-[18px] md:text-[22px] text-gray-300 mb-8 max-w-2xl leading-relaxed ">
             Practical artificial intelligence solutions that deliver measurable business outcomes.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[#007635] hover:bg-[#007635] text-white  text-[16px] px-3 py-2 md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold md:text-[22px] transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25">
+          <div className="flex flex-col sm:flex-row gap-4 ">
+            <button className="bg-[#007635] hover:bg-[#007635] text-white text-[16px] px-3 py-2 md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold md:text-[22px] transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25">
               Explore Solutions
             </button>
-            <button className="border-2 border-white text-white hover:bg-white text-[16px] px-3 py-2 hover:text-slate-900   md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold md:text-[22px] transition-all duration-300">
+            <button className="border-2 border-white text-white hover:bg-white text-[16px] px-3 py-2 hover:text-slate-900 md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold md:text-[22px] transition-all duration-300">
               Schedule Consultation
             </button>
           </div>
         </div>
-        
       </div>
-      {/* <div
-          className="block lg:hidden bottom-2 w-full left-0 right-0 "      >
-          <img
-            src={wave}
-            alt="wave"
-            className="  bottom-2 left-0 w-full "
-          />
-        </div> */}
+     
     </section>
   );
 };

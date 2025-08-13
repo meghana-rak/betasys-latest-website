@@ -8,25 +8,27 @@ function BlogPage() {
   const label = "Blog"
   return (
     <div>
-      <div className="mb-6 ">
-        {/* <HeroSection /> */}
-        <Banner label={label} />
-      </div>
+  <div className="mb-6">
+    <Banner label={label} />
+  </div>
 
-      <main className="px-4 mx-auto md:text-justify md:pb-10 max-w-5xl md:max-w-7xl sm:px-6 lg:px-8 ">
-        <div className="flex flex-col gap-6  lg:flex-row ">
-          {/* Sidebar: shown first on mobile, second on desktop */}
-          <div className="order-1 ">
-            <Sidebar />
-          </div>
+  <main className="container mx-auto px-4 sm:px-6 lg:px-8 md:pb-10">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      {/* Sidebar */}
+      <aside className="order-1 lg:order-none lg:col-span-3">
+        <Sidebar />
+      </aside>
 
-          {/* BlogGrid: shown second on mobile, first on desktop */}
-          <div className="order-2 mx-auto">
-            <BlogGrid />
-          </div>
-        </div>
-      </main>
+      {/* Blog Grid */}
+      <section className="order-2 lg:order-2 lg:col-span-9">
+        <BlogGrid />
+      </section>
+
     </div>
+  </main>
+</div>
+
   );
 }
 

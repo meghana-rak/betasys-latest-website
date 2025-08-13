@@ -26,13 +26,13 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/services" element={<ServicePage />} />
+        <Route path="/services/:name" element={<ServicePage />} />
         <Route path='/contactus' element={<ContactUsPage />} />
         <Route path='/blogdetails/:id' element={<BlogDetails />} />
         <Route path='/ebooklisting' element={<EbookListing />} />

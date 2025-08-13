@@ -32,15 +32,15 @@ const ContactUsPage = () => {
                     }`}
 
             >
-                <div className="relative max-w-7xl justify-between grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className=" pr-12 flex justify-between flex-col">
+                <div className="relative container justify-between grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className=" md:pr-12 flex justify-between flex-col">
                         <div>
                             <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">GET IN TOUCH</p>
                             <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
                                 We are ready to help you and
                                 <span className='font-bold'> Answer your question</span>
                             </h2>
-                             <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">Explore expert content, practical guides, and real-world use cases to for your business.</p>
+                            <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">Explore expert content, practical guides, and real-world use cases to for your business.</p>
                         </div>
                         <div>
                             <p className="font-semibold text-black font-poppins lg:my-0  text-[22px] md:text-[24px]">Call Center</p>
@@ -57,10 +57,10 @@ const ContactUsPage = () => {
                     </div>
 
                     <div className="w-full md:h-96 rounded-lg overflow-hidden">
-                      {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.5351975912226!2d79.0726599778843!3d21.091218635564637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bfd7ae5cb621%3A0x88ff86a105e9ecf1!2sBetasys%20AI%20Learning%20Hub!5e0!3m2!1sen!2sus!4v1754917486511!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.5351975912226!2d79.0726599778843!3d21.091218635564637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bfd7ae5cb621%3A0x88ff86a105e9ecf1!2sBetasys%20AI%20Learning%20Hub!5e0!3m2!1sen!2sus!4v1754917486511!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
                         <iframe
                             title="Nagpur Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.5351975912226!2d79.0726599778843!3d21.091218635564637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bfd7ae5cb621%3A0x88ff86a105e9ecf1!2sBetasys%20AI%20Learning%20Hub!5e0!3m2!1sen!2sus!4v1754917486511!5m2!1sen!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.534736638073!2d79.07499257525835!3d21.09123703057369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2539bd9a9f240a73%3A0x7f35f795b3106f8e!2sBetasys%20AI%20Private%20Ltd!5e0!3m2!1sen!2sin!4v1754993396499!5m2!1sen!2sin"
                             className="w-full h-full border-none"
                             allowFullScreen
                             loading="lazy"
@@ -72,7 +72,7 @@ const ContactUsPage = () => {
                                 borderRadius: "8px",
                             }}
                         ></iframe>
-                        
+                       
                     </div>
                 </div>
             </section>
