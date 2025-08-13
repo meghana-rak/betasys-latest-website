@@ -11,7 +11,7 @@ function Banner({label}) {
                 <h1 className="text-[24px] font-bold text-white font-helvetica sm:text-[28px] xl:text-4xl">{label}</h1>
                 <nav className="flex items-center space-x-2 text-[18px] uppercase tracking-wide font-poppins md:mt-2 ">
                     <button
-                        className="text-[#00A148] font-poppins text-[22px] focus:outline-none hover:underline"
+                        className="text-[#34ef88] font-poppins text-[22px] focus:outline-none hover:underline"
                         onClick={() => window.location.href = '/'}
                     >
                         Betasys.ai
