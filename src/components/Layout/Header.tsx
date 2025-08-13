@@ -101,12 +101,12 @@ const Header = () => {
 
                     {/* Dropdown */}
                     {openDropdown === name && (
-                      <div className="absolute left-0 top-full border-t-4 border-gray-800 w-56 bg-white rounded-md shadow-lg z-50">
+                      <div className="absolute left-0 top-full pt-3 w-56 bg-white rounded-md shadow-lg z-50">
                         {dropdown.map((item) => (
                           <Link
                             key={item.name}
                             to={item.path}
-                            className={`block px-4 py-1 font-poppins text-[16px] lg:text-[18px] hover:bg-green-100 hover:text-green-600 ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-gray-800'
+                            className={`block px-4 py-1 font-poppins text-[16px] lg:text-[18px]  hover:border-l-4 hover:border-green-600 hover:text-green-600 ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-gray-800'
                               }`}
                           >
                             {item.name}

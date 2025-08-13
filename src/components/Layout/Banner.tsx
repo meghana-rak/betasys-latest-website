@@ -1,5 +1,6 @@
 import React from 'react';
 import frame from '../../assests/Servicepage/ServiceFrame.png'
+import { ChevronRight } from 'lucide-react';
 
 function Banner({label}) {
     return (
@@ -8,7 +9,21 @@ function Banner({label}) {
             {/* Text Content */}
             <div className="z-10 mt-12 sm:mt-0">
                 <h1 className="text-[24px] font-bold text-white font-helvetica sm:text-[28px] xl:text-4xl">{label}</h1>
-                <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">Betasys.ai </p>
+                <nav className="flex items-center space-x-2 text-[18px] uppercase tracking-wide font-poppins md:mt-2 ">
+                    <button
+                        className="text-[#00A148] font-poppins text-[22px] focus:outline-none hover:underline"
+                        onClick={() => window.location.href = '/'}
+                    >
+                        Betasys.ai
+                    </button>
+                    <span className="text-white font-medium"><ChevronRight/></span>
+                    <button
+                        className="text-white font-poppins text-[22px] focus:outline-none hover:underline"
+                        onClick={() => window.location.href = `/betasys.ai/${label}`}
+                    >
+                        {label}
+                    </button>
+                </nav>
             </div>
 
             {/* Background Image */}
