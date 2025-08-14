@@ -3,25 +3,15 @@ import { Menu, X } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategory } from "../../store/blogThunk.js";
 
-// const categories = [
-//   "Health",
-//   "AI & Machine Learning",
-//   "Business Transformation",
-//   "Data & Analytics",
-//   "Industry Use Cases",
-//   "Ethics & AI Governance",
-//   "Careers in AI",
-//   "Training & Education",
-// ];
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC = ({ onCategorySelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
   const { status, categories } = useSelector((state) => state.blog);
 
   const [categoriesList, setCategoriesList] = useState([]);
 
-  console.log("posts in page", categories);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   useEffect(() => {
     dispatch(fetchCategory());
@@ -79,14 +69,22 @@ const Sidebar: React.FC = () => {
 
         {/* Category List */}
         <ul className="p-4 overflow-y-auto max-h-[calc(100%-60px)]">
-          {categoriesList?.map((category, index) => (
-            <li key={index}>
-              <a
-                href="#"
-                className="block text-xs text-gray-700 font-medium px-3 py-2 transition-all hover:bg-emerald-50 hover:text-[#00A148] hover:shadow-sm"
+          {categoriesList?.map((category) => (
+            <li key={category._id}>
+              <button
+                onClick={() => {
+                  setActiveCategory(category._id);
+                  onCategorySelect(category?._id);
+                  setIsOpen(false);
+                }}
+                className={`w-full text-left block text-xs font-medium px-3 py-2 transition-all rounded-md
+              ${activeCategory == category?._id
+                    ? "bg-emerald-500 text-white"
+                    : "text-gray-700 hover:bg-emerald-50 hover:text-[#00A148]"}`
+                }
               >
-                {category?.name}
-              </a>
+                {category.name}
+              </button>
             </li>
           ))}
         </ul>
@@ -97,14 +95,21 @@ const Sidebar: React.FC = () => {
       <aside className="hidden  lg:block sticky grid-cols-2  py-6 px-6 bg-[#F0F0F0]/30 border-[#DFDFDF8F]/30 border-2 rounded-lg shadow-sm  h-screen ">
         <h2 className="text-[#00A148] font-semibold text-[24px] md:text-[28px]  font-poppins mb-4">Categories</h2>
         <ul className="space-y-2 leading-tight">
-          {categoriesList?.map((category, index) => (
-            <li key={index}>
-              <a
-                href="#"
-                className=" tracking-[0.05px]  font-poppins font-medium text-gray-700 transition-colors  rounded-md text-[18px] lg:text-[20px] hover:text-emerald-600 hover:bg-emerald-50"
+          {categoriesList?.map((category) => (
+            <li key={category._id}>
+              <button
+                onClick={() => {
+                  setActiveCategory(category?._id);
+                  onCategorySelect(category._id)
+                }}
+                className={`w-full text-left p-1 tracking-[0.05px] font-poppins font-medium rounded-md text-[18px] lg:text-[20px] 
+              ${activeCategory === category._id
+                    ? "text-[#00A148]  "
+                    : "text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"}`
+                }
               >
-                {category?.name}
-              </a>
+                {category.name}
+              </button>
             </li>
           ))}
         </ul>

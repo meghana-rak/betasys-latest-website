@@ -294,7 +294,6 @@ export default function ProductPage() {
 
       // Hide stroke bar and release fixed position after scrolling past the last section
       const releasePoint = SECTION_COUNT * sectionHeight;
-      console.log("Release Point:", releasePoint, "Current Scroll:", scrollY);
       if (scrollY >= releasePoint) {
         setIsFixed(false);
         setShowStroke(false);

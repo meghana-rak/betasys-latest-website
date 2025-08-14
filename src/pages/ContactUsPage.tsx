@@ -4,6 +4,8 @@ import worldmap from '../assests/worldmap.png';
 import { useIntersectionObserver } from '../hooks/useParallax';
 import Worldmap from "../components/Contact/Worldmap";
 import Banner from "../components/Layout/Banner";
+import ContactForm from "../components/Contact/ContactForm";
+import Map from "../components/Contact/Map";
 
 // const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 const geoUrl = "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson";
@@ -32,7 +34,7 @@ const ContactUsPage = () => {
                     }`}
 
             >
-                <div className="relative container justify-between grid grid-cols-1 md:grid-cols-2 gap-6 mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="relative container justify-between grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto px-4 sm:px-6 lg:px-8">
                     <div className=" md:pr-12 flex justify-between flex-col">
                         <div>
                             <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">GET IN TOUCH</p>
@@ -56,25 +58,13 @@ const ContactUsPage = () => {
                         </div>
                     </div>
 
-                    <div className="w-full md:h-96 rounded-lg overflow-hidden">
-                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.5351975912226!2d79.0726599778843!3d21.091218635564637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4bfd7ae5cb621%3A0x88ff86a105e9ecf1!2sBetasys%20AI%20Learning%20Hub!5e0!3m2!1sen!2sus!4v1754917486511!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-                        <iframe
-                            title="Nagpur Location"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.534736638073!2d79.07499257525835!3d21.09123703057369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2539bd9a9f240a73%3A0x7f35f795b3106f8e!2sBetasys%20AI%20Private%20Ltd!5e0!3m2!1sen!2sin!4v1754993396499!5m2!1sen!2sin"
-                            className="w-full h-full border-none"
-                            allowFullScreen
-                            loading="lazy"
-                            style={{
-                                minHeight: "350px",
-                                width: "100%",
-                                height: "100%",
-                                border: "none",
-                                borderRadius: "8px",
-                            }}
-                        ></iframe>
-                       
+                    <div >
+                        <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins mb-2">Inquiry Form</p>
+                        <ContactForm />
                     </div>
                 </div>
+                <Map />
+
             </section>
 
         </div>

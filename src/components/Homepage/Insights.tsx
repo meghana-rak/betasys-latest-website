@@ -14,7 +14,7 @@ const Insights = () => {
         }`}
     >
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex lg:flex-row flex-col justify-between items-start mb-12 transition-all duration-1000 delay-200 `}>
+        <div className={`flex lg:flex-row flex-col justify-between items-start  transition-all duration-1000 delay-200 `}>
           <div>
            <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">Insights & Resources</p>
              <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
@@ -23,7 +23,7 @@ const Insights = () => {
              <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
               Explore expert content, practical guides, and real-world use cases to unlock AI’s potential for your business.        </p>
           </div>
-          <Link to=''>
+          <Link to='' className='mb-2 lg:mb-0'>
             <button className="bg-[#00A148]  hover:bg-green-500 text-white px-2 py-1 lg:px-4 lg:py-2 rounded-lg font-regular transition-all duration-500 transform hover:scale-105 hover:shadow-xl hover:shadow-[#00A148]/25 relative overflow-hidden">
               <span className="relative z-10 font-poppins text-[16px] md:text-[20px] ">See All Blog</span>
             </button>

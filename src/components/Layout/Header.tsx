@@ -28,7 +28,7 @@ const Header = () => {
       // path: '/services',
       dropdown: [
         { name: 'AI Consulting', path: '/services/ai-consulting' },
-        { name: 'Agentic AI', path: '/services/agrntic-ai' },
+        { name: 'Agentic AI', path: '/services/agentic-ai' },
         { name: 'Cloud Data Engineering', path: '/services/cloud-data-engineering' },
         { name: 'Product Engineering', path: '/services/product-engineering' },
         { name: 'Magnetic AI', path: '/services/magnetic-ai' },
@@ -42,7 +42,7 @@ const Header = () => {
   ];
 
 
-  const specialPaths = ['/aboutus', '/contactus', '/ebooklisting', '/ebookdetails/', '/product', '/blogdetails/', '/blog', '/services/ai-consulting', '/services/agrntic-ai', '/services/cloud-data-engineering', '/services/product-engineering', '/services/magnetic-ai'];
+  const specialPaths = ['/aboutus', '/contactus', '/ebooklisting', '/ebookdetails/', '/product', '/blogdetails/', '/blog', '/services/ai-consulting', '/services/agentic-ai', '/services/cloud-data-engineering', '/services/product-engineering', '/services/magnetic-ai'];
   const isSpecialPath = specialPaths.some(path => location.pathname.startsWith(path));
 
   return (

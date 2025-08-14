@@ -12,56 +12,44 @@ interface BlogPost {
   category: string;
 }
 
-const RelatedBlogs: React.FC = () => {
-  const relatedPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: "The Future of AI in Healthcare Transforming Patient Care",
-      date: "20/06/2025",
-      image: blogdetail1,
-      category: "Healthcare",
-    },
-    {
-      id: 2,
-      title: "The Future of AI in Healthcare Transforming Patient Care",
-      date: "20/06/2025",
-      image: blogdetail2,
-      category: "Healthcare",
-    },
-    {
-      id: 3,
-      title: "The Future of AI in Healthcare Transforming Patient Care",
-      date: "20/06/2025",
-      image: blogdetail3,
-      category: "Healthcare",
-    },
-  ];
+const RelatedBlogs: React.FC = ({ relatedBlogs }) => {
 
+  const apiKey = import.meta.env.VITE_AWS_IMG_URL;
+
+  if (!relatedBlogs || relatedBlogs?.length === 0) {
+    return (
+      <div className="text-center text-gray-500">
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div >
       <h3 className="md:text-[28px] text-[24px] leading-tight font-bold  font-helvetica font-regular text-[#042337] mb-4">Related Blog</h3>
       <div className="space-y-4  ">
-        {relatedPosts.map((post) => (
-          <Link to={`/blogdetails/${post.id}`} key={post.id} className="group">
+        {relatedBlogs?.map((post) => (
+          <Link to={`/blogdetails/${post?.category?._id}/${post?._id}`} key={post?._id} className="group">
             <div key={post.id} className="group cursor-pointer pb-3">
               <div className="relative">
                 <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-[300px] h-32 rounded-lg object-cover"
+                  src={`${apiKey}${post?.image?.path}`}
+                  alt={post?.title}
+                  className="w-full  h-48 rounded-lg object-cover"
                 />
 
                 <div className="absolute top-2 left-2">
                   <span className="px-2 py-1 text-[16px]  text-[#005F2B] bg-[#C4E1D1] rounded-full">
-                    20/06/2025
+                    {new Date(post?.createdAt)
+                      .toLocaleDateString("en-GB")
+                      .replace(/\//g, "/")}
                   </span>
                 </div>
               </div>
               <span className="inline-block text-[#00A148] mb-1 text-[16px] md:text-[18px] font-poppins">
-                {post.category}
+                {post?.category?.name}
               </span>
-              <h4 className=" tracking-tighter text-[16px] font-poppins md:text-[18px]  space-x-0 text-gray-700  line-clamp-2">
-                {post.title}
+              <h4 className=" tracking-tighter  font-poppins text-[18px] md:text-[22px] space-x-0 text-gray-700  line-clamp-2">
+                {post?.title}
               </h4>
             </div>
           </Link>

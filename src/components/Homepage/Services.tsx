@@ -65,13 +65,16 @@ const Services = () => {
           : 'opacity-0 translate-y-12'
           }`}>
           {services.map((service, index) => (
-            <div key={index} className="py-3 md:py-12 gap-3 flex ">
+            <div
+              key={index}
+              className="p-3 md:py-12 gap-3 flex bg-black/10 backdrop-blur-sm rounded-xl shadow-lg"
+            >
               <div className="text-white ">
-                {service.icon}
+              {service.icon}
               </div>
               <div>
-                <h3 className="text-[24px] md:text-[28px] font-helvetica font-semibold text-white mb-2">{service.title}</h3>
-                <p className="text-gray-300 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light">{service.description}</p>
+              <h3 className="text-[24px] md:text-[28px] font-helvetica font-semibold text-white mb-2">{service.title}</h3>
+              <p className="text-gray-300 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light">{service.description}</p>
               </div>
             </div>
           ))}

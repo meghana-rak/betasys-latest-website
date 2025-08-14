@@ -20,9 +20,6 @@ function OurValues() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Values Header */}
                     <div className={`md:mb-16 transition-all duration-800 delay-300 `}>
-                        {/* Green accent line */}
-                        {/* <div className="w-1 h-16 bg-emerald-500 mb-8"></div> */}
-
                         <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
                             Our Values
                         </p>
@@ -38,7 +35,7 @@ function OurValues() {
 
                     {/* Content Grid */}
                     {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"> */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 ">
                         {/* Left Side - Dark Card (1/3 width) */}
                         <div className="lg:col-span-2">
                             <div className="bg-slate-800 rounded-2xl p-5 md:p-12 h-full relative overflow-hidden group">

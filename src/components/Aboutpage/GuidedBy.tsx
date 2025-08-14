@@ -59,14 +59,18 @@ function GuidedBy() {
                 }`}
         >
             <div>
-                <div className="relative container text-center mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className=" mb-4 flex flex-col items-center justify-center">
-                        <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">Leadership</p>
+                <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className={` transition-all duration-800 delay-300 `}>
+                        <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
+                          Guided By
+                        </p>
+
                         <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
-                            Guided by Vision, <span className='font-bold'> Driven by Purpose </span>
+                            Guided by Vision,  <span className="font-bold">Driven by Purpose</span>
                         </h2>
-                        <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
-                            At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.
+
+                        <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px] ">
+                           At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.
                         </p>
                     </div>
 

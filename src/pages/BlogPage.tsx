@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import HeroSection from '../components/BlogPages/HeroSection';
 import Sidebar from '../components/BlogPages/Sidebar';
 import BlogGrid from '../components/BlogPages/BlogGrid';
@@ -6,6 +6,7 @@ import Banner from '../components/Layout/Banner';
 
 function BlogPage() {
   const label = "Blog"
+   const [selectedCategory, setSelectedCategory] = useState(null); 
   return (
     <div>
   <div className="mb-6">
@@ -17,12 +18,12 @@ function BlogPage() {
       
       {/* Sidebar */}
       <aside className="order-1 lg:order-none lg:col-span-3">
-        <Sidebar />
+         <Sidebar onCategorySelect={setSelectedCategory} />
       </aside>
 
       {/* Blog Grid */}
       <section className="order-2 lg:order-2 lg:col-span-9">
-        <BlogGrid />
+        <BlogGrid categoryId={selectedCategory} />
       </section>
 
     </div>

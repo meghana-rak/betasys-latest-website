@@ -21,5 +21,21 @@ const fetchCategory = createAsyncThunk(
     }
 );
 
+const fetchBlogPostById = createAsyncThunk(
+  'blogs/fetchBlogById',
+  async (id) => {
+    const response = await axios.get(`${baseUrl}blog/${id}`);
+    return response.data;
+  }
+);
 
-export {fetchBlogPosts, fetchCategory};
+
+const fetchRelatedPosts = createAsyncThunk(
+  'blogs/fetchRelatedPosts',
+  async ({category, id}) => {
+    const response = await axios.get(`${baseUrl}blog/similar/${category}/${id}`);
+    return response.data;
+  }
+);
+
+export {fetchBlogPosts, fetchCategory, fetchBlogPostById, fetchRelatedPosts};

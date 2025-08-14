@@ -17,22 +17,22 @@ function EbookDetails() {
        >
       {/* Hero Section */}
       <section
-        className="relative  flex items-center pt-28 py-4 "
+        className="relative flex items-center py-4 min-h-[70vh] md:min-h-[50vh] "
         style={{
           backgroundImage: `url(${EbookImage})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right center",
-          backgroundSize: "80% auto",
+          backgroundSize: "cover",
         }}
       >
-       <div className=" container mx-auto px-4 sm:px-6 lg:px-8 h-[300px] sm:h-[260px] md:h-[300px] lg:h-[380px] xl:h-[380px]  flex items-center ">
+       <div className=" container mx-auto  px-4 sm:px-6 lg:px-8  flex items-center ">
           {/* Left Text Content */}
-          <div className="w-full">
-            <h2 className="md:text-[38px] text-[28px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+          <div className="w-full sm:py-20 lg:py-24 xl:py-28">
+            <h2 className="md:text-[48px] text-[36px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               Installing{" "}
               <span className="text-green-600 ">AI in Construction</span>
             </h2>
-            <h3 className="md:text-[38px] text-[28px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+            <h3 className="md:text-[48px] text-[36px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               A Practical Guide for Industry Leaders
             </h3>
             <p className="text-gray-700 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light mt-2">
@@ -47,7 +47,7 @@ function EbookDetails() {
       </section>
 
       {/* Discover Our Book Section */}
-      <section className="mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-4 md:py-8">
+      <section className="mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-10 md:py-20">
         <div className="  text-start ">
           {/* Heading */}
          <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">

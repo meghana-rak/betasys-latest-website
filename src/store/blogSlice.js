@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchBlogPosts, fetchCategory } from './blogThunk.js';
+import { fetchBlogPosts, fetchCategory, fetchBlogPostById , fetchRelatedPosts} from './blogThunk.js';
 
 export const blogSlice = createSlice({
     name: 'blog',
     initialState: {
         categories: [],
         posts: [],
+        post: null,
+        relatedPosts: [],
         status: 'idle',
         error: null,
     },
@@ -17,10 +19,10 @@ export const blogSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-        .addCase(fetchCategory.pending, (state) => {
+            .addCase(fetchCategory.pending, (state) => {
                 state.status = 'loading';
             })
-            .addCase(fetchCategory.fulfilled, (state, action) => {  
+            .addCase(fetchCategory.fulfilled, (state, action) => {
                 state.status = 'succeeded';
                 state.categories = action.payload;
             })
@@ -36,6 +38,28 @@ export const blogSlice = createSlice({
                 state.posts = action.payload;
             })
             .addCase(fetchBlogPosts.rejected, (state, action) => {
+                state.status = 'failed';
+                state.error = action.error.message;
+            })
+            .addCase(fetchBlogPostById.pending, (state) => {
+                state.status = 'loading';
+            })
+            .addCase(fetchBlogPostById.fulfilled, (state, action) => {
+                state.status = 'succeeded';
+                state.post = action.payload;
+            })
+            .addCase(fetchBlogPostById.rejected, (state, action) => {
+                state.status = 'failed';
+                state.error = action.error.message;
+            })
+            .addCase(fetchRelatedPosts.pending, (state) => {
+                state.status = 'loading';
+            })
+            .addCase(fetchRelatedPosts.fulfilled, (state, action) => {
+                state.status = 'succeeded';
+                state.relatedPosts = action.payload;
+            })
+            .addCase(fetchRelatedPosts.rejected, (state, action) => {
                 state.status = 'failed';
                 state.error = action.error.message;
             });

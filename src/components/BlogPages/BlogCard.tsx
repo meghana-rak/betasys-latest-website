@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 interface BlogCardProps {
-  key: string;
+  id: string;
   date: string;
   author?: string;
   image: string;
@@ -14,16 +14,15 @@ interface BlogCardProps {
 
 
 
-const BlogCard: React.FC<BlogCardProps> = ({ key, date, image, category, title , author}) => {
+const BlogCard: React.FC<BlogCardProps> = ({ id, date, image, category, title , author}) => {
    const formattedDate = new Date(date)
     .toLocaleDateString("en-GB") // gives dd/mm/yyyy
     .replace(/\//g, "/");
   
 const apiKey = import.meta.env.VITE_AWS_IMG_URL;
-console.log("apiKey", apiKey, image);
 
   return (
-    <Link to={`/blogdetails/${key}`} className="group">
+    <Link to={`/blogdetails/${category?._id}/${id}`} className="group">
       <article className=" bg-white rounded-lg shadow-md">
         {/* Image Section */}
         <div className="relative">
@@ -43,10 +42,10 @@ console.log("apiKey", apiKey, image);
         {/* Content Section */}
         <div className="p-3">
           <p className="text-[#00A148] -tracking-[0.5px] mb-1 text-[16px] md:text-[18px] font-poppins">
-            {category}
+            {category?.name}
           </p>
           <h3
-            className="font-medium text-[18px] md:text-[22px] text-gray-700 transition-colors line-clamp-2 font-poppins -tracking-[0.3px]"
+            className="font-medium text-[18px] md:text-[22px] text-gray-700 transition-colors line-clamp-1 font-poppins -tracking-[0.3px]"
           >
             {title}
           </h3>
