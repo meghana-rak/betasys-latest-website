@@ -4,18 +4,18 @@ import { useIntersectionObserver } from "../../hooks/useParallax";
 const testimonials = [
     {
         quote:
-            "“Our AI strategy session helped us reduce customer churn by 35% within six months. The team not only guided us through the tech but helped reimagine our entire customer experience.”",
-        author: "- COO, Retail Tech Company",
+            "“Data-driven demand forecasting in manufacturing enhances supply chain accuracy and inventory optimization, leading to better decision-making and an improved bottom line.”",
+        author: "Data-Driven Forecasting Optimization for Manufacturing",
     },
     {
         quote:
-            "“Our AI strategy session helped us reduce customer churn by 35% within six months. The team not only guided us through the tech but helped reimagine our entire customer experience.”",
-        author: "- COO, Retail Tech Company",
+            "“Data-driven demand forecasting in manufacturing enhances supply chain accuracy and inventory optimization, leading to better decision-making and an improved bottom line.”",
+        author: "Cloud Data Engineering for an Innovative Diagnostic Product",
     },
     {
         quote:
-            "“Our AI strategy session helped us reduce customer churn by 35% within six months. The team not only guided us through the tech but helped reimagine our entire customer experience.”",
-        author: "- COO, Retail Tech Company",
+            "“Data-driven demand forecasting in manufacturing enhances supply chain accuracy and inventory optimization, leading to better decision-making and an improved bottom line.”",
+        author: "Data-Driven Forecasting Optimization for Manufacturing",
     },
 ];
 
@@ -27,13 +27,11 @@ function Stories() {
             className={`md:pb-20 pb-10 transition-all duration-1000 bg-white text-[#000000]${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
                 }`}>
             <div className="px-4 mx-auto mt-8 md:mt-14 container sm:px-6 lg:px-8">
-                 <h2 className="md:text-[38px] font-bold text-[28px] leading-tight  font-helvetica font-regular text-[#042337] my-4">
+                <h2 className="md:text-[38px] font-bold text-[28px] leading-tight  font-helvetica font-regular text-[#042337] my-4">
                     Success Stories
                 </h2>
                 <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
-                    Delivering Value Across Sectors and Scales identify high-impact
-                    opportunities for artificial intelligence, assess readiness, and
-                    implement scalable AI
+                    At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.
                 </p>
 
                 <div className="grid grid-cols-1  gap-3 lg:grid-cols-3">

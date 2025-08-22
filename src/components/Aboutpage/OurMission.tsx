@@ -98,8 +98,8 @@ function OurMission() {
                             Our Mission
                         </p>
 
-                        <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
-                            The Values <span className='font-bold'>Behind Every Decision We Make</span>
+                        <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+                            The Values Behind Every Decision We Make
                         </h2>
 
                         <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">

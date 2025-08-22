@@ -35,23 +35,22 @@ const ContactUsPage = () => {
 
             >
                 <div className="relative container justify-between grid grid-cols-1 lg:grid-cols-2 gap-6 mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className=" md:pr-12 flex justify-between flex-col">
+                    <div className=" md:pr-12 flex flex-col">
                         <div>
                             <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">GET IN TOUCH</p>
-                            <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
-                                We are ready to help you and
-                                <span className='font-bold'> Answer your question</span>
+                            <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+                                We are ready to help you and Answer your question
                             </h2>
-                            <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">Explore expert content, practical guides, and real-world use cases to for your business.</p>
+                            <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px] ">Explore expert content, practical guides, and real-world use cases to for your business.</p>
                         </div>
-                        <div>
+                        <div className="my-6">
                             <p className="font-semibold text-black font-poppins lg:my-0  text-[22px] md:text-[24px]">Call Center</p>
                             <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">+91-8080404566</p>
                             {/* <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">(572) 481-6883</p> */}
                         </div>
 
-                        <div className=" my-4 " >
-                            <p className="font-semibold text-black font-poppins lg:my-0  text-[22px] md:text-[24px]">Address</p>
+                        <div >
+                            <p className="font-semibold text-black font-poppins  text-[22px] md:text-[24px]">Address</p>
                             <p className="text-gray-700 font-poppins text-[18px] md:text-[22px]">4th floor, Chidanand Heights,  Nagpur,<br />
                                 above Titan eye Care, Manish Nagar, Somalwada,<br />
                                 Maharashtra 440025</p>

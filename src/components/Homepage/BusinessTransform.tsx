@@ -17,8 +17,8 @@ const BusinessTransform = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mt-6 mb-12 ">
          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">What We Deliver</p>
-          <h2 className="md:text-[38px] text-[28px]leading-tight  font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
-            How AI Solutions <span className='font-bold'>Transform Your Business</span>
+          <h2 className="md:text-[38px] font-bold text-[28px]leading-tight  font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+            How AI Solutions Transform Your Business
           </h2>
          <p className="max-w-5xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis nunc a molestie dictum. Mauris venenatis, felis scelerisque aliquet lacinia, nulla nisi venenatis odio, id blandit mauris ipsum id sapien.  </p>      </div>
@@ -44,7 +44,7 @@ const BusinessTransform = () => {
                 See how our AI solutions streamline workflows and eliminate manual bottlenecks.
               </p>
               <div className='flex md:justify-end'>
-                <button className="bg-[#00A148] hover:bg-[rgb(58,176,99)] my-1  text-white px-3 py-2 flex items-center md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold transition-colors gap-2">
+                <button className="bg-[#00A148] font-poppins hover:bg-[rgb(58,176,99)] my-1  text-white px-3 py-2 flex items-center md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold transition-colors gap-2">
                   <ArrowRight className="w-5 h-5" />
                   Explore Solution
                 </button>

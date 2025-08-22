@@ -58,7 +58,7 @@ const Hero = () => {
       >
         <div className="pb-3 md:pt-10 md:pb-0 ">
           <h1
-            className="max-w-3xl font-helvetica text-[36px] md:text-4xl lg:text-[68px] font-bold text-white mb-6 leading-tight lg:leading-[74px] mx-auto"
+            className="max-w-3xl font-helvetica text-[36px] md:text-4xl lg:text-[78px] font-bold text-white mb-6 leading-tight lg:leading-[84px] mx-auto"
           >
             AI Business Solutions Tailored for Your Growth
           </h1>
@@ -66,10 +66,10 @@ const Hero = () => {
             Practical artificial intelligence solutions that deliver measurable business outcomes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 ">
-            <button className="bg-[#007635] hover:bg-[#007635] text-white text-[16px] px-3 py-2 md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold md:text-[22px] transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25">
+            <button className="bg-[#007635] font-poppins hover:bg-[#007635] text-white text-[16px] px-3 py-2 md:px-5 md:py-3 lg:px-8  rounded-lg font-semibold md:text-[22px] transition-all duration-300 hover:shadow-lg hover:shadow-green-500/25">
               Explore Solutions
             </button>
-            <button className="border-2 border-white text-white hover:bg-white text-[16px] px-3 py-2 hover:text-slate-900 md:px-5 md:py-3 lg:px-8 lg:py-4 rounded-lg font-semibold md:text-[22px] transition-all duration-300">
+            <button className="border-2 font-poppins border-white text-white hover:bg-white text-[16px] px-3 py-2 hover:text-slate-900 md:px-5 md:py-3 lg:px-8  rounded-lg font-semibold md:text-[22px] transition-all duration-300">
               Schedule Consultation
             </button>
           </div>

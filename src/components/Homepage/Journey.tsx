@@ -16,8 +16,8 @@ const Journey = () => {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">How It Works</p>
-          <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
-            Your Journey to  <span className='font-bold'>AI Implementation</span>
+          <h2 className="md:text-[38px] font-bold  text-[28px] font-helvetica leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
+            Your Journey to  AI Implementation
           </h2>
           <p className="max-w-3xl text-[#E8E8E8] font-poppins  text-[18px] md:text-[22px]  mb-8">
             A simple, low-risk path to adopting AI that fits your business—designed for clarity, confidence, and measurable results.         </p>
@@ -72,7 +72,7 @@ const Journey = () => {
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-8'
           }`}>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-3 py-2 md:px-8 md:py-3 rounded-lg font-semibold text-[16px] md:text-[20px] transition-colors">
+          <button className="bg-green-500 font-poppins hover:bg-green-600 text-white px-3 py-2 md:px-8 md:py-3 rounded-lg font-semibold text-[16px] md:text-[20px] transition-colors">
             Start Your AI Journey
           </button>
         </div>

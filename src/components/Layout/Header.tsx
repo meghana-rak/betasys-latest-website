@@ -38,11 +38,13 @@ const Header = () => {
     { name: 'About', path: '/aboutus' },
     { name: 'EBook', path: '/ebooklisting' },
     { name: 'Blog', path: '/blog' },
+    {name:'Partners' , path:'/partners'},
     { name: 'Contact', path: '/contactus' },
+
   ];
 
 
-  const specialPaths = ['/aboutus', '/contactus', '/ebooklisting', '/ebookdetails/', '/product', '/blogdetails/', '/blog', '/services/ai-consulting', '/services/agentic-ai', '/services/cloud-data-engineering', '/services/product-engineering', '/services/magnetic-ai'];
+  const specialPaths = ['/aboutus', '/contactus', '/ebooklisting', '/ebookdetails/', '/product', '/blogdetails/', '/blog', '/partners', '/services/ai-consulting', '/services/agentic-ai', '/services/cloud-data-engineering', '/services/product-engineering', '/services/magnetic-ai'];
   const isSpecialPath = specialPaths.some(path => location.pathname.startsWith(path));
 
   return (
@@ -93,7 +95,7 @@ const Header = () => {
                     onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <div
-                      className={`font-semibold text-[16px] lg:text-[20px] ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-white'
+                      className={`cursor-pointer font-semibold text-[16px] lg:text-[20px] ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-white'
                         } hover:text-green-400`}
                     >
                       {name}
@@ -104,6 +106,7 @@ const Header = () => {
                       <div className="absolute left-0 top-full pt-3 w-56 bg-white rounded-md shadow-lg z-50">
                         {dropdown.map((item) => (
                           <Link
+                          onClick={() => setOpenDropdown(null)}
                             key={item.name}
                             to={item.path}
                             className={`block px-4 py-1 font-poppins text-[16px] lg:text-[18px]  hover:border-l-4 hover:border-green-600 hover:text-green-600 ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-gray-800'

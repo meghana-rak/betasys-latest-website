@@ -36,8 +36,8 @@ const WhyChoose1: React.FC = () => {
       {/* <section className="px-4 py-12 bg-white sm:px-6 lg:px-20"> */}
       <div className="px-4 mx-auto container sm:px-6 lg:px-8">
 
-        <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
-          Why Choose <span className='font-bold'>Our AI Consulting?</span>
+        <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+          Why Choose Our AI Consulting?
         </h2>
         <p className=" text-gray-700 font-poppins my-4 text-[18px] md:text-[22px] ">
           Our AI Consulting services help organizations identify high-impact opportunities for artificial intelligence,

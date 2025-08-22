@@ -50,11 +50,9 @@ function EbookDetails() {
       <section className="mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-10 md:py-20">
         <div className="  text-start ">
           {/* Heading */}
-         <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
-            Discover{" "}
-            <span className="font-semibold">
-              Our <span className="font-bold">Book</span>
-            </span>
+         <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+            Discover  Book
+            
           </h2>
           <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-14">
             Delivering Value Across Sectors and Scales identify high-impact
@@ -101,9 +99,8 @@ function EbookDetails() {
           </p>
 
           {/* Heading */}
-          <h2 className="md:text-[38px] text-[28px] font-helvetica leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
-            Why Growing Businesses{" "}
-            <span className="font-bold">Choose Betasys AI</span>
+          <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
+            Why Growing Businesses Choose Betasys AI
           </h2>
 
           {/* Subheading */}

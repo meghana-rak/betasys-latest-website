@@ -57,7 +57,7 @@ const BlogGrid = ({ categoryId }) => {
       </div>
 
       {/* Blog list */}
-      <div className="flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 flex-grow">
+      <div className="flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 ">
         {status === 'loading' ? (
           <div className="col-span-full flex justify-center items-center py-10">
             <span className="text-lg text-gray-500">Loading...</span>

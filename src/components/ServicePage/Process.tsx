@@ -49,8 +49,8 @@ const Process: React.FC = () => {
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             Our Core Capabilities
           </p>
-          <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-white mt-[4px] mb-[1px]">
-            Our Consulting <span className="font-bold"> Process</span>
+          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-white mt-[4px] mb-[1px]">
+            Our Consulting Process
           </h2>
           <p className="text-[#D4D4D4] max-w-3xl my-4  font-poppins  text-[18px] md:text-[22px] ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum

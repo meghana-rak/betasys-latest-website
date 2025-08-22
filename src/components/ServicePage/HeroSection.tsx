@@ -11,14 +11,14 @@ const {name} = useParams<{name: string}>();
       <div className=" container mx-auto px-4 sm:px-6 lg:px-8 h-[220px] sm:h-[260px] md:h-[300px] lg:h-[380px] xl:h-[380px] overflow-hidden flex items-center ">
         {/* Text Content */}
          <div className="z-10  sm:mt-0">
-          <h1 className="text-[24px] font-bold text-white font-helvetica sm:text-[28px] xl:text-4xl">
+          <h1 className="text-[24px] font-bold text-white font-poppins sm:text-[40px] xl:text-4xl">
             {name
               ? name
                   .replace(/-/g, ' ')
                   .replace(/\b\w/g, char => char.toUpperCase())
               : 'Service Page'}
           </h1>
-          <p className="text-[#EFEFEF] font-poppins mt-2 text-[16px]  md:text-[22px] ">
+          <p className="text-[#EFEFEF] font-poppins text-[16px]  md:text-[18px] ">
             From AI Strategy to Execution — We Guide You All the Way
           </p>
         </div>

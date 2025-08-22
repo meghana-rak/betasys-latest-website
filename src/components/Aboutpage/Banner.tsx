@@ -43,8 +43,8 @@ function Banner() {
       <div className="relative container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins"> About Us</p>
-          <h2 className="md:text-[38px] text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
-            Your Trusted Partner Smart, <span className='font-bold '> Growth Through AI</span>
+          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+            Your Trusted Partner Smart, Growth Through AI
           </h2>
           <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
             More than a tech service — Betasys.ai

@@ -6,11 +6,22 @@ import logo from '../../assests/logo.png';
 const Footer = () => {
   const { isVisible, setElement } = useIntersectionObserver();
   const navLinks = [
-    { name: 'Services', path: '/services' },
-    { name: 'Product', path: '#' },
+    {
+      name: 'Services',
+      // path: '/services',
+      dropdown: [
+        { name: 'AI Consulting', path: '/services/ai-consulting' },
+        { name: 'Agentic AI', path: '/services/agentic-ai' },
+        { name: 'Cloud Data Engineering', path: '/services/cloud-data-engineering' },
+        { name: 'Product Engineering', path: '/services/product-engineering' },
+        { name: 'Magnetic AI', path: '/services/magnetic-ai' },
+      ],
+    },
+    { name: 'Product', path: '/product' },
     { name: 'About', path: '/aboutus' },
-    { name: 'Ebook', path: '/ebook' },
+    { name: 'Ebook', path: '/ebooklisting' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Partners', path: '/partners' },
     { name: 'Contact', path: '/contactus' },
   ];
 
@@ -20,11 +31,11 @@ const Footer = () => {
       className={`bg-slate-900 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top section: Logo + Links */}
         <div
-          className={`flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`flex flex-col md:flex-row items-start justify-center md:justify-between text-center md:text-left transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
         >
           {/* Logo */}
@@ -39,17 +50,45 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-wrap justify-center  md:justify-start font-poppins gap-3 sm:gap-y-0 sm:gap-x-6 mb-2">
-            {navLinks.map(({ name, path }) => (
-              <Link
-                key={name}
-                to={path}
-                className="text-white font-semibold text-[18px] lg:text-[22px]  hover:text-green-400"
-              >
-                {name}
-              </Link>
-            ))}
+          <div className="flex gap-10 font-poppins mb-2 p-2 md:p-6 lg:p-8">
+            {/* Services column */}
+            <div className="flex flex-col items-start">
+              <span className="text-white cursor-pointer font-semibold text-[18px] lg:text-[22px] hover:text-green-400 mb-1">
+                Services
+              </span>
+              <ul className="flex flex-col gap-1">
+                {navLinks
+                  .find((link) => link.name === "Services")
+                  ?.dropdown?.map((service) => (
+                    <li key={service.name} className=" text-start text-[16px] lg:text-[18px] hover:text-green-400">
+                      <Link
+                        to={service.path}
+                        className="text-gray-300 text-start text-[16px] lg:text-[18px] hover:text-green-400"
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+
+            {/* Other links column */}
+            <div className="flex flex-col  items-start gap-2">
+              {navLinks
+                .filter((link) => link.name !== "Services")
+                .map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className="text-white font-semibold text-[18px] lg:text-[22px] hover:text-green-400"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+            </div>
           </div>
+
+
         </div>
 
         {/* Bottom copyright */}

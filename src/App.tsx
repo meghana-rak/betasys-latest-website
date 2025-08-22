@@ -12,6 +12,7 @@ import EbookListing from './pages/EbookListing';
 import EbookDetails from './pages/EbookDetails';
 import AboutPage from './pages/AboutPage';
 import ProductPage from './pages/ProductPageNew';
+import PartnersPage from './pages/PartnersPage';
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path='/ebookdetails/:id' element={<EbookDetails />} />
         <Route path='/aboutus' element={<AboutPage />} />
         <Route path='/product' element={<ProductPage />} />
+        <Route path='/partners' element={<PartnersPage />} />
       </Routes>
       <CTA />
       <Footer />

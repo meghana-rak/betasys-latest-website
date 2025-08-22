@@ -22,7 +22,7 @@ const CTA = () => {
           {/* Right Button Section */}
           <div className="shrink-0">
             <Link to="/contactus" >
-            <button className="px-6 py-2 md:py-2 text-[16px] md:text-[18px] font-semibold text-white rounded-lg bg-[#002A3A] hover:bg-[#00394f] transition duration-300">
+            <button className=" font-poppins px-6 py-2 md:py-2 text-[16px] md:text-[18px] font-semibold text-white rounded-lg bg-[#002A3A] hover:bg-[#00394f] transition duration-300">
             LETS CONNECT
             </button>
             </Link>

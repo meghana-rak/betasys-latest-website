@@ -12,17 +12,17 @@ const BlogHero: React.FC = ({ label }) => {
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             Health
           </p>
-          <h1 className="text-[20px] sm:text-[24px] my-2 font-bold text-white font-helvetica leading-tight md:text-[28px] xl:text-4xl ">
+          <h1 className="text-[20px] sm:text-[24px]  font-bold text-white font-helvetica leading-tight md:text-[40px] xl:text-4xl ">
             The Future of AI in Healthcare Transforming Patient Care
           </h1>
           <p className="font-poppins text-[#FFFFFF] pb-3 text-[16px]">
             20/06/2025
           </p>
           <div className="z-10  sm:mt-0">
-            <nav className="flex items-center md:space-x-2 text-[16px] uppercase tracking-wide font-poppins md:mt-2 ">
+            <nav className="flex items-center md:space-x-2 text-[16px] uppercase tracking-wide font-poppins  ">
               <Link to='/'>
                 <button
-                  className="text-[#34ef88] font-poppins text-[16px] md:text-[22px] focus:outline-none hover:underline"
+                  className="text-[#34ef88] font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline"
 
                 >
                   Betasys.ai
@@ -31,7 +31,7 @@ const BlogHero: React.FC = ({ label }) => {
               <span className="text-white font-medium"><ChevronRight className="w-3 md:w-5" /></span>
               <Link to='/blog'>
                 <button
-                  className="text-white font-poppins text-[16px] md:text-[22px] focus:outline-none hover:underline"
+                  className="text-white font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline"
 
                 >
                   blog
@@ -39,7 +39,7 @@ const BlogHero: React.FC = ({ label }) => {
               </Link>
               <span className="text-white font-medium"><ChevronRight className="w-3 md:w-5" /></span>
               <button
-                className="text-white font-poppins text-[16px] md:text-[22px] focus:outline-none hover:underline"
+                className="text-white font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline"
               >
                 {label}
               </button>
