@@ -1,6 +1,8 @@
 import React from 'react';
 import ServiceFrame from '../../assests/Servicepage/ServiceFrame.png';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 
 const HeroSection = () => {
 const {name} = useParams<{name: string}>();
@@ -21,6 +23,21 @@ const {name} = useParams<{name: string}>();
           <p className="text-[#EFEFEF] font-poppins text-[16px]  md:text-[18px] ">
             From AI Strategy to Execution — We Guide You All the Way
           </p>
+           <nav className="flex items-center space-x-2 text-[16px] uppercase tracking-wide font-poppins ">
+                    <Link to='/'>
+                    <button
+                        className="text-[#34ef88] font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline"
+                    >
+                        Betasys.ai
+                    </button>
+                    </Link>
+                    <span className="text-white font-medium"><ChevronRight className="w-3 md:w-5"/></span>
+                    <button
+                        className="text-white text-start font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline"
+                    >
+                        {name}
+                    </button>
+                </nav>
         </div>
 
         {/* Background Image */}

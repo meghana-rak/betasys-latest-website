@@ -3,21 +3,24 @@ import EbookImage from "../assests/EbookDetail/EbookDetail.jpg";
 import Icon from "../assests/EbookDetail/Icon.png";
 import BgFrame from "../assests/EbookDetail/Frame.png";
 import { useIntersectionObserver } from '../hooks/useParallax';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
 
 function EbookDetails() {
-    const { isVisible, setElement } = useIntersectionObserver();
+  const { isVisible, setElement } = useIntersectionObserver();
 
   return (
-     <section
-         ref={setElement}
-         className={` bg-[#F9FAFB]  bg-cover bg-no-repeat bg-center  transition-all duration-1000 ${isVisible
-           ? 'opacity-100 translate-y-0'
-           : 'opacity-0 translate-y-16'
-           }`}
-       >
+    <section
+      ref={setElement}
+      className={` bg-[#F9FAFB]  bg-cover bg-no-repeat bg-center  transition-all duration-1000 ${isVisible
+        ? 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-16'
+        }`}
+    >
       {/* Hero Section */}
+   
       <section
-        className="relative flex items-center py-4 min-h-[70vh] md:min-h-[50vh] "
+        className="relative flex flex-col justify-between py-4 min-h-[70vh] md:min-h-[50vh]"
         style={{
           backgroundImage: `url(${EbookImage})`,
           backgroundRepeat: "no-repeat",
@@ -25,24 +28,45 @@ function EbookDetails() {
           backgroundSize: "cover",
         }}
       >
-       <div className=" container mx-auto  px-4 sm:px-6 lg:px-8  flex items-center ">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
           {/* Left Text Content */}
           <div className="w-full sm:py-20 lg:py-24 xl:py-28">
             <h2 className="md:text-[48px] text-[36px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
-              Installing{" "}
-              <span className="text-green-600 ">AI in Construction</span>
+              Installing <span className="text-green-600">AI in Construction</span>
             </h2>
             <h3 className="md:text-[48px] text-[36px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               A Practical Guide for Industry Leaders
             </h3>
             <p className="text-gray-700 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light mt-2">
-              Transform Projects, Improve Efficiency, and Build a Smarter Future
-              with AI
+              Transform Projects, Improve Efficiency, and Build a Smarter Future with AI
             </p>
-            <button className="bg-[#042337] text-white text-[16px] mt-6  md:text-[20px] px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-slate-800 transition-colors shadow-md font-poppins">
+            <button className="bg-[#042337] text-white text-[16px] mt-6 md:text-[20px] px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-slate-800 transition-colors shadow-md font-poppins">
               Download Now
             </button>
           </div>
+
+          {/* Breadcrumb bottom left */}
+          <nav className="flex items-center space-x-2 text-[16px] uppercase tracking-wide font-poppins self-start pb-4">
+            <Link to="/">
+              <button className="text-[#34ef88] font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline">
+                Betasys.ai
+              </button>
+            </Link>
+            <span className="text-[#042337] font-medium">
+              <ChevronRight className="w-3 md:w-5" />
+            </span>
+            <Link to="/ebooklisting">
+              <button className="text-[#042337] font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline">
+                EBook
+              </button>
+            </Link>
+            <span className="text-[#042337]">
+              <ChevronRight className="w-3 md:w-5" />
+            </span>
+            <button className="text-[#042337] text-start font-poppins text-[16px] md:text-[18px] focus:outline-none hover:underline">
+              AI in Construction
+            </button>
+          </nav>
         </div>
       </section>
 
@@ -50,9 +74,9 @@ function EbookDetails() {
       <section className="mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-10 md:py-20">
         <div className="  text-start ">
           {/* Heading */}
-         <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+          <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
             Discover  Book
-            
+
           </h2>
           <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-14">
             Delivering Value Across Sectors and Scales identify high-impact
@@ -69,7 +93,7 @@ function EbookDetails() {
               >
                 {/* Icon aligned to top-left */}
                 <div className="absolute -top-5 left-5 sm:left-6 flex items-center justify-center w-9 h-9 md:w-12 md:h-12 bg-[#022333] border-4 border-white rounded-full shadow-md">
-                  <img src={Icon} alt="icon"  />
+                  <img src={Icon} alt="icon" />
                 </div>
 
                 {/* Card Text */}
@@ -104,7 +128,7 @@ function EbookDetails() {
           </h2>
 
           {/* Subheading */}
-         <p className="max-w-3xl text-[#E8E8E8] font-poppins  text-[18px] md:text-[22px]  mb-8">
+          <p className="max-w-3xl text-[#E8E8E8] font-poppins  text-[18px] md:text-[22px]  mb-8">
             Built for agility, clarity, and real business impact — Betasys
             stands apart from legacy giants.
           </p>
@@ -118,7 +142,7 @@ function EbookDetails() {
               frameworks, and strategies to overcome delays, cost overruns, and
               safety risks. Whether you’re starting small or scaling big, this
               book helps you make AI work right where it matters. AI in
-              construction isn’t the future. It’s now. Let’s build smarter.           
+              construction isn’t the future. It’s now. Let’s build smarter.
               The construction industry is evolving and AI is at the forefront.
               This guide is for executives and project leaders ready to turn AI
               into real-world results. Discover practical use cases, proven
