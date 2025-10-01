@@ -16,7 +16,7 @@ const Journey = () => {
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">How It Works</p>
-          <h2 className="md:text-[38px] font-bold  text-[28px] font-helvetica leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
+          <h2 className="md:text-[38px] font-bold  text-[28px]   leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
             Your Journey to  AI Implementation
           </h2>
           <p className="max-w-3xl text-[#E8E8E8] font-poppins  text-[18px] md:text-[22px]  mb-8">

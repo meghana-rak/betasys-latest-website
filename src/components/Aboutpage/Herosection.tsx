@@ -95,7 +95,7 @@ function Herosection() {
                         </div>
 
                         <div className="relative ">
-                            <h1 className="max-w-5xl font-helvetica text-3xl md:text-4xl lg:text-7xl font-bold ">
+                            <h1 className="max-w-5xl text-3xl md:text-4xl lg:text-7xl font-bold ">
                                 <div>
                                     <span className="text-slate-800">Your </span>
                                     <span className="text-emerald-600 relative">

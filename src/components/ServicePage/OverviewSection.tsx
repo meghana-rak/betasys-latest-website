@@ -16,7 +16,7 @@ const OverviewSection: React.FC = () => {
     >
       <div className="px-4 mx-auto md:text-justify md:py-2 container sm:px-6 lg:px-8">
         <div className="md:mb-4">
-          <h2 className="md:text-[38px] text-[28px] leading-tight font-bold  font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">Overview</h2>
+          <h2 className="md:text-[38px] text-[28px] leading-tight font-bold    font-regular text-[#042337] mt-[4px] mb-[1px]">Overview</h2>
 
           <p className=" text-gray-700 font-poppins md:text-justify  text-[18px] md:text-[22px] my-4">
             At Betasys.ai, our AI Consulting services are designed to help organizations unlock the true potential of

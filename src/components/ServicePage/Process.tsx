@@ -49,7 +49,7 @@ const Process: React.FC = () => {
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             Our Core Capabilities
           </p>
-          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-white mt-[4px] mb-[1px]">
+          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight   font-regular text-white mt-[4px] mb-[1px]">
             Our Consulting Process
           </h2>
           <p className="text-[#D4D4D4] max-w-3xl my-4  font-poppins  text-[18px] md:text-[22px] ">
@@ -72,7 +72,7 @@ const Process: React.FC = () => {
             >
 
               <div className=" inset-0 flex flex-col items-center justify-center p-3  md:p-8 text-center">
-                <h3 className="mb-2 text-[24px] md:text-[28px] font-semibold text-white font-helvetica">
+                <h3 className="mb-2 text-[24px] md:text-[28px] font-semibold text-white  ">
                   {item.title}
                 </h3>
                 <p className="text-[16px] font-light leading-relaxed text-[#D4D4D4] md:text-[20px] font-poppins">

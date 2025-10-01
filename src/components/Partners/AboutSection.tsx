@@ -42,7 +42,7 @@ function AboutSection() {
 
       <div className="relative container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
-          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight   font-regular text-[#042337] mt-[4px] mb-[1px]">
             Our Databricks Partnership
           </h2>
           <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">

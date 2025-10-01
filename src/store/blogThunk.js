@@ -25,7 +25,7 @@ const fetchCategory = createAsyncThunk(
 const fetchBlogPostById = createAsyncThunk(
   'blogs/fetchBlogById',
   async (id) => {
-    const response = await axios.get(`${baseUrl}blog/${id}`);
+    const response = await axios.get(`${baseUrl}blogUrl/${id}`);
     return response.data;
   }
 );

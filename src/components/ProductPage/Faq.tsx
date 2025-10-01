@@ -46,7 +46,7 @@
 //   return (
 //     <section className="w-full  px-4 py-10 lg:px-24 sm:px-6 md:py-32">
 //       <div className="w-full mx-auto ">
-//         <h2 className="my-1 mb-8 text-[28px] font-bold text-black md:text-[38px] font-regular font-helvetica">
+//         <h2 className="my-1 mb-8 text-[28px] font-bold text-black md:text-[38px] font-regular  ">
 //           FAQ
 //         </h2>
 //         <motion.div
@@ -71,7 +71,7 @@
 //                       }`}
 //                   >
 //                     <h2
-//                       className={`font-bold font-helvetica md:text-[28px] text-[24px] transition ${isActive ? "text-black" : "text-black"
+//                       className={`font-bold   md:text-[28px] text-[24px] transition ${isActive ? "text-black" : "text-black"
 //                         }`}
 //                     >
 //                       {faq.title}
@@ -156,7 +156,7 @@ const Faq: React.FC = () => {
         }`}
     >
       <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="my-1 mb-8 text-[24px] font-bold text-black md:text-[38px] font-helvetica">
+        <h2 className="my-1 mb-8 text-[24px] font-bold text-black md:text-[38px]  ">
           FAQ
         </h2>
 
@@ -179,7 +179,7 @@ const Faq: React.FC = () => {
                     }`}
                 >
                   <h2
-                    className={`font-bold font-helvetica md:text-[26px] text-[22px]`}
+                    className={`font-bold   md:text-[26px] text-[22px]`}
                   >
                     {faq.title}
                   </h2>

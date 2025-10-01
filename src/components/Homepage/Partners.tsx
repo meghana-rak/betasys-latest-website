@@ -19,7 +19,7 @@ const Partners = () => {
           {/* Left Text Section - 60% (3 columns) */}
           <div className="md:col-span-3">
            <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">Our Partners</p>
-           <h2 className="md:text-[38px] font-bold  text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+           <h2 className="md:text-[38px] font-bold  text-[28px] leading-tight   font-regular text-[#042337] mt-[4px] mb-[1px]">
               Powered by Leading AI Technologies
             </h2>
            <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">

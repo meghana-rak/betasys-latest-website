@@ -38,7 +38,7 @@ const ContactUsPage = () => {
                     <div className=" md:pr-12 flex flex-col">
                         <div>
                             <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">GET IN TOUCH</p>
-                            <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+                            <h2 className="md:text-[38px] font-bold text-[28px]   leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
                                 We are ready to help you and Answer your question
                             </h2>
                             <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px] ">Explore expert content, practical guides, and real-world use cases to for your business.</p>

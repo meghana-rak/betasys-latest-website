@@ -30,26 +30,26 @@ function Banner() {
   }, [scrolled]);
 
   return (
-
     <section
       id="who-section"
       ref={setElement}
-      className={`py-10 md:py-20 bg-gray-50 transition-all duration-1000 ${isVisible
-        ? 'opacity-100 translate-y-0'
-        : 'opacity-0 translate-y-16'
-        }`}
+      className={`py-10 md:py-20 bg-gray-50 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      }`}
     >
-
       <div className="relative container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
-          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins"> About Us</p>
-          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
-            Your Trusted Partner Smart, Growth Through AI
+          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
+            {" "}
+            About Us
+          </p>
+          <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+            AI Solutions Built For Business Results, Not Buzzwords
           </h2>
           <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
-            More than a tech service — Betasys.ai
-            fuels intelligent growth for innovators across healthcare,
-            retail, finance, and beyond.  </p>
+            More than a tech service — Betasys.ai fuels intelligent growth for
+            innovators across healthcare, retail, finance, and beyond.{" "}
+          </p>
         </div>
       </div>
       {/* <div className="  text-center">
@@ -63,7 +63,7 @@ function Banner() {
             About Us
           </motion.p>
           <motion.h1
-            className="max-w-7xl font-helvetica text-[28px] md:text-[48px] xl:text-[68px] font-bold leading-tight"
+            className="max-w-7xl   text-[28px] md:text-[48px] xl:text-[68px] font-bold leading-tight"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -79,11 +79,14 @@ function Banner() {
 
       {/* Image and Animated Text Section */}
       {/* <div className={`max-w-7xl mx-auto md:px-4 grid gap-2 lg:gap-8 items-center transition-all duration-700 ease-in-out ${scrolled ? "grid-cols-1 md:grid-cols-2 justify-between items-center" : "flex-col  "}`}> */}
-      <div className={`container mx-auto px-4 sm:px-6 lg:px-8  md:px-4 grid gap-2 lg:gap-8  transition-all duration-700 ease-in-out grid-cols-1 lg:grid-cols-2 justify-between items-center`}>
+      <div
+        className={`container mx-auto px-4 sm:px-6 lg:px-8  md:px-4 grid gap-2 lg:gap-8  transition-all duration-700 ease-in-out grid-cols-1 lg:grid-cols-2 justify-between items-center`}
+      >
         {/* Hero Image */}
         <div
-          className={`transition-all duration-700 ease-in ${scrolled ? "w-full" : "w-full "
-            }`}
+          className={`transition-all duration-700 ease-in ${
+            scrolled ? "w-full" : "w-full "
+          }`}
         >
           <div className="rounded-2xl overflow-hidden shadow-2xl group h-full">
             <div className="relative w-full h-full">
@@ -107,21 +110,17 @@ function Banner() {
         </div>
 
         {/* Main Text floats from right */}
-      <p className="text-gray-700 font-poppins text-[18px] md:text-[22px] leading-relaxed text-justify">
-              Fifteen years ago, businesses were overwhelmed by fragmented
-              systems, manual processes, and outdated digital tools.
-              Betasys.ai was founded to change that — with a vision to
-              simplify complexity through purposeful technology. What began as
-              a small team offering software solutions has grown into a
-              company that builds intelligent systems to help businesses
-              operate smarter, faster, and with greater clarity. Over the years, our journey evolved alongside the needs of our
-              clients. We expanded from traditional web and mobile development
-              into AI-powered platforms, automation tools, and custom data
-              engines that solve real business problems. Today, Betasys.ai
-              stands as a strategic technology partner for companies across
-              industries — delivering scalable, human-centric solutions that
-              turn bold ideas into real-world results.
-            </p>
+        <p className="text-gray-700 font-poppins text-[18px] md:text-[22px] leading-relaxed text-justify">
+          At Betasys, we understand that businesses need AI that delivers real
+          value, not just technical showcases. Our team of AI specialists works
+          directly with business leaders to identify high-impact opportunities
+          where AI can reduce costs, increase efficiency, and create competitive
+          advantages. <br />
+          Unlike traditional consulting firms, we focus on rapid implementation
+          with clear ROI metrics. Our approach combines deep technical expertise
+          with practical business knowledge, allowing us to deliver solutions
+          that work within your existing systems and processes.
+        </p>
       </div>
 
       {/* Paragraph floats from bottom */}
@@ -153,7 +152,6 @@ function Banner() {
         </div>
       </div> */}
     </section>
-
   );
 }
 

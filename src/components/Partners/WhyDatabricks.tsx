@@ -18,7 +18,7 @@ function WhyDatabricks() {
             <section className="mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-10 md:py-20">
                 <div className="  text-start ">
                     {/* Heading */}
-                    <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+                    <h2 className="md:text-[38px] font-bold text-[28px]   leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
                         Why Databricks?
                     </h2>
                     <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-14">

@@ -54,7 +54,7 @@ const HeroSectionPart2 = () => {
           <h2
             className="
               text-[12px] sm:text-[16px] md:text-[18px] lg:text-[30px]
-              text-[#022334] font-bold font-helvetica leading-snug
+              text-[#022334] font-bold   leading-snug
               lg:ml-[270px] sm:ml-[200px] md:ml-[90px] ml-[90px]
             "
           >

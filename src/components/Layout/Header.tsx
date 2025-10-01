@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import logo from '../../assests/logo.png';
-import logo2 from '../../assests/Asset 41.png'
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Link } from "react-router-dom";
+import logo from "../../assests/logo.png";
+import logo2 from "../../assests/Asset 41.png";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const location = useLocation()
+  const location = useLocation();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   useEffect(() => {
@@ -18,44 +18,78 @@ const Header = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
+    { name: "Home", path: "/" },
     {
-      name: 'Services',
+      name: "Services",
       // path: '/services',
       dropdown: [
-        { name: 'AI Consulting', path: '/services/ai-consulting' },
-        { name: 'Agentic AI', path: '/services/agentic-ai' },
-        { name: 'Cloud Data Engineering', path: '/services/cloud-data-engineering' },
-        { name: 'Product Engineering', path: '/services/product-engineering' },
-        { name: 'Magnetic AI', path: '/services/magnetic-ai' },
+        {
+          name: "Data Foundation & Analytics",
+          path: "/services/data-foundation-analytics",
+        },
+        { name: "Custom AI/ML Models", path: "/services/custom-ai-ml-models" },
+        {
+          name: "AI Consulting & POC Development",
+          path: "/services/ai-consulting-poc",
+        },
+        {
+          name: "MLOps & AI Governance",
+          path: "/services/mlops-ai-governance",
+        },
+        {
+          name: "Agentic AI Workflows",
+          path: "/services/agentic-ai-workflows",
+        },
+        {
+          name: "Modernize Your Apps with AI",
+          path: "/services/modernize-apps-ai",
+        },
       ],
     },
-    { name: 'Product', path: '/product' },
-    { name: 'About', path: '/aboutus' },
-    { name: 'EBook', path: '/ebooklisting' },
-    { name: 'Blog', path: '/blog' },
-    {name:'Partners' , path:'/partners'},
-    { name: 'Contact', path: '/contactus' },
-
+    { name: "Product", path: "/product" },
+    { name: "About", path: "/aboutus" },
+    { name: "EBook", path: "/ebooklisting" },
+    { name: "Blog", path: "/blog" },
+    { name: "Partners", path: "/partners" },
+    { name: "Contact", path: "/contactus" },
   ];
 
-
-  const specialPaths = ['/aboutus', '/contactus', '/ebooklisting', '/ebookdetails/', '/product', '/blogdetails/', '/blog', '/partners', '/services/ai-consulting', '/services/agentic-ai', '/services/cloud-data-engineering', '/services/product-engineering', '/services/magnetic-ai'];
-  const isSpecialPath = specialPaths.some(path => location.pathname.startsWith(path));
+  const specialPaths = [
+    "/aboutus",
+    "/contactus",
+    "/ebooklisting",
+    "/ebookdetails/",
+    "/product",
+    "/blogdetails/",
+    "/blog",
+    "/partners",
+    "/services/data-foundation-analytics",
+    "/services/custom-ai-ml-models",
+    "/services/ai-consulting-poc",
+    "/services/ai-consulting",
+    "/services/mlops-ai-governance",
+    "/services/agentic-ai-workflows",
+    "/services/modernize-apps-ai",
+  ];
+  const isSpecialPath = specialPaths.some((path) =>
+    location.pathname.startsWith(path)
+  );
 
   return (
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 
-    ${isSpecialPath || isScrolled
-          ? 'bg-white backdrop-blur-sm '
-          // ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
-          : 'bg-transparent'
-        }
-        `      }
+    ${
+      isSpecialPath || isScrolled
+        ? "bg-white backdrop-blur-sm "
+        : // ? 'bg-slate-900/95 backdrop-blur-sm border-b border-slate-800'
+          "bg-transparent"
+    }
+        `}
     >
       <header className="container mx-auto px-4 sm:px-6 lg:px-8 py-1">
         <div className="w-full ">
@@ -95,8 +129,11 @@ const Header = () => {
                     onMouseLeave={() => setOpenDropdown(null)}
                   >
                     <div
-                      className={`cursor-pointer font-semibold text-[16px] lg:text-[20px] ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-white'
-                        } hover:text-green-400`}
+                      className={`cursor-pointer font-semibold text-[16px] lg:text-[20px] ${
+                        isSpecialPath || isScrolled
+                          ? "text-gray-700"
+                          : "text-white"
+                      } hover:text-green-400`}
                     >
                       {name}
                     </div>
@@ -106,11 +143,14 @@ const Header = () => {
                       <div className="absolute left-0 top-full pt-3 w-56 bg-white rounded-md shadow-lg z-50">
                         {dropdown.map((item) => (
                           <Link
-                          onClick={() => setOpenDropdown(null)}
+                            onClick={() => setOpenDropdown(null)}
                             key={item.name}
                             to={item.path}
-                            className={`block px-4 py-1 font-poppins text-[16px] lg:text-[18px]  hover:border-l-4 hover:border-green-600 hover:text-green-600 ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-gray-800'
-                              }`}
+                            className={`block px-4 py-1 font-poppins text-[16px] lg:text-[18px]  hover:border-l-4 hover:border-green-600 hover:text-green-600 ${
+                              isSpecialPath || isScrolled
+                                ? "text-gray-700"
+                                : "text-gray-800"
+                            }`}
                           >
                             {item.name}
                           </Link>
@@ -122,8 +162,11 @@ const Header = () => {
                   <Link
                     key={name}
                     to={path}
-                    className={`text-[16px] lg:text-[20px] font-semibold hover:text-green-400 ${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-white'
-                      }`}
+                    className={`text-[16px] lg:text-[20px] font-semibold hover:text-green-400 ${
+                      isSpecialPath || isScrolled
+                        ? "text-gray-700"
+                        : "text-white"
+                    }`}
                   >
                     {name}
                   </Link>
@@ -143,7 +186,9 @@ const Header = () => {
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`${isSpecialPath || isScrolled ? 'text-gray-700' : 'text-white'}`}
+                className={`${
+                  isSpecialPath || isScrolled ? "text-gray-700" : "text-white"
+                }`}
               >
                 {isMenuOpen ? <X size={26} /> : <Menu size={26} />}
               </button>
@@ -153,10 +198,9 @@ const Header = () => {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div
-              className={`md:hidden font-poppins px-4 pt-3 pb-4 space-y-2 border-t border-slate-800 ${isScrolled
-                  ? "bg-slate-900"
-                  : "bg-slate-900/95 backdrop-blur-sm"
-                }`}
+              className={`md:hidden font-poppins px-4 pt-3 pb-4 space-y-2 border-t border-slate-800 ${
+                isScrolled ? "bg-slate-900" : "bg-slate-900/95 backdrop-blur-sm"
+              }`}
             >
               {navLinks.map(({ name, path, dropdown }) =>
                 dropdown ? (
@@ -218,4 +262,3 @@ const Header = () => {
   );
 };
 export default Header;
-

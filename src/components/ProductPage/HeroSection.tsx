@@ -23,7 +23,7 @@ const HeroSection = () => {
 
         {/* Main heading */}
         <motion.h1
-          className="max-w-7xl font-helvetica text-[28px] md:text-[48px] xl:text-[68px] font-bold leading-tight"
+          className="max-w-7xl   text-[28px] md:text-[48px] xl:text-[68px] font-bold leading-tight"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}

@@ -4,7 +4,7 @@
 
 
 html {
-  font-family: system-ui, sans-serif;
+  font-family: "Poppins", sans-serif !important;
   font-size: 1.25rem;
 }
 
@@ -25,3 +25,8 @@ path {
   font-family: sans-serif;
   text-align: center;
 }
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+

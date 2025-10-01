@@ -20,7 +20,7 @@ const Work: React.FC = () => {
         }`}
     >
       <div className="px-4 mx-auto container sm:px-6 lg:px-8">
-        <h2 className="md:text-[38px] font-bold  text-[28px] leading-tight  font-helvetica font-regular text-[#042337] my-4">
+        <h2 className="md:text-[38px] font-bold  text-[28px] leading-tight    font-regular text-[#042337] my-4">
           Who We Work With
         </h2>
         <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">

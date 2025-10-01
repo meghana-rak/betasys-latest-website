@@ -27,7 +27,7 @@ function Stories() {
             className={`md:pb-20 pb-10 transition-all duration-1000 bg-white text-[#000000]${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
                 }`}>
             <div className="px-4 mx-auto mt-8 md:mt-14 container sm:px-6 lg:px-8">
-                <h2 className="md:text-[38px] font-bold text-[28px] leading-tight  font-helvetica font-regular text-[#042337] my-4">
+                <h2 className="md:text-[38px] font-bold text-[28px] leading-tight    font-regular text-[#042337] my-4">
                     Success Stories
                 </h2>
                 <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">

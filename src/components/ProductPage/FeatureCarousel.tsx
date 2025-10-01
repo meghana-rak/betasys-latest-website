@@ -57,7 +57,7 @@
 //               >
 //                 {/* Text Section */}
 //                 <div className="lg:w-[65%] text-center lg:text-left">
-//                   <h2 className="text-[44px] text-[#000000] mb-0 lg:mb-6 leading-snug font-helvetica font-semibold">
+//                   <h2 className="text-[44px] text-[#000000] mb-0 lg:mb-6 leading-snug   font-semibold">
 //                     {slide.title}
 //                   </h2>
 //                   <p className="text-[#000000] font-poppins text-[20px] leading-relaxed">

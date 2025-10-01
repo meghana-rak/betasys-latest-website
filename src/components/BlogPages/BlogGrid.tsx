@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import BlogCard from './BlogCard';
-import Blogimg1 from "../../assests/blogpage/Blogimg1.png";
-import Blogimg2 from "../../assests/blogpage/Blogimg2.png"
-import Blogimg3 from "../../assests/blogpage/Blogimg3.png";
+// import Blogimg1 from "../../assests/blogpage/Blogimg1.png";
+// import Blogimg2 from "../../assests/blogpage/Blogimg2.png"
+// import Blogimg3 from "../../assests/blogpage/Blogimg3.png";
 import { fetchBlogPosts, } from '../../store/blogThunk.js';
 import { useDispatch, useSelector } from 'react-redux';
 // import Blogimg2 from '../assests/Blogimg2.png';
@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 const BlogGrid = ({ categoryId }) => {
   const dispatch = useDispatch();
   const { posts, status } = useSelector((state) => state.blog);
-  const [searchTerm, setSearchTerm] = useState('');
+  // const [searchTerm, setSearchTerm] = useState('');
   const [blogPosts, setBlogPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
@@ -45,13 +45,10 @@ const BlogGrid = ({ categoryId }) => {
     }
   }, [posts]);
 
-
-
-
   return (
     <div className="grid-cols-10 min-h-screen flex flex-col">
       <div className="mb-6">
-        <h2 className="md:text-[38px] text-[28px] leading-tight font-bold font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+        <h2 className="md:text-[38px] text-[28px] leading-tight font-bold font-regular text-[#042337] mt-[4px] mb-[1px]">
           Blog
         </h2>
       </div>
@@ -76,6 +73,7 @@ const BlogGrid = ({ categoryId }) => {
               image={post?.image?.path}
               category={post?.category}
               title={post?.title}
+              slugUrl={post?.slugUrl}
             />
           ))
         )}

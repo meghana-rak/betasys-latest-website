@@ -13,7 +13,6 @@ interface BlogPost {
 }
 
 const RelatedBlogs: React.FC = ({ relatedBlogs }) => {
-
   const apiKey = import.meta.env.VITE_AWS_IMG_URL;
 
   if (!relatedBlogs || relatedBlogs?.length === 0) {
@@ -25,16 +24,16 @@ const RelatedBlogs: React.FC = ({ relatedBlogs }) => {
   }
   return (
     <div >
-      <h3 className="md:text-[28px] text-[24px] leading-tight font-bold  font-helvetica font-regular text-[#042337] mb-4">Related Blog</h3>
+      <h3 className="md:text-[28px] text-[24px] leading-tight font-bold font-regular text-[#042337] mb-4">Related Blog</h3>
       <div className="space-y-4  ">
         {relatedBlogs?.map((post) => (
-          <Link to={`/blogdetails/${post?.category?._id}/${post?._id}`} key={post?._id} className="group">
+          <Link to={`/blog/${post?.slugUrl}`} key={post?._id} className="group">
             <div key={post.id} className="group cursor-pointer pb-3">
               <div className="relative">
                 <img
                   src={`${apiKey}${post?.image?.path}`}
                   alt={post?.title}
-                  className="w-full  h-48 rounded-lg object-cover"
+                  className="w-full  h-48 rounded-lg object-contain aspect-[16/9]"
                 />
 
                 <div className="absolute top-2 left-2">

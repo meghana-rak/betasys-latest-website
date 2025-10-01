@@ -12,7 +12,7 @@ const BlogHero: React.FC = ({ label }) => {
           <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
             Health
           </p>
-          <h1 className="text-[20px] sm:text-[24px]  font-bold text-white font-helvetica leading-tight md:text-[40px] xl:text-4xl ">
+          <h1 className="text-[20px] sm:text-[24px]  font-bold text-white leading-tight md:text-[40px] xl:text-4xl ">
             The Future of AI in Healthcare Transforming Patient Care
           </h1>
           <p className="font-poppins text-[#FFFFFF] pb-3 text-[16px]">

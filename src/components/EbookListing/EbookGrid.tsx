@@ -32,7 +32,7 @@ const EbookGrid = () => {
         : 'opacity-0 translate-y-16'
         }`}
     >
-      <div className={`container mx-auto px-4  sm:px-8 mb-6 bg-white font-helvetica`} >
+      <div className={`container mx-auto px-4  sm:px-8 mb-6 bg-white`} >
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:gap-6">
           {ebooks.map((book) => (
             <Link to={`/ebookdetails/${book.id}`}> <EbookCard key={book.id} title={book.title} image={book.image} /></Link>

@@ -18,6 +18,7 @@ const BlogDetails: React.FC = () => {
   const { post, relatedPosts } = useSelector((state) => state.blog);
   const [blogPost, setBlogPost] = useState(null);
   const [relatedBlogs, setRelatedBlogs] = useState([]);
+  console.log(blogPost, "blogPost");
 
 
 

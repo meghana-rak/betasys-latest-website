@@ -24,7 +24,7 @@ function OurValues() {
                             Our Values
                         </p>
 
-                        <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
+                        <h2 className="md:text-[38px] font-bold text-[28px] leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
                             Empowering Progress Through Innovation
                         </h2>
 

@@ -28,11 +28,11 @@ function EbookDetails() {
        <div className=" container mx-auto  px-4 sm:px-6 lg:px-8  flex items-center ">
           {/* Left Text Content */}
           <div className="w-full sm:py-20 lg:py-24 xl:py-28">
-            <h2 className="md:text-[48px] text-[36px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+            <h2 className="md:text-[48px] text-[36px] font-bold   leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               Installing{" "}
               <span className="text-green-600 ">AI in Construction</span>
             </h2>
-            <h3 className="md:text-[48px] text-[36px] font-bold font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+            <h3 className="md:text-[48px] text-[36px] font-bold   leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
               A Practical Guide for Industry Leaders
             </h3>
             <p className="text-gray-700 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light mt-2">
@@ -50,7 +50,7 @@ function EbookDetails() {
       <section className="mx-auto container   px-4 sm:px-6 lg:px-8 md:px-10 py-10 md:py-20">
         <div className="  text-start ">
           {/* Heading */}
-         <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
+         <h2 className="md:text-[38px] font-bold text-[28px]   leading-tight font-regular text-[#042337] mt-[4px] mb-[1px]">
             Discover  Book
             
           </h2>
@@ -99,7 +99,7 @@ function EbookDetails() {
           </p>
 
           {/* Heading */}
-          <h2 className="md:text-[38px] font-bold text-[28px] font-helvetica leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
+          <h2 className="md:text-[38px] font-bold text-[28px]   leading-tight font-regular text-[#E8E8E8] mt-[4px] mb-[1px]">
             Why Growing Businesses Choose Betasys AI
           </h2>
 

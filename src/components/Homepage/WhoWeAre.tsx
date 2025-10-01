@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useIntersectionObserver } from '../../hooks/useParallax';
-import wave from '../../assests/Hero/Property 1=Default.png'
-import wave1 from '../../assests/Hero/Property 1=Default (1).png';
-import wave2 from '../../assests/Hero/Property 1=Default (2).png';
-import wave3 from '../../assests/Hero/Property 1=Default (3).png';
-import img from '../../assests/Whoweare/Rectangle 12.png';
-import img1 from '../../assests/Whoweare/RectangleS.png';
-import img2 from '../../assests/Whoweare/Rectangle 13.png';
-import img3 from '../../assests/Whoweare/Rectangle 14.png';
+import React, { useEffect, useState } from "react";
+import { useIntersectionObserver } from "../../hooks/useParallax";
+import wave from "../../assests/Hero/Property 1=Default.png";
+import wave1 from "../../assests/Hero/Property 1=Default (1).png";
+import wave2 from "../../assests/Hero/Property 1=Default (2).png";
+import wave3 from "../../assests/Hero/Property 1=Default (3).png";
+import img from "../../assests/Whoweare/Rectangle 12.png";
+import img1 from "../../assests/Whoweare/RectangleS.png";
+import img2 from "../../assests/Whoweare/Rectangle 13.png";
+import img3 from "../../assests/Whoweare/Rectangle 14.png";
 
 const WhoWeAre = () => {
   const { isVisible, setElement } = useIntersectionObserver();
@@ -39,10 +39,9 @@ const WhoWeAre = () => {
     <section
       id="who-section"
       ref={setElement}
-      className={`py-10 md:py-20 bg-gray-50 transition-all duration-1000 ${isVisible
-        ? 'opacity-100 translate-y-0'
-        : 'opacity-0 translate-y-16'
-        }`}
+      className={`py-10 md:py-20 bg-gray-50 transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      }`}
     >
       {/* <div
         className="absolute bottom-0 -left-2/3 right-28 h-96 overflow-hidden"      >
@@ -59,18 +58,21 @@ const WhoWeAre = () => {
       </div> */}
       <div className="relative container  mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
-          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">WHO WE ARE</p>
-          <h2 className="md:text-[38px] text-[28px] font-bold  leading-tight font-helvetica font-regular text-[#042337] mt-[4px] mb-[1px]">
-            Driving Business Growth Through AI
+          <p className="text-[#00A148] font-medium text-[18px] uppercase tracking-wide font-poppins">
+            About 
+          </p>
+          <h2 className="md:text-[38px] text-[28px] font-bold  leading-tight   font-regular text-[#042337] mt-[4px] mb-[1px]">
+            AI Solutions Built For Business Results, Not Buzzwords
           </h2>
           <p className="max-w-3xl text-gray-700 font-poppins  text-[18px] md:text-[22px]  mb-8">
-            At Betasys, we blend advanced AI with business insight to build solutions that accelerate innovation and results.          </p>
+            At Betasys, we blend advanced AI with business insight to build
+            solutions that accelerate innovation and results.{" "}
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-
           <div className="mx-auto sm:pr-28 md:pr-0">
-            <div className='flex gap-3'>
+            <div className="flex gap-3">
               <img
                 src={img}
                 alt="AI Core"
@@ -96,16 +98,26 @@ const WhoWeAre = () => {
             </div>
           </div>
           <div>
-            <p className='font-poppins text-gray-700  text-[18px] md:text-[22px]'>At Betasys, we specialize in turning complex AI technologies into practical, results-driven solutions for businesses of all sizes. Our team blends deep technical expertise with a strong understanding of business needs to deliver custom-built AI tools that improve efficiency, enhance customer experiences, and drive data-informed decisions. Whether you're just starting your AI journey or scaling your existing systems, we're here to guide you every step of the way.</p>
+            <p className="font-poppins text-gray-700  text-[18px] md:text-[22px]">
+              At Betasys, we understand that businesses need AI that delivers
+              real value, not just technical showcases. Our team of AI
+              specialists works directly with business leaders to identify
+              high-impact opportunities where AI can reduce costs, increase
+              efficiency, and create competitive advantages.
+            </p>
+            <p className="font-poppins text-gray-700  text-[18px] md:text-[22px]">
+              Unlike traditional consulting firms, we focus on rapid
+              implementation with clear ROI metrics. Our approach combines deep
+              technical expertise with practical business knowledge, allowing us
+              to deliver solutions that work within your existing systems and
+              processes.
+            </p>
             <button className="bg-[#00A148] hover:bg-[rgb(58,176,99)] my-6  text-white px-3 py-2 md:px-5 md:py-3 lg:px-8  rounded-lg font-semibold transition-colors text-[16px] md:text-[20px] font-poppins ">
-              Explore Our AI Expertise
+              Learn Our Approach
             </button>
           </div>
-
-
         </div>
       </div>
-
     </section>
   );
 };

@@ -53,7 +53,7 @@ const Benefits = () => {
     >
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className=" mb-4 ">
-          <h2 className="md:text-[38px] font-bold  text-[28px] font-helvetica font-regular text-white mt-[4px] mb-[1px]">
+          <h2 className="md:text-[38px] font-bold  text-[28px]   font-regular text-white mt-[4px] mb-[1px]">
            Databricks + Betasys AI Benefits
           </h2>
           <p className="max-w-3xl text-[#E8E8E8] font-poppins  text-[18px] md:text-[22px]  mb-8">
@@ -74,7 +74,7 @@ const Benefits = () => {
               {benefit?.icon}
               </div>
               <div>
-              <h3 className="text-[24px] md:text-[28px] font-helvetica font-semibold text-white mb-2">{benefit?.title}</h3>
+              <h3 className="text-[24px] md:text-[28px]   font-semibold text-white mb-2">{benefit?.title}</h3>
               <p className="text-gray-300 text-[18px] md:text-[22px] font-poppins leading-relaxed font-light">{benefit?.description}</p>
               </div>
             </div>

@@ -22,8 +22,8 @@ const BlogMain: React.FC = ({ blogPost, categoryId }) => {
       <div className="relative mb-4">
         <img
           src={`${apiKey}${blogPost?.image?.path || blogDetail}`}
-          alt="Doctor with stethoscope"
-          className="w-full h-48 md:h-72 object-cover rounded-lg"
+          alt={blogPost?.imgAltText || "Blog Image"}
+          className="w-full h-48 md:h-72 object-contain rounded-lg aspect-[16/9]"
         />
 
         {/* Date Badge */}
